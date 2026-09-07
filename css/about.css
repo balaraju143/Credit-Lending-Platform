@@ -1,0 +1,3599 @@
+/* =====================================================
+   STACKLY ABOUT HERO
+===================================================== */
+
+.about-hero-section {
+    position: relative;
+
+    width: 100%;
+
+    height: 340px;
+
+    min-height: 340px;
+
+    overflow: hidden;
+
+    background: #1d1d28;
+}
+
+
+/* =====================================================
+   BACKGROUND IMAGE
+===================================================== */
+
+.about-hero-bg {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow: hidden;
+}
+
+
+.about-hero-bg img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transform: scale(1.08);
+}
+
+
+/* =====================================================
+   DARK OVERLAY
+===================================================== */
+
+.about-hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(22,22,34,.94) 0%,
+            rgba(22,22,34,.78) 30%,
+            rgba(22,22,34,.38) 58%,
+            rgba(22,22,34,.18) 100%
+        );
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.about-hero-container {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(1200px, 90%);
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.about-hero-content {
+    margin-top: 18px;
+
+    max-width: 500px;
+}
+
+
+/* =====================================================
+   BREADCRUMB
+===================================================== */
+
+.about-breadcrumb {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 17px;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    letter-spacing: 2.5px;
+}
+
+
+.about-breadcrumb span {
+    color: rgba(255,255,255,.62);
+}
+
+
+.about-breadcrumb b {
+    color: rgba(255,255,255,.55);
+
+    font-weight: 400;
+}
+
+
+.about-breadcrumb .active {
+    color: #ef382b;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.about-hero-content h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(42px, 5vw, 50px);
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: -1.5px;
+}
+
+
+/* =====================================================
+   DECORATIVE CIRCLE
+===================================================== */
+
+.about-hero-circle {
+    position: absolute;
+
+    z-index: 4;
+
+    left: 41%;
+
+    top: 65%;
+
+    width: 26px;
+
+    height: 26px;
+
+    border:
+        2px solid #ef382b;
+
+    border-radius: 50%;
+
+    opacity: .9;
+}
+
+
+.about-hero-circle::after {
+    content: "";
+
+    position: absolute;
+
+    left: -115px;
+
+    top: 20px;
+
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #ef382b;
+
+    opacity: .45;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .about-hero-section {
+        height: 285px;
+
+        min-height: 285px;
+    }
+
+
+    .about-hero-container {
+        width: 90%;
+        justify-content: center;
+    }
+
+
+
+    .about-hero-content {
+        margin-top: 12px;
+        text-align: center;
+        align-items: center;
+    }
+
+
+    .about-breadcrumb {
+        margin-bottom: 13px;
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+
+    .about-hero-content h1 {
+        font-size: 38px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .about-hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(22,22,34,.93),
+                rgba(22,22,34,.55)
+            );
+    }
+
+
+    .about-hero-bg img {
+        object-position: 58% center;
+    }
+
+
+    .about-hero-circle {
+        left: 42%;
+
+        top: 68%;
+
+        width: 22px;
+
+        height: 22px;
+    }
+
+
+    .about-hero-circle::after {
+        left: -75px;
+
+        top: 18px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .about-hero-section {
+        height: 260px;
+
+        min-height: 260px;
+    }
+
+
+    .about-hero-content h1 {
+        font-size: 34px;
+        text-align: center;
+    }
+
+}
+
+.breadcrumb-home {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb-home:hover {
+    color: #ef382b;
+}
+
+.about-breadcrumb b {
+    color: #ffffff;
+}
+
+.about-breadcrumb .active {
+    color: #ef382b;
+}
+
+
+
+/* =====================================================
+   STACKLY CREDIT & LENDING FEATURE SECTION
+===================================================== */
+
+.credit-feature-section {
+    position: relative;
+    width: 100%;
+    min-height: 720px;
+    background: #ffffff;
+    overflow: hidden;
+    padding: 105px 0 90px;
+}
+
+
+/* =====================================================
+   BACKGROUND STACKLY TEXT
+===================================================== */
+
+.credit-bg-word {
+    position: absolute;
+    left: -13%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+
+    font-family: Arial, sans-serif;
+    font-size: 94px;
+    font-weight: 800;
+    letter-spacing: 24px;
+
+    color: #f1eeeb;
+
+    white-space: nowrap;
+    pointer-events: none;
+    user-select: none;
+
+    z-index: 0;
+}
+
+
+/* =====================================================
+   BACKGROUND DECORATIVE LINES
+===================================================== */
+
+.credit-bg-line {
+    position: absolute;
+    height: 1px;
+    background: #eee8e4;
+    transform-origin: left center;
+    pointer-events: none;
+}
+
+.credit-line-one {
+    width: 260px;
+    left: 5%;
+    top: 24%;
+    transform: rotate(-25deg);
+}
+
+.credit-line-two {
+    width: 190px;
+    left: 7%;
+    bottom: 22%;
+    transform: rotate(24deg);
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.credit-feature-container {
+    position: relative;
+    z-index: 2;
+
+    width: min(1160px, 90%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 44% 56%;
+    align-items: center;
+
+    gap: 55px;
+}
+
+
+/* =====================================================
+   LEFT VISUAL
+===================================================== */
+
+.credit-feature-visual {
+    position: relative;
+    min-height: 545px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+
+/* =====================================================
+   IMAGE FRAME
+===================================================== */
+
+.credit-image-frame {
+    position: relative;
+
+    width: 390px;
+    height: 510px;
+
+    overflow: hidden;
+
+    z-index: 2;
+}
+
+
+.credit-main-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transform: scale(1.08);
+}
+
+
+/* Red inner border */
+
+.credit-image-border {
+    position: absolute;
+
+    left: 25px;
+    right: 25px;
+    top: 25px;
+    bottom: 25px;
+
+    border: 1px solid #ef382b;
+
+    pointer-events: none;
+
+    z-index: 3;
+}
+
+
+/* =====================================================
+   EXPERIENCE SHAPE
+===================================================== */
+
+.credit-experience-shape {
+    position: absolute;
+
+    left: 5px;
+    bottom: 0;
+
+    width: 245px;
+    height: 210px;
+
+    background: #171720;
+
+    z-index: 4;
+
+    clip-path: polygon(
+        0 22%,
+        15% 0,
+        100% 72%,
+        76% 100%,
+        0 100%
+    );
+
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.experience-red-line {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 15px;
+    height: 86%;
+
+    background: #ef382b;
+}
+
+
+.experience-content {
+    position: relative;
+
+    padding: 0 0 22px 34px;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 2;
+}
+
+
+.experience-content strong {
+    color: #ffffff;
+
+    font-size: 50px;
+    line-height: 1;
+
+    font-weight: 800;
+}
+
+
+.experience-content span {
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    margin-top: 7px;
+}
+
+
+/* =====================================================
+   FLOATING CREDIT CARD ICON
+===================================================== */
+
+.credit-floating-card {
+    position: absolute;
+
+    right: 2px;
+    bottom: 65px;
+
+    width: 66px;
+    height: 66px;
+
+    background: #ffffff;
+
+    border: 1px solid #eee8e4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 5;
+
+    box-shadow: 0 12px 35px rgba(0,0,0,.08);
+}
+
+
+.credit-floating-card i {
+    color: #ef382b;
+    font-size: 25px;
+}
+
+
+/* =====================================================
+   RIGHT CONTENT
+===================================================== */
+
+.credit-feature-content {
+    position: relative;
+    padding: 5px 0 0;
+}
+
+
+/* =====================================================
+   EYEBROW
+===================================================== */
+
+.credit-eyebrow {
+    color: #ef382b;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 14px;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.credit-feature-content h2 {
+    margin: 0;
+
+    max-width: 570px;
+
+    color: #20202a;
+
+    font-size: 39px;
+    line-height: 1.18;
+
+    font-weight: 750;
+
+    letter-spacing: -1px;
+}
+
+
+.credit-feature-content h2 span {
+    display: block;
+}
+
+
+/* =====================================================
+   HIGHLIGHT
+===================================================== */
+
+.credit-feature-content h4 {
+    margin: 30px 0 10px;
+
+    color: #ef382b;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.credit-description {
+    max-width: 570px;
+
+    margin: 0 0 25px;
+
+    color: #666b73;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   PROGRESS AREA
+===================================================== */
+
+.credit-progress-area {
+    width: 100%;
+    max-width: 570px;
+
+    margin-bottom: 30px;
+}
+
+
+.credit-progress-item {
+    margin-bottom: 22px;
+}
+
+
+.credit-progress-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 9px;
+}
+
+
+.credit-progress-heading strong {
+    color: #252530;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.credit-progress-heading span {
+    color: #777b83;
+
+    font-size: 13px;
+}
+
+
+.credit-progress-track {
+    position: relative;
+
+    width: 100%;
+    height: 7px;
+
+    background: #eeeae7;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+
+.credit-progress-fill {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 0;
+    height: 100%;
+
+    background: #ef382b;
+
+    border-radius: 10px;
+}
+
+
+/* =====================================================
+   BOTTOM AREA
+===================================================== */
+
+.credit-feature-bottom {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    max-width: 570px;
+}
+
+
+/* =====================================================
+   BENEFITS
+===================================================== */
+
+.credit-benefits {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 13px;
+}
+
+
+.credit-benefits li {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    color: #34343d;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+}
+
+
+.credit-benefits i {
+    color: #ef382b;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   VIDEO CARD
+===================================================== */
+
+.credit-video-card {
+    position: relative;
+
+    flex-shrink: 0;
+
+    width: 180px;
+    height: 92px;
+
+    overflow: hidden;
+
+    display: block;
+
+    text-decoration: none;
+}
+
+
+.credit-video-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform .5s ease;
+}
+
+
+.credit-video-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.18);
+
+    transition: background .3s ease;
+}
+
+
+.credit-play-button {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #ef382b;
+
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 0 0 8px rgba(239,56,43,.20);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.credit-play-button i {
+    font-size: 12px;
+
+    margin-left: 2px;
+}
+
+
+.credit-video-card:hover img {
+    transform: scale(1.08);
+}
+
+
+.credit-video-card:hover .credit-video-overlay {
+    background: rgba(0,0,0,.35);
+}
+
+
+.credit-video-card:hover .credit-play-button {
+    transform: translate(-50%, -50%) scale(1.1);
+
+    box-shadow:
+        0 0 0 12px rgba(239,56,43,.16);
+}
+
+
+/* =====================================================
+   MONEY DECORATION
+===================================================== */
+
+.credit-money-decoration {
+    position: absolute;
+
+    right: 8%;
+    bottom: 60px;
+
+    width: 105px;
+    height: 105px;
+
+    border: 1px solid #eee8e4;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: rotate(-15deg);
+
+    opacity: .7;
+
+    z-index: 1;
+}
+
+
+.credit-money-decoration i {
+    color: #eee8e4;
+
+    font-size: 42px;
+
+    transform: rotate(15deg);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .credit-feature-container {
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+    }
+
+    .credit-feature-visual {
+        min-height: 560px;
+    }
+
+    .credit-feature-content {
+        max-width: 700px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .credit-bg-word {
+        left: 8%;
+        opacity: .55;
+    }
+
+    .credit-money-decoration {
+        right: 3%;
+    }
+}
+
+
+/* =====================================================
+   MOBILE - ALL CONTENT CENTERED
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .credit-feature-section {
+        padding: 75px 0 65px;
+    }
+
+    /* Main container */
+    .credit-feature-container {
+        width: 90%;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        justify-items: center;
+    }
+
+
+    /* =================================================
+       LEFT IMAGE AREA
+    ================================================= */
+
+    .credit-feature-visual {
+        width: 100%;
+        min-height: 430px;
+
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        position: relative;
+    }
+
+
+    .credit-image-frame {
+        width: 290px;
+        height: 390px;
+    }
+
+
+    .credit-image-border {
+        left: 18px;
+        right: 18px;
+        top: 18px;
+        bottom: 18px;
+    }
+
+
+    /* Experience badge */
+
+    .credit-experience-shape {
+        width: 195px;
+        height: 160px;
+
+        left: 50%;
+        bottom: 0;
+
+        transform: translateX(-72%);
+    }
+
+
+    .experience-content {
+        padding-left: 27px;
+        padding-bottom: 17px;
+    }
+
+
+    .experience-content strong {
+        font-size: 38px;
+    }
+
+
+    .experience-content span {
+        font-size: 12px;
+    }
+
+
+    /* Floating card */
+
+    .credit-floating-card {
+        width: 52px;
+        height: 52px;
+
+        right: calc(50% - 145px);
+        bottom: 45px;
+    }
+
+
+    .credit-floating-card i {
+        font-size: 20px;
+    }
+
+
+    /* =================================================
+       STACKLY BACKGROUND TEXT
+    ================================================= */
+
+    .credit-bg-word {
+        left: -8%;
+
+        font-size: 65px;
+        letter-spacing: 15px;
+
+        opacity: .45;
+    }
+
+
+    /* =================================================
+       RIGHT CONTENT
+    ================================================= */
+
+    .credit-feature-content {
+        width: 100%;
+        max-width: 600px;
+
+        padding: 0;
+
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /* Eyebrow */
+
+    .credit-eyebrow {
+        text-align: center;
+    }
+
+
+    /* Heading */
+
+    .credit-feature-content h2 {
+        width: 100%;
+        max-width: 520px;
+
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 31px;
+        line-height: 1.2;
+
+        text-align: center;
+    }
+
+
+    .credit-feature-content h2 span {
+        display: block;
+    }
+
+
+    /* Highlight */
+
+    .credit-feature-content h4 {
+        width: 100%;
+        max-width: 520px;
+
+        margin: 22px auto 10px;
+
+        font-size: 12px;
+        line-height: 1.6;
+
+        text-align: center;
+    }
+
+
+    /* Description */
+
+    .credit-description {
+        width: 100%;
+        max-width: 520px;
+
+        margin: 0 auto 25px;
+
+        font-size: 13px;
+        line-height: 1.7;
+
+        text-align: center;
+    }
+
+
+    /* =================================================
+       PROGRESS BARS
+    ================================================= */
+
+    .credit-progress-area {
+        width: 100%;
+        max-width: 520px;
+
+        margin: 0 auto 30px;
+
+        text-align: left;
+    }
+
+
+    .credit-progress-item {
+        width: 100%;
+
+        margin-bottom: 22px;
+    }
+
+
+    .credit-progress-heading {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        text-align: left;
+    }
+
+
+    /* =================================================
+       BOTTOM CONTENT
+    ================================================= */
+
+    .credit-feature-bottom {
+        width: 100%;
+        max-width: 520px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 25px;
+    }
+
+
+    /* Benefits */
+
+    .credit-benefits {
+        width: max-content;
+        max-width: 100%;
+
+        align-items: flex-start;
+
+        text-align: left;
+
+        margin: 0 auto;
+    }
+
+
+    .credit-benefits li {
+        font-size: 12px;
+
+        text-align: left;
+    }
+
+
+    /* Video */
+
+    .credit-video-card {
+        width: 250px;
+        max-width: 100%;
+
+        height: 120px;
+
+        margin: 0 auto;
+    }
+
+
+    /* Hide money decoration */
+
+    .credit-money-decoration {
+        display: none;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .credit-feature-section {
+        padding: 65px 0 55px;
+    }
+
+
+    .credit-feature-container {
+        width: 92%;
+
+        gap: 45px;
+    }
+
+
+    /* Image */
+
+    .credit-feature-visual {
+        min-height: 390px;
+    }
+
+
+    .credit-image-frame {
+        width: 255px;
+        height: 350px;
+    }
+
+
+    /* Experience badge */
+
+    .credit-experience-shape {
+        width: 175px;
+        height: 145px;
+
+        left: 50%;
+
+        transform: translateX(-70%);
+    }
+
+
+    .experience-content {
+        padding-left: 24px;
+        padding-bottom: 15px;
+    }
+
+
+    .experience-content strong {
+        font-size: 33px;
+    }
+
+
+    .experience-content span {
+        font-size: 11px;
+    }
+
+
+    /* Floating card */
+
+    .credit-floating-card {
+        width: 48px;
+        height: 48px;
+
+        right: calc(50% - 128px);
+        bottom: 40px;
+    }
+
+
+    /* Stackly */
+
+    .credit-bg-word {
+        left: -15%;
+
+        font-size: 52px;
+        letter-spacing: 12px;
+    }
+
+
+    /* Content */
+
+    .credit-feature-content h2 {
+        font-size: 27px;
+        line-height: 1.2;
+    }
+
+
+    .credit-feature-content h4 {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+
+
+    .credit-description {
+        font-size: 12px;
+        line-height: 1.7;
+    }
+
+
+    .credit-progress-area {
+        max-width: 100%;
+    }
+
+
+    .credit-progress-heading strong {
+        font-size: 13px;
+    }
+
+
+    .credit-progress-heading span {
+        font-size: 12px;
+    }
+
+
+    .credit-benefits li {
+        font-size: 11px;
+    }
+
+
+    .credit-video-card {
+        width: 235px;
+        height: 110px;
+    }
+
+}
+
+/* =====================================================
+   STACKLY CREDIT & LENDING CTA
+===================================================== */
+
+.stackly-loan-cta {
+    position: relative;
+
+    width: 100%;
+    height: 270px;
+
+    display: flex;
+
+    background: #ef382b;
+
+    overflow: hidden;
+
+    isolation: isolate;
+}
+
+
+/* =====================================================
+   LEFT IMAGE
+===================================================== */
+
+.loan-cta-image {
+    position: relative;
+
+    width: 49%;
+    height: 100%;
+
+    overflow: hidden;
+
+    z-index: 2;
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        92% 100%,
+        0 100%
+    );
+}
+
+
+.loan-cta-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transform: scale(1.12);
+
+    will-change: transform;
+}
+
+
+/* Slight dark overlay */
+
+.loan-cta-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.08);
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   RIGHT CONTENT
+===================================================== */
+
+.loan-cta-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: 51%;
+    height: 100%;
+
+    padding: 50px 8% 35px 4%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   META
+===================================================== */
+
+.loan-cta-meta {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 11px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.4px;
+
+    color: #ffffff;
+}
+
+
+.loan-cta-meta b {
+    font-weight: 500;
+    opacity: .7;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.loan-cta-content h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 34px;
+    line-height: 1.15;
+
+    font-weight: 750;
+
+    letter-spacing: -0.7px;
+}
+
+
+/* =====================================================
+   ACTION
+===================================================== */
+
+.loan-cta-action {
+    display: flex;
+    align-items: center;
+
+    gap: 24px;
+
+    margin-top: 25px;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.loan-cta-btn {
+    width: 190px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    color: #25252e;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+.loan-cta-btn:hover {
+    background: #171720;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   CURVED ARROW
+===================================================== */
+
+.loan-cta-arrow {
+    position: relative;
+
+    width: 70px;
+    height: 58px;
+}
+
+
+.loan-cta-arrow span {
+    position: absolute;
+
+    left: 0;
+    top: 2px;
+
+    width: 62px;
+    height: 42px;
+
+    border-bottom: 1.5px solid #ffffff;
+
+    border-radius: 0 0 70% 60%;
+
+    transform: rotate(-25deg);
+}
+
+
+.loan-cta-arrow i {
+    position: absolute;
+
+    left: -3px;
+    bottom: 5px;
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    transform: rotate(20deg);
+}
+
+
+/* =====================================================
+   DIAGONAL DECORATIONS
+===================================================== */
+
+.loan-diagonal {
+    position: absolute;
+
+    z-index: 3;
+
+    pointer-events: none;
+
+    background: rgba(255, 255, 255, .22);
+
+    transform: rotate(48deg);
+}
+
+
+.diagonal-one {
+    width: 420px;
+    height: 25px;
+
+    right: -115px;
+    top: -90px;
+}
+
+
+.diagonal-two {
+    width: 420px;
+    height: 25px;
+
+    right: -115px;
+    top: -45px;
+
+    opacity: .65;
+}
+
+
+/* =====================================================
+   ADDITIONAL LIGHT SHAPE
+===================================================== */
+
+.stackly-loan-cta::after {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    right: -100px;
+    bottom: -190px;
+
+    border: 1px solid rgba(255,255,255,.16);
+
+    border-radius: 50%;
+
+    z-index: 1;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .stackly-loan-cta {
+        height: 260px;
+    }
+
+    .loan-cta-content {
+        padding-left: 3%;
+        padding-right: 5%;
+    }
+
+    .loan-cta-content h2 {
+        font-size: 29px;
+    }
+
+    .loan-cta-btn {
+        width: 170px;
+        height: 50px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .stackly-loan-cta {
+        height: auto;
+
+        min-height: 520px;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    /* IMAGE */
+
+    .loan-cta-image {
+        width: 100%;
+        height: 230px;
+
+        clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 88%,
+            50% 100%,
+            0 88%
+        );
+    }
+
+
+    .loan-cta-image img {
+        transform: scale(1.08);
+    }
+
+
+    /* CONTENT */
+
+    .loan-cta-content {
+        width: 100%;
+        height: auto;
+
+        min-height: 290px;
+
+        padding: 20px 25px 45px;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+
+    .loan-cta-meta {
+        justify-content: center;
+
+        gap: 8px;
+
+        font-size: 10px;
+    }
+
+
+    .loan-cta-content h2 {
+        max-width: 340px;
+
+        font-size: 28px;
+
+        line-height: 1.2;
+
+        text-align: center;
+    }
+
+
+    .loan-cta-action {
+        justify-content: center;
+
+        margin-top: 22px;
+    }
+
+
+    .loan-cta-btn {
+        width: 175px;
+        height: 50px;
+    }
+
+
+    .loan-cta-arrow {
+        display: none;
+    }
+
+
+    .loan-diagonal {
+        display: none;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .stackly-loan-cta {
+        min-height: 500px;
+    }
+
+
+    .loan-cta-image {
+        height: 205px;
+    }
+
+
+    .loan-cta-content {
+        min-height: 295px;
+
+        padding: 20px 18px 40px;
+    }
+
+
+    .loan-cta-content h2 {
+        font-size: 25px;
+    }
+
+
+    .loan-cta-meta {
+        font-size: 9px;
+
+        gap: 7px;
+    }
+
+
+    .loan-cta-btn {
+        width: 165px;
+        height: 48px;
+    }
+
+}
+
+
+
+/* =====================================================
+   STACKLY TESTIMONIALS
+===================================================== */
+
+.stackly-testimonials {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   TOP TESTIMONIAL AREA
+===================================================== */
+.testimonial-top {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 505px;
+
+    padding: 78px 0 0;
+
+    background: #ffffff;
+
+    overflow: visible;
+
+    z-index: 2;
+}
+
+/* =====================================================
+   BACKGROUND GLOBES
+===================================================== */
+
+.testimonial-globe {
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    opacity: .5;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(235, 231, 228, .8) 1.3px,
+            transparent 1.8px
+        );
+
+    background-size: 9px 9px;
+
+    z-index: 0;
+}
+
+
+.globe-left {
+    left: -260px;
+    top: -170px;
+
+    transform: rotate(-20deg);
+
+    mask-image:
+        radial-gradient(
+            circle,
+            black 35%,
+            transparent 72%
+        );
+}
+
+
+.globe-right {
+    right: -280px;
+    bottom: -300px;
+
+    transform: rotate(25deg);
+
+    mask-image:
+        radial-gradient(
+            circle,
+            black 35%,
+            transparent 72%
+        );
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.testimonial-heading {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+
+    text-align: center;
+
+    margin-bottom: 48px;
+}
+
+
+.testimonial-eyebrow {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #ef382b;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+}
+
+
+.testimonial-heading h2 {
+    margin: 0;
+
+    color: #20202a;
+
+    font-size: 37px;
+
+    line-height: 1.2;
+
+    font-weight: 750;
+
+    letter-spacing: -.8px;
+}
+
+
+/* =====================================================
+   CARDS CONTAINER
+===================================================== */
+
+.testimonial-cards {
+    position: static;
+
+    z-index: 10;
+
+    width: min(960px, 90%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+
+    align-items: stretch;
+    margin-bottom:-40px;
+}
+
+
+/* =====================================================
+   TESTIMONIAL CARD
+===================================================== */
+
+.testimonial-card {
+    position: relative;
+
+    min-height: 360px;
+
+    padding: 34px 32px 32px;
+
+    background: #ffffff;
+
+    border: 1px solid #f0ece9;
+
+    box-shadow:
+        0 18px 45px rgba(20, 20, 30, .08);
+
+    overflow: hidden;
+   
+    z-index: 10;
+    transform: translateZ(0);
+
+    transition:
+        transform .4s ease,
+        border-color .4s ease,
+        box-shadow .4s ease;
+}
+
+
+/* Active center card */
+
+.testimonial-card.active {
+    border: 1px solid #ef382b;
+
+    transform: translateY(-1px);
+}
+
+
+/* Hover */
+
+.testimonial-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 25px 55px rgba(20, 20, 30, .12);
+}
+
+
+/* =====================================================
+   PERSON
+===================================================== */
+
+.testimonial-person {
+    display: flex;
+
+    align-items: center;
+
+    gap: 23px;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.testimonial-image-wrap {
+    position: relative;
+
+    width: 91px;
+    height: 91px;
+
+    flex-shrink: 0;
+
+    overflow: visible;
+}
+
+
+.testimonial-image-wrap img {
+    width: 82px;
+    height: 82px;
+
+    display: block;
+
+    object-fit: cover;
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    z-index: 2;
+}
+
+
+/* Dashed image frame */
+
+.testimonial-image-wrap::before {
+    content: "";
+
+    position: absolute;
+
+    left: 8px;
+    top: -8px;
+
+    width: 82px;
+    height: 82px;
+
+    border: 1px dashed #ef382b;
+
+    z-index: 3;
+
+    transition:
+        transform .4s ease,
+        opacity .4s ease;
+}
+
+
+/* =====================================================
+   RED LINE ON IMAGE HOVER
+===================================================== */
+
+.testimonial-image-line {
+    position: absolute;
+
+    left: 8px;
+    top: -8px;
+
+    width: 82px;
+    height: 82px;
+
+    border: 1px solid transparent;
+
+    z-index: 4;
+
+    pointer-events: none;
+}
+
+
+.testimonial-image-line::before,
+.testimonial-image-line::after {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 2px;
+
+    background: #ef382b;
+
+    transition:
+        width .35s ease;
+}
+
+
+.testimonial-image-line::before {
+    top: -1px;
+    left: -1px;
+}
+
+
+.testimonial-image-line::after {
+    bottom: -1px;
+    right: -1px;
+}
+
+
+.testimonial-card:hover
+.testimonial-image-line::before,
+.testimonial-card:hover
+.testimonial-image-line::after {
+    width: 82px;
+}
+
+
+/* Side lines */
+
+.testimonial-image-wrap {
+    transition: transform .4s ease;
+}
+
+
+.testimonial-card:hover
+.testimonial-image-wrap {
+    transform: translateY(-3px);
+}
+
+
+.testimonial-card:hover
+.testimonial-image-wrap::before {
+    transform: translate(5px, 5px);
+}
+
+
+/* =====================================================
+   PERSON DETAILS
+===================================================== */
+
+.testimonial-person-info {
+    min-width: 0;
+}
+
+
+.testimonial-stars {
+    color: #ef382b;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 6px;
+}
+
+
+.testimonial-person-info h3 {
+    margin: 0 0 4px;
+
+    color: #252530;
+
+    font-size: 17px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+
+.testimonial-person-info > span {
+    color: #777b83;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   HEARTBEAT DIVIDER
+===================================================== */
+
+.testimonial-heartbeat {
+    position: relative;
+
+    width: 100%;
+
+    height: 48px;
+
+    margin: 20px 0 10px;
+
+    overflow: hidden;
+}
+
+
+.testimonial-heartbeat::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    top: 24px;
+
+    height: 1px;
+
+    background: #eeeae7;
+}
+
+
+.testimonial-heartbeat span {
+    position: absolute;
+
+    left: 50%;
+
+    top: 24px;
+
+    width: 100%;
+
+    height: 1px;
+
+    transform: translateX(-50%);
+
+    background: #eeeae7;
+
+    clip-path: polygon(
+        0 0,
+        40% 0,
+        43% 0,
+        46% 100%,
+        50% 0,
+        53% 0,
+        56% 100%,
+        60% 0,
+        100% 0
+    );
+}
+
+
+.testimonial-card.active
+.testimonial-heartbeat span {
+    background: #22232c;
+}
+
+
+/* =====================================================
+   TESTIMONIAL TEXT
+===================================================== */
+
+.testimonial-card > p {
+    margin: 0;
+
+    color: #68707a;
+
+    font-size: 13px;
+
+    line-height: 1.85;
+}
+
+
+/* =====================================================
+   QUOTE
+===================================================== */
+
+.testimonial-quote {
+    position: absolute;
+
+    right: 23px;
+    bottom: 5px;
+
+    color: #eeeae7;
+
+    font-family: Georgia, serif;
+
+    font-size: 70px;
+
+    line-height: 1;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   DOTS
+===================================================== */
+
+.testimonial-dots {
+    position: absolute;
+
+    left: 50%;
+    bottom: 22px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    z-index: 10;
+}
+
+
+.testimonial-dots span {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #dedede;
+}
+
+
+.testimonial-dots span.active {
+    width: 9px;
+    height: 9px;
+
+    background: #ef382b;
+}
+
+
+/* =====================================================
+   DARK STATISTICS
+===================================================== */
+
+.stackly-statistics {
+    position:relative;
+
+    width: 100%;
+
+    min-height: 295px;
+
+    margin-top: -1px;
+
+    background: #171821;
+
+    overflow: hidden;
+
+    z-index: 1;
+
+}
+
+
+/* =====================================================
+   CONTOUR PATTERN
+===================================================== */
+
+.statistics-pattern {
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .5;
+
+    background-image:
+        radial-gradient(
+            ellipse at 10% 30%,
+            transparent 0 34px,
+            rgba(90, 92, 103, .18) 35px,
+            transparent 37px
+        ),
+        radial-gradient(
+            ellipse at 35% 75%,
+            transparent 0 48px,
+            rgba(90, 92, 103, .16) 49px,
+            transparent 51px
+        ),
+        radial-gradient(
+            ellipse at 65% 25%,
+            transparent 0 40px,
+            rgba(90, 92, 103, .17) 41px,
+            transparent 43px
+        ),
+        radial-gradient(
+            ellipse at 90% 70%,
+            transparent 0 55px,
+            rgba(90, 92, 103, .15) 56px,
+            transparent 58px
+        );
+
+    background-size:
+        180px 140px,
+        230px 180px,
+        200px 150px,
+        240px 190px;
+
+    filter: blur(.2px);
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   STATISTICS CONTAINER
+===================================================== */
+
+.statistics-container {
+    position:relative;
+
+    z-index: 2;
+
+    width: min(1100px, 90%);
+
+    min-height: 295px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+/* =====================================================
+   STAT ITEM
+===================================================== */
+
+.stat-item {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    min-height: 220px;
+}
+
+
+/* =====================================================
+   STAT ICON
+===================================================== */
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.stat-icon i {
+    color: #ef382b;
+
+    font-size: 30px;
+
+    transition:
+        transform .4s ease;
+}
+
+
+.stat-item:hover
+.stat-icon i {
+    transform: translateY(-5px) scale(1.08);
+}
+
+
+/* =====================================================
+   NUMBER
+===================================================== */
+
+.stat-number {
+    color: #ffffff;
+
+    font-size: 50px;
+
+    line-height: 1;
+
+    font-weight: 750;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 12px;
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.stat-label {
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 13px;
+}
+
+
+/* =====================================================
+   RED UNDERLINE
+===================================================== */
+
+.stat-line {
+    display: block;
+
+    width: 50px;
+
+    height: 2px;
+
+    background: #ef382b;
+
+    transition:
+        width .4s ease;
+}
+
+
+.stat-item:hover
+.stat-line {
+    width: 75px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .testimonial-heading h2 {
+        font-size: 32px;
+    }
+
+
+    .testimonial-cards {
+        width: 92%;
+        gap: 15px;
+    }
+
+
+    .testimonial-card {
+        padding: 28px 22px;
+    }
+
+
+    .testimonial-person {
+        gap: 15px;
+    }
+
+
+    .testimonial-image-wrap {
+        width: 75px;
+        height: 75px;
+    }
+
+
+    .testimonial-image-wrap img {
+        width: 68px;
+        height: 68px;
+    }
+
+
+    .testimonial-image-wrap::before {
+        width: 68px;
+        height: 68px;
+    }
+
+
+    .testimonial-person-info h3 {
+        font-size: 15px;
+    }
+
+
+    .stat-number {
+        font-size: 42px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .testimonial-top {
+        min-height: auto;
+
+        padding: 65px 0 75px;
+    }
+
+
+    .testimonial-heading {
+        margin-bottom: 35px;
+
+        padding: 0 20px;
+    }
+
+
+    .testimonial-eyebrow {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .testimonial-heading h2 {
+        font-size: 28px;
+
+        line-height: 1.25;
+    }
+
+
+    /* Cards */
+
+    .testimonial-cards {
+        width: 90%;
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+    }
+
+
+    .testimonial-card {
+        min-height: 330px;
+
+        padding: 28px 25px;
+    }
+
+
+    .testimonial-card.active {
+        transform: none;
+    }
+
+
+    .testimonial-card:hover {
+        transform: translateY(-5px);
+    }
+
+
+    /* Person */
+
+    .testimonial-person {
+        justify-content: flex-start;
+
+        gap: 20px;
+    }
+
+
+    .testimonial-image-wrap {
+        width: 82px;
+        height: 82px;
+    }
+
+
+    .testimonial-image-wrap img {
+        width: 75px;
+        height: 75px;
+    }
+
+
+    .testimonial-image-wrap::before {
+        width: 75px;
+        height: 75px;
+    }
+
+
+    .testimonial-person-info h3 {
+        font-size: 16px;
+    }
+
+
+    .testimonial-stars {
+        font-size: 13px;
+    }
+
+
+    .testimonial-card > p {
+        font-size: 13px;
+
+        line-height: 1.8;
+    }
+
+
+    .testimonial-dots {
+        position: relative;
+
+        left: auto;
+        bottom: auto;
+
+        transform: none;
+
+        justify-content: center;
+
+        margin-top: 30px;
+    }
+
+
+    /* Hide extra background */
+
+    .globe-left {
+        left: -330px;
+    }
+
+
+    .globe-right {
+        right: -350px;
+    }
+
+
+    /* Statistics */
+
+    .stackly-statistics {
+        min-height: auto;
+
+        padding: 50px 0;
+    }
+
+
+    .statistics-container {
+        width: 90%;
+
+        min-height: auto;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 35px 15px;
+    }
+
+
+    .stat-item {
+        min-height: 175px;
+    }
+
+
+    .stat-icon {
+        width: 40px;
+        height: 40px;
+
+        margin-bottom: 7px;
+    }
+
+
+    .stat-icon i {
+        font-size: 24px;
+    }
+
+
+    .stat-number {
+        font-size: 37px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .stat-label {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .testimonial-top {
+        padding-top: 55px;
+    }
+
+
+    .testimonial-heading h2 {
+        font-size: 25px;
+    }
+
+
+    .testimonial-card {
+        min-height: 320px;
+
+        padding: 25px 20px;
+    }
+
+
+    .testimonial-person {
+        gap: 15px;
+    }
+
+
+    .testimonial-image-wrap {
+        width: 72px;
+        height: 72px;
+    }
+
+
+    .testimonial-image-wrap img {
+        width: 66px;
+        height: 66px;
+    }
+
+
+    .testimonial-image-wrap::before {
+        width: 66px;
+        height: 66px;
+    }
+
+
+    .testimonial-person-info h3 {
+        font-size: 14px;
+    }
+
+
+    .testimonial-person-info > span {
+        font-size: 8px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .testimonial-stars {
+        font-size: 11px;
+    }
+
+
+    .testimonial-card > p {
+        font-size: 12px;
+    }
+
+
+    .statistics-container {
+        gap: 25px 10px;
+    }
+
+
+    .stat-item {
+        min-height: 155px;
+    }
+
+
+    .stat-number {
+        font-size: 32px;
+    }
+
+
+    .stat-label {
+        font-size: 11px;
+    }
+
+
+    .stat-icon i {
+        font-size: 22px;
+    }
+
+}
+
+
+/* =====================================================
+   STACKLY BENEFITS SECTION
+===================================================== */
+
+.stackly-benefits-section {
+    position: relative;
+
+    width: 100%;
+    min-height: 610px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =====================================================
+   RED LEFT PANEL
+===================================================== */
+
+.benefits-red-panel {
+    position: absolute;
+
+    left: 8.2%;
+    top: 0;
+
+    width: 32%;
+    height: 100%;
+
+    background: #ef382b;
+
+    z-index: 1;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   RED PANEL GEOMETRIC LINES
+===================================================== */
+
+.benefits-red-lines {
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .20;
+
+    overflow: hidden;
+}
+
+
+/* diagonal lines */
+
+.red-line {
+    position: absolute;
+
+    display: block;
+
+    width: 620px;
+    height: 1px;
+
+    background: #b92118;
+
+    transform-origin: left center;
+}
+
+
+.red-line-1 {
+    left: -180px;
+    top: 80px;
+
+    transform: rotate(-24deg);
+}
+
+
+.red-line-2 {
+    left: -120px;
+    top: 180px;
+
+    transform: rotate(-24deg);
+}
+
+
+.red-line-3 {
+    left: -80px;
+    top: 300px;
+
+    transform: rotate(-24deg);
+}
+
+
+.red-line-4 {
+    left: -100px;
+    top: 430px;
+
+    transform: rotate(-24deg);
+}
+
+
+.red-line-5 {
+    left: -180px;
+    top: 550px;
+
+    transform: rotate(-24deg);
+}
+
+
+/* additional vertical geometric lines */
+
+.benefits-red-lines::before,
+.benefits-red-lines::after {
+    content: "";
+
+    position: absolute;
+
+    width: 1px;
+    height: 800px;
+
+    background: rgba(120, 20, 15, .22);
+
+    transform: rotate(24deg);
+}
+
+
+.benefits-red-lines::before {
+    left: 100px;
+    top: -80px;
+}
+
+
+.benefits-red-lines::after {
+    left: 260px;
+    top: -100px;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.benefits-image-wrap {
+    position: relative;
+
+    width: 390px;
+    height: 575px;
+
+    margin-left: 21.3%;
+
+    flex-shrink: 0;
+
+    overflow: hidden;
+
+    z-index: 4;
+
+    clip-path: inset(100% 0 0 0);
+}
+
+
+.benefits-main-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transform: scale(1.12);
+
+    will-change: transform;
+}
+
+
+/* =====================================================
+   IMAGE DARK GRADIENT
+===================================================== */
+
+.benefits-image-gradient {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 42%;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(17, 18, 28, .95),
+            rgba(17, 18, 28, .35),
+            transparent
+        );
+
+    z-index: 2;
+}
+
+
+/* =====================================================
+   SUCCESS BADGE
+===================================================== */
+
+.benefits-success {
+    position: absolute;
+
+    left: 50px;
+    bottom: 50px;
+
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.benefits-success strong {
+    color: #ef382b;
+
+    font-size: 40px;
+
+    line-height: 1;
+
+    font-weight: 800;
+}
+
+
+.benefits-success span {
+    margin-top: 12px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   RIGHT CONTENT
+===================================================== */
+
+.benefits-content {
+    position: relative;
+
+    z-index: 5;
+
+    width: 510px;
+
+    margin-left: 60px;
+
+    padding: 20px 0;
+}
+
+
+/* =====================================================
+   EYEBROW
+===================================================== */
+
+.benefits-eyebrow {
+    color: #ef382b;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 14px;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.benefits-content h2 {
+    margin: 0;
+
+    color: #20202a;
+
+    font-size: 38px;
+
+    line-height: 1.18;
+
+    font-weight: 750;
+
+    letter-spacing: -.8px;
+}
+
+
+.benefits-content h2 span {
+    display: block;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.benefits-intro {
+    margin: 27px 0 30px;
+
+    max-width: 500px;
+
+    color: #68707a;
+
+    font-size: 13px;
+
+    line-height: 1.85;
+}
+
+
+/* =====================================================
+   BENEFIT ITEM
+===================================================== */
+
+.benefit-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    margin-bottom: 22px;
+
+    max-width: 500px;
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.benefit-icon {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #f5f1ee;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    transition:
+        background .35s ease,
+        transform .35s ease;
+}
+
+
+.benefit-icon::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    border: 1px solid transparent;
+
+    transition:
+        border-color .35s ease,
+        transform .35s ease;
+}
+
+
+.benefit-icon i {
+    color: #ef382b;
+
+    font-size: 23px;
+
+    transition:
+        transform .35s ease;
+}
+
+
+.benefit-item:hover .benefit-icon {
+    background: #ef382b;
+
+    transform: translateY(-3px);
+}
+
+
+.benefit-item:hover .benefit-icon::after {
+    border-color: #ef382b;
+
+    transform: scale(1.12);
+}
+
+
+.benefit-item:hover .benefit-icon i {
+    color: #ffffff;
+
+    transform: scale(1.08);
+}
+
+
+/* =====================================================
+   BENEFIT TEXT
+===================================================== */
+
+.benefit-text h3 {
+    margin: 2px 0 7px;
+
+    color: #282832;
+
+    font-size: 15px;
+
+    line-height: 1.3;
+
+    font-weight: 700;
+}
+
+
+.benefit-text p {
+    margin: 0;
+
+    color: #68707a;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .benefits-red-panel {
+        left: 0;
+
+        width: 38%;
+    }
+
+
+    .benefits-image-wrap {
+        margin-left: 14%;
+
+        width: 350px;
+        height: 530px;
+    }
+
+
+    .benefits-content {
+        width: 45%;
+
+        margin-left: 45px;
+    }
+
+
+    .benefits-content h2 {
+        font-size: 32px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .stackly-benefits-section {
+        min-height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        padding: 70px 0 70px;
+
+        overflow: hidden;
+    }
+
+
+    /* Red background becomes top decorative block */
+
+    .benefits-red-panel {
+        position: absolute;
+
+        left: 0;
+        top: 0;
+
+        width: 100%;
+        height: 260px;
+
+        z-index: 1;
+    }
+
+
+    /* Image */
+
+    .benefits-image-wrap {
+        width: 82%;
+        max-width: 360px;
+
+        height: 430px;
+
+        margin: 0 auto;
+
+        z-index: 4;
+    }
+
+
+    .benefits-success {
+        left: 30px;
+        bottom: 35px;
+    }
+
+
+    .benefits-success strong {
+        font-size: 34px;
+    }
+
+
+    .benefits-success span {
+        font-size: 11px;
+    }
+
+
+    /* Content */
+
+    .benefits-content {
+        width: 90%;
+
+        max-width: 550px;
+
+        margin: 50px auto 0;
+
+        padding: 0;
+
+        text-align: center;
+    }
+
+
+    .benefits-eyebrow {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .benefits-content h2 {
+        font-size: 29px;
+
+        line-height: 1.2;
+    }
+
+
+    .benefits-content h2 span {
+        display: block;
+    }
+
+
+    .benefits-intro {
+        margin: 22px auto 30px;
+
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+
+    /* Benefit rows */
+
+    .benefit-item {
+        width: 100%;
+
+        max-width: 500px;
+
+        margin: 0 auto 22px;
+
+        text-align: left;
+
+        gap: 15px;
+    }
+
+
+    .benefit-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+
+    .benefit-icon i {
+        font-size: 20px;
+    }
+
+
+    .benefit-text h3 {
+        font-size: 14px;
+    }
+
+
+    .benefit-text p {
+        font-size: 11px;
+
+        line-height: 1.7;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .stackly-benefits-section {
+        padding-top: 55px;
+    }
+
+
+    .benefits-red-panel {
+        height: 235px;
+    }
+
+
+    .benefits-image-wrap {
+        width: 88%;
+
+        height: 390px;
+    }
+
+
+    .benefits-success {
+        left: 25px;
+        bottom: 28px;
+    }
+
+
+    .benefits-success strong {
+        font-size: 31px;
+    }
+
+
+    .benefits-content {
+        margin-top: 42px;
+    }
+
+
+    .benefits-content h2 {
+        font-size: 26px;
+    }
+
+
+    .benefit-item {
+        gap: 12px;
+    }
+
+
+    .benefit-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    .benefit-icon i {
+        font-size: 18px;
+    }
+
+}

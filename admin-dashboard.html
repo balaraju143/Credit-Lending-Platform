@@ -1,0 +1,2803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Stackly Admin Dashboard</title>
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+
+</head>
+
+
+<body>
+
+
+<div class="admin-dashboard">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="admin-sidebar" id="adminSidebar">
+
+        <div class="sidebar-top">
+
+            <a
+                href="#overview"
+                class="dashboard-logo"
+            >
+                <img
+                    src="assets/red-logo.webp"
+                    alt="Stackly"
+                >
+            </a>
+
+
+            <button
+                class="sidebar-close"
+                id="sidebarClose"
+                aria-label="Close sidebar"
+            >
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+
+        <div class="admin-profile">
+
+            <div class="admin-avatar">
+                A
+            </div>
+
+            <div class="admin-profile-text">
+
+                <strong>Admin Panel</strong>
+
+                <span id="adminEmail">
+                    admin@stackly.com
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ADMIN MENU -->
+
+        <nav class="sidebar-navigation">
+
+            <p class="sidebar-label">
+                ADMIN PANEL
+            </p>
+
+
+            <a
+                href="#overview"
+                class="admin-nav-link active"
+                data-page="overview"
+            >
+                <span class="nav-icon">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </span>
+
+                <span>
+                    Overview
+                </span>
+            </a>
+
+
+            <a
+                href="#applications"
+                class="admin-nav-link"
+                data-page="applications"
+            >
+                <span class="nav-icon">
+                    <i class="fa-solid fa-file-signature"></i>
+                </span>
+
+                <span>
+                    Loan Applications
+                </span>
+            </a>
+
+
+            <a
+                href="#clients"
+                class="admin-nav-link"
+                data-page="clients"
+            >
+                <span class="nav-icon">
+                    <i class="fa-solid fa-users"></i>
+                </span>
+
+                <span>
+                    Clients
+                </span>
+            </a>
+
+
+            <a
+                href="#credit"
+                class="admin-nav-link"
+                data-page="credit"
+            >
+                <span class="nav-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </span>
+
+                <span>
+                    Credit Reviews
+                </span>
+            </a>
+
+
+            <a
+                href="#payments"
+                class="admin-nav-link"
+                data-page="payments"
+            >
+                <span class="nav-icon">
+                    <i class="fa-solid fa-wallet"></i>
+                </span>
+
+                <span>
+                    Payments
+                </span>
+            </a>
+
+
+            <a
+                href="#reports"
+                class="admin-nav-link"
+                data-page="reports"
+            >
+                <span class="nav-icon">
+                    <i class="fa-solid fa-file-invoice"></i>
+                </span>
+
+                <span>
+                    Reports
+                </span>
+            </a>
+
+
+            <p class="sidebar-label sidebar-label-bottom">
+                MANAGEMENT
+            </p>
+
+
+            <a
+                href="#settings"
+                class="admin-nav-link"
+                data-page="settings"
+            >
+                <span class="nav-icon">
+                    <i class="fa-solid fa-sliders"></i>
+                </span>
+
+                <span>
+                    Settings
+                </span>
+            </a>
+
+
+            <a
+                href="login.html"
+                class="admin-nav-link logout-link"
+            >
+                <span class="nav-icon">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </span>
+
+                <span>
+                    Logout
+                </span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="support-box">
+
+                <i class="fa-solid fa-headset"></i>
+
+                <div>
+                    <strong>Admin Support</strong>
+                    <span>support@stackly.com</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         OVERLAY MOBILE
+    ====================================================== -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- HEADER -->
+
+        <header class="admin-header">
+
+            <div class="header-left">
+
+                <button
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    aria-label="Open menu"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+
+                <div class="header-heading">
+
+                    <span id="headerSmallTitle">
+                        Admin Control Center
+                    </span>
+
+                    <h1 id="headerTitle">
+                        Overview
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <button
+                    class="header-action-btn"
+                    onclick="window.location.href='404.html'"
+                    aria-label="Search"
+                >
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+
+
+                <button
+                    class="header-action-btn notification-btn"
+                    onclick="window.location.href='404.html'"
+                    aria-label="Notifications"
+                >
+                    <i class="fa-regular fa-bell"></i>
+                    <span></span>
+                </button>
+
+
+                <div class="header-admin">
+
+                    <div class="header-avatar">
+                        A
+                    </div>
+
+                    <div class="header-admin-text">
+
+                        <strong>Administrator</strong>
+
+                        <small id="headerEmail">
+                            admin@stackly.com
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             PAGE CONTAINER
+        ================================================== -->
+
+        <div class="admin-page-container">
+
+
+            <!-- =================================================
+                 OVERVIEW
+            ================================================== -->
+
+            <section
+                class="admin-page active-page"
+                id="page-overview"
+            >
+
+                <div class="welcome-admin">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            STACKLY ADMIN
+                        </span>
+
+                        <h2>
+                            Manage lending operations
+                            with confidence.
+                        </h2>
+
+                        <p>
+                            Review applications, monitor client
+                            activity, manage credit reviews and
+                            keep lending operations moving smoothly.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="404.html"
+                        class="admin-primary-btn"
+                    >
+                        Review Applications
+                        
+                    </a>
+
+                </div>
+
+
+                <!-- STAT GRID -->
+
+                <div class="admin-stat-grid">
+
+
+                    <div class="admin-stat-card stat-red">
+
+                        <div class="stat-card-top">
+
+                            <span class="stat-icon">
+                                <i class="fa-solid fa-file-circle-check"></i>
+                            </span>
+
+                            <span class="stat-arrow">
+                                <i class="fa-solid fa-arrow-up"></i>
+                            </span>
+
+                        </div>
+
+                        <strong>1,284</strong>
+
+                        <span>
+                            Active Applications
+                        </span>
+
+                        <small>
+                            +12.8% from previous period
+                        </small>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="stat-card-top">
+
+                            <span class="stat-icon purple">
+                                <i class="fa-solid fa-users"></i>
+                            </span>
+
+                            <span class="stat-arrow">
+                                <i class="fa-solid fa-arrow-up"></i>
+                            </span>
+
+                        </div>
+
+                        <strong>8,642</strong>
+
+                        <span>
+                            Registered Clients
+                        </span>
+
+                        <small>
+                            +8.4% client growth
+                        </small>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="stat-card-top">
+
+                            <span class="stat-icon blue">
+                                <i class="fa-solid fa-indian-rupee-sign"></i>
+                            </span>
+
+                            <span class="stat-arrow">
+                                <i class="fa-solid fa-arrow-up"></i>
+                            </span>
+
+                        </div>
+
+                        <strong>₹4.82Cr</strong>
+
+                        <span>
+                            Loan Portfolio
+                        </span>
+
+                        <small>
+                            Healthy portfolio movement
+                        </small>
+
+                    </div>
+
+
+                    <div class="admin-stat-card">
+
+                        <div class="stat-card-top">
+
+                            <span class="stat-icon green">
+                                <i class="fa-solid fa-shield-heart"></i>
+                            </span>
+
+                            <span class="stat-arrow">
+                                <i class="fa-solid fa-arrow-up"></i>
+                            </span>
+
+                        </div>
+
+                        <strong>94.6%</strong>
+
+                        <span>
+                            Repayment Health
+                        </span>
+
+                        <small>
+                            Portfolio performing well
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <!-- OVERVIEW LOWER -->
+
+                <div class="overview-grid">
+
+
+                    <div class="approval-panel">
+
+                        <div class="panel-heading">
+
+                            <div>
+                                <span>
+                                    OPERATIONS
+                                </span>
+
+                                <h3>
+                                    Application Pipeline
+                                </h3>
+                            </div>
+
+                            <a href="404.html">
+                                View All
+                            </a>
+
+                        </div>
+
+
+                        <div class="pipeline">
+
+
+                            <div class="pipeline-row">
+
+                                <div class="pipeline-icon pending">
+                                    <i class="fa-solid fa-hourglass-half"></i>
+                                </div>
+
+                                <div class="pipeline-info">
+
+                                    <strong>
+                                        Pending Review
+                                    </strong>
+
+                                    <span>
+                                        Applications awaiting admin review
+                                    </span>
+
+                                </div>
+
+                                <strong class="pipeline-number">
+                                    184
+                                </strong>
+
+                            </div>
+
+
+                            <div class="pipeline-row">
+
+                                <div class="pipeline-icon approved">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+
+                                <div class="pipeline-info">
+
+                                    <strong>
+                                        Approved
+                                    </strong>
+
+                                    <span>
+                                        Applications approved for processing
+                                    </span>
+
+                                </div>
+
+                                <strong class="pipeline-number">
+                                    736
+                                </strong>
+
+                            </div>
+
+
+                            <div class="pipeline-row">
+
+                                <div class="pipeline-icon review">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+
+                                <div class="pipeline-info">
+
+                                    <strong>
+                                        Credit Review
+                                    </strong>
+
+                                    <span>
+                                        Files requiring credit assessment
+                                    </span>
+
+                                </div>
+
+                                <strong class="pipeline-number">
+                                    96
+                                </strong>
+
+                            </div>
+
+
+                            <div class="pipeline-row">
+
+                                <div class="pipeline-icon rejected">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+
+                                <div class="pipeline-info">
+
+                                    <strong>
+                                        Needs Attention
+                                    </strong>
+
+                                    <span>
+                                        Applications requiring action
+                                    </span>
+
+                                </div>
+
+                                <strong class="pipeline-number">
+                                    42
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUICK ACTIONS -->
+
+                    <div class="quick-admin-panel">
+
+                        <span class="panel-mini-title">
+                            ADMIN TOOLS
+                        </span>
+
+                        <h3>
+                            Quick management
+                        </h3>
+
+                        <p>
+                            Access frequently used lending
+                            administration tools.
+                        </p>
+
+
+                        <div class="quick-actions">
+
+                            <a href="404.html">
+                                <i class="fa-solid fa-user-plus"></i>
+                                <span>Add Client</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                            <a href="404.html">
+                                <i class="fa-solid fa-file-circle-plus"></i>
+                                <span>New Application</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                            <a href="404.html">
+                                <i class="fa-solid fa-chart-column"></i>
+                                <span>Generate Report</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 APPLICATIONS
+            ================================================== -->
+
+            <section
+                class="admin-page"
+                id="page-applications"
+            >
+
+                <div class="page-intro">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            LOAN MANAGEMENT
+                        </span>
+
+                        <h2>
+                            Loan Applications
+                        </h2>
+
+                        <p>
+                            Review and manage lending requests
+                            submitted by Stackly clients.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="404.html"
+                        class="admin-primary-btn"
+                    >
+                        Create Application
+                        <i class="fa-solid fa-plus"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="application-summary">
+
+
+                    <div class="application-summary-card">
+
+                        <span>
+                            Pending
+                        </span>
+
+                        <strong>
+                            184
+                        </strong>
+
+                        <div class="summary-line">
+                            <i style="width:68%"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="application-summary-card">
+
+                        <span>
+                            Approved
+                        </span>
+
+                        <strong>
+                            736
+                        </strong>
+
+                        <div class="summary-line green-line">
+                            <i style="width:84%"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="application-summary-card">
+
+                        <span>
+                            Under Review
+                        </span>
+
+                        <strong>
+                            96
+                        </strong>
+
+                        <div class="summary-line blue-line">
+                            <i style="width:48%"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="application-summary-card">
+
+                        <span>
+                            Declined
+                        </span>
+
+                        <strong>
+                            42
+                        </strong>
+
+                        <div class="summary-line dark-line">
+                            <i style="width:22%"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="application-table-card">
+
+                    <div class="table-heading">
+
+                        <div>
+                            <span>
+                                APPLICATION QUEUE
+                            </span>
+
+                            <h3>
+                                Recent loan requests
+                            </h3>
+                        </div>
+
+                        <a href="404.html">
+                            Export
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+
+                    </div>
+
+
+                    <div class="admin-table-wrap">
+
+                        <table class="admin-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>Applicant</th>
+                                    <th>Loan Type</th>
+                                    <th>Amount</th>
+                                    <th>Credit</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>
+                                        <div class="table-user">
+                                            <span>RK</span>
+                                            <strong>Rahul Kumar</strong>
+                                        </div>
+                                    </td>
+
+                                    <td>Personal Loan</td>
+
+                                    <td>₹4,50,000</td>
+
+                                    <td>782</td>
+
+                                    <td>
+                                        <span class="status pending-status">
+                                            Pending
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a href="404.html">
+                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <div class="table-user">
+                                            <span>PS</span>
+                                            <strong>Priya Sharma</strong>
+                                        </div>
+                                    </td>
+
+                                    <td>Home Loan</td>
+
+                                    <td>₹28,00,000</td>
+
+                                    <td>811</td>
+
+                                    <td>
+                                        <span class="status approved-status">
+                                            Approved
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a href="404.html">
+                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <div class="table-user">
+                                            <span>AM</span>
+                                            <strong>Arjun Mehta</strong>
+                                        </div>
+                                    </td>
+
+                                    <td>Business Loan</td>
+
+                                    <td>₹16,00,000</td>
+
+                                    <td>746</td>
+
+                                    <td>
+                                        <span class="status review-status">
+                                            Review
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a href="404.html">
+                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr>
+
+                                    <td>
+                                        <div class="table-user">
+                                            <span>NS</span>
+                                            <strong>Neha Singh</strong>
+                                        </div>
+                                    </td>
+
+                                    <td>Education Loan</td>
+
+                                    <td>₹8,00,000</td>
+
+                                    <td>728</td>
+
+                                    <td>
+                                        <span class="status attention-status">
+                                            Attention
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a href="404.html">
+                                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                        </a>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+                <!-- =====================================================
+     LOAN APPLICATIONS - REVIEW QUEUE
+===================================================== -->
+
+<div class="admin-application-review">
+
+    <div class="application-review-header">
+        <div>
+            <span>REVIEW QUEUE</span>
+            <h3>Applications Requiring Attention</h3>
+            <p>Review recently submitted loan requests and move each application to the next stage.</p>
+        </div>
+
+        <a href="404.html" class="review-view-all">
+            View All
+
+        </a>
+    </div>
+
+
+    <div class="application-review-list">
+
+        <article class="application-review-item">
+
+            <div class="review-user">
+                <div class="review-avatar">RK</div>
+
+                <div>
+                    <h4>Rahul Kumar</h4>
+                    <span>Personal Loan • APP-1024</span>
+                </div>
+            </div>
+
+            <div class="review-info">
+                <small>REQUESTED</small>
+                <strong>₹4,50,000</strong>
+            </div>
+
+            <div class="review-priority priority-high">
+                <span></span>
+                High Priority
+            </div>
+
+            <a href="404.html" class="review-action">
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+        </article>
+
+
+        <article class="application-review-item">
+
+            <div class="review-user">
+                <div class="review-avatar">AS</div>
+
+                <div>
+                    <h4>Anjali Sharma</h4>
+                    <span>Home Loan • APP-1025</span>
+                </div>
+            </div>
+
+            <div class="review-info">
+                <small>REQUESTED</small>
+                <strong>₹28,00,000</strong>
+            </div>
+
+            <div class="review-priority priority-medium">
+                <span></span>
+                Medium
+            </div>
+
+            <a href="404.html" class="review-action">
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+        </article>
+
+
+        <article class="application-review-item">
+
+            <div class="review-user">
+                <div class="review-avatar">VM</div>
+
+                <div>
+                    <h4>Vikram Mehta</h4>
+                    <span>Business Loan • APP-1026</span>
+                </div>
+            </div>
+
+            <div class="review-info">
+                <small>REQUESTED</small>
+                <strong>₹12,50,000</strong>
+            </div>
+
+            <div class="review-priority priority-low">
+                <span></span>
+                Low Priority
+            </div>
+
+            <a href="404.html" class="review-action">
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+        </article>
+
+
+        <article class="application-review-item">
+
+            <div class="review-user">
+                <div class="review-avatar">NP</div>
+
+                <div>
+                    <h4>Neha Patel</h4>
+                    <span>Education Loan • APP-1027</span>
+                </div>
+            </div>
+
+            <div class="review-info">
+                <small>REQUESTED</small>
+                <strong>₹7,80,000</strong>
+            </div>
+
+            <div class="review-priority priority-medium">
+                <span></span>
+                Medium
+            </div>
+
+            <a href="404.html" class="review-action">
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+
+        </article>
+
+    </div>
+
+</div>
+
+            </section>
+
+
+            <!-- =================================================
+                 CLIENTS
+            ================================================== -->
+
+            <section
+                class="admin-page"
+                id="page-clients"
+            >
+
+                <div class="page-intro">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            CLIENT MANAGEMENT
+                        </span>
+
+                        <h2>
+                            Client Directory
+                        </h2>
+
+                        <p>
+                            Manage client profiles and lending
+                            relationships from one place.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="404.html"
+                        class="admin-primary-btn"
+                    >
+                        Add New Client
+                        <i class="fa-solid fa-user-plus"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="client-directory">
+
+
+                    <div class="client-feature-card">
+
+                        <div class="client-feature-icon">
+                            <i class="fa-solid fa-users-viewfinder"></i>
+                        </div>
+
+                        <span>
+                            TOTAL CLIENTS
+                        </span>
+
+                        <strong>
+                            8,642
+                        </strong>
+
+                        <p>
+                            Active customers across Stackly
+                            lending services.
+                        </p>
+
+                        <a href="404.html">
+                            Manage Directory
+                        
+                        </a>
+
+                    </div>
+
+
+                    <div class="client-list-card">
+
+                        <div class="client-list-header">
+
+                            <h3>
+                                Priority Accounts
+                            </h3>
+
+                            <a href="404.html">
+                                View all
+                            </a>
+
+                        </div>
+
+
+                        <div class="client-row">
+
+                            <div class="client-row-avatar">
+                                RS
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Rakesh Sharma
+                                </strong>
+
+                                <span>
+                                    Business Lending
+                                </span>
+                            </div>
+
+                            <b>
+                                824
+                            </b>
+
+                        </div>
+
+
+                        <div class="client-row">
+
+                            <div class="client-row-avatar">
+                                AM
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Ananya Menon
+                                </strong>
+
+                                <span>
+                                    Home Financing
+                                </span>
+                            </div>
+
+                            <b>
+                                806
+                            </b>
+
+                        </div>
+
+
+                        <div class="client-row">
+
+                            <div class="client-row-avatar">
+                                VK
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Vikram Kumar
+                                </strong>
+
+                                <span>
+                                    Personal Lending
+                                </span>
+                            </div>
+
+                            <b>
+                                792
+                            </b>
+
+                        </div>
+
+
+                        <div class="client-row">
+
+                            <div class="client-row-avatar">
+                                SP
+                            </div>
+
+                            <div>
+                                <strong>
+                                    Sneha Prasad
+                                </strong>
+
+                                <span>
+                                    Education Loan
+                                </span>
+                            </div>
+
+                            <b>
+                                775
+                            </b>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="client-bottom-grid">
+
+                    <div class="client-metric">
+
+                        <i class="fa-solid fa-user-check"></i>
+
+                        <div>
+                            <span>Verified Clients</span>
+                            <strong>7,984</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-metric">
+
+                        <i class="fa-solid fa-user-clock"></i>
+
+                        <div>
+                            <span>Pending Verification</span>
+                            <strong>218</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="client-metric">
+
+                        <i class="fa-solid fa-user-shield"></i>
+
+                        <div>
+                            <span>Protected Accounts</span>
+                            <strong>8,421</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- =====================================================
+     CLIENTS - ACTIVITY & RELATIONSHIP OVERVIEW
+===================================================== -->
+
+<div class="client-activity-section">
+
+    <div class="client-activity-heading">
+
+        <div>
+            <span class="admin-eyebrow">
+                CLIENT ACTIVITY
+            </span>
+
+            <h3>
+                Recent Client Engagement
+            </h3>
+
+            <p>
+                Follow recent lending activity and important
+                client interactions across the platform.
+            </p>
+        </div>
+
+        <a href="404.html" class="client-activity-btn">
+            Activity Report
+    
+        </a>
+
+    </div>
+
+
+    <div class="client-activity-content">
+
+        <!-- Activity 01 -->
+
+        <article class="client-activity-item">
+
+            <div class="activity-date">
+                <strong>06</strong>
+                <span>SEP</span>
+            </div>
+
+            <div class="activity-line">
+                <span></span>
+            </div>
+
+            <div class="activity-details">
+
+                <div class="activity-details-top">
+
+                    <div>
+                        <span class="activity-type">
+                            LOAN DISBURSEMENT
+                        </span>
+
+                        <h4>
+                            Business loan successfully processed
+                        </h4>
+                    </div>
+
+                    <strong class="activity-amount">
+                        ₹12.5L
+                    </strong>
+
+                </div>
+
+                <p>
+                    A business lending request completed its
+                    final review and moved to disbursement.
+                </p>
+
+                <span class="activity-client">
+                    <i class="fa-solid fa-user"></i>
+                    Vikram Mehta
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- Activity 02 -->
+
+        <article class="client-activity-item">
+
+            <div class="activity-date">
+                <strong>04</strong>
+                <span>SEP</span>
+            </div>
+
+            <div class="activity-line">
+                <span></span>
+            </div>
+
+            <div class="activity-details">
+
+                <div class="activity-details-top">
+
+                    <div>
+                        <span class="activity-type">
+                            CREDIT REVIEW
+                        </span>
+
+                        <h4>
+                            Credit profile review completed
+                        </h4>
+                    </div>
+
+                    <strong class="activity-amount">
+                        812
+                    </strong>
+
+                </div>
+
+                <p>
+                    Client credit information was reviewed and
+                    the latest assessment has been recorded.
+                </p>
+
+                <span class="activity-client">
+                    <i class="fa-solid fa-user"></i>
+                    Ananya Menon
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- Activity 03 -->
+
+        <article class="client-activity-item">
+
+            <div class="activity-date">
+                <strong>02</strong>
+                <span>SEP</span>
+            </div>
+
+            <div class="activity-line">
+                <span></span>
+            </div>
+
+            <div class="activity-details">
+
+                <div class="activity-details-top">
+
+                    <div>
+                        <span class="activity-type">
+                            DOCUMENT UPDATE
+                        </span>
+
+                        <h4>
+                            Financial documents updated
+                        </h4>
+                    </div>
+
+                    <strong class="activity-amount">
+                        04
+                    </strong>
+
+                </div>
+
+                <p>
+                    Updated income and identity documents have
+                    been submitted for account verification.
+                </p>
+
+                <span class="activity-client">
+                    <i class="fa-solid fa-user"></i>
+                    Rakesh Sharma
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- Activity 04 -->
+
+        <article class="client-activity-item">
+
+            <div class="activity-date">
+                <strong>30</strong>
+                <span>AUG</span>
+            </div>
+
+            <div class="activity-line">
+                <span></span>
+            </div>
+
+            <div class="activity-details">
+
+                <div class="activity-details-top">
+
+                    <div>
+                        <span class="activity-type">
+                            ACCOUNT UPDATE
+                        </span>
+
+                        <h4>
+                            Client profile information updated
+                        </h4>
+                    </div>
+
+                    <strong class="activity-amount">
+                        NEW
+                    </strong>
+
+                </div>
+
+                <p>
+                    Personal and lending preferences were
+                    successfully updated in the client profile.
+                </p>
+
+                <span class="activity-client">
+                    <i class="fa-solid fa-user"></i>
+                    Sneha Prasad
+                </span>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</div>
+
+            </section>
+
+
+            <!-- =================================================
+                 CREDIT REVIEWS
+            ================================================== -->
+
+            <section
+                class="admin-page"
+                id="page-credit"
+            >
+
+                <div class="credit-header">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            CREDIT OPERATIONS
+                        </span>
+
+                        <h2>
+                            Credit Review Center
+                        </h2>
+
+                        <p>
+                            Monitor credit health and review
+                            applications requiring financial assessment.
+                        </p>
+
+                    </div>
+
+
+                    <div class="credit-score-big">
+
+                        <span>
+                            PORTFOLIO HEALTH
+                        </span>
+
+                        <strong>
+                            78.4
+                        </strong>
+
+                        <small>
+                            Stable
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="credit-dashboard-grid">
+
+
+                    <div class="credit-health-card">
+
+                        <div class="credit-circle">
+
+                            <div>
+                                <strong>78%</strong>
+                                <span>Healthy</span>
+                            </div>
+
+                        </div>
+
+                        <h3>
+                            Overall Credit Quality
+                        </h3>
+
+                        <p>
+                            Most active applications currently
+                            fall within acceptable credit ranges.
+                        </p>
+
+                        <a href="404.html">
+                            Review Credit Portfolio
+                        </a>
+
+                    </div>
+
+
+                    <div class="credit-review-list">
+
+                        <div class="review-list-heading">
+
+                            <h3>
+                                Reviews Requiring Attention
+                            </h3>
+
+                            <span>
+                                06 cases
+                            </span>
+
+                        </div>
+
+
+                        <div class="credit-review-item">
+
+                            <div class="review-person">
+                                <span>AP</span>
+
+                                <div>
+                                    <strong>
+                                        Arun Prakash
+                                    </strong>
+
+                                    <small>
+                                        Personal Loan
+                                    </small>
+                                </div>
+                            </div>
+
+                            <b>
+                                642
+                            </b>
+
+                            <a href="404.html">
+                                Review
+                            </a>
+
+                        </div>
+
+
+                        <div class="credit-review-item">
+
+                            <div class="review-person">
+                                <span>KS</span>
+
+                                <div>
+                                    <strong>
+                                        Kavya Srinivas
+                                    </strong>
+
+                                    <small>
+                                        Business Loan
+                                    </small>
+                                </div>
+                            </div>
+
+                            <b>
+                                618
+                            </b>
+
+                            <a href="404.html">
+                                Review
+                            </a>
+
+                        </div>
+
+
+                        <div class="credit-review-item">
+
+                            <div class="review-person">
+                                <span>MR</span>
+
+                                <div>
+                                    <strong>
+                                        Manoj Rao
+                                    </strong>
+
+                                    <small>
+                                        Home Loan
+                                    </small>
+                                </div>
+                            </div>
+
+                            <b>
+                                654
+                            </b>
+
+                            <a href="404.html">
+                                Review
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="credit-insight">
+
+                    <div class="insight-icon">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            ADMIN INSIGHT
+                        </span>
+
+                        <h3>
+                            Credit quality remains strong
+                        </h3>
+
+                        <p>
+                            Most clients maintain healthy repayment
+                            behavior. Continue reviewing lower-score
+                            applications before approval.
+                        </p>
+
+                    </div>
+
+                    <a href="404.html">
+                        View Analysis
+                    </a>
+
+                </div>
+
+
+                <!-- =====================================================
+     CREDIT REVIEWS - ASSESSMENT OVERVIEW
+===================================================== -->
+
+<div class="credit-review-overview">
+
+    <div class="credit-review-head">
+
+        <div>
+            <span class="admin-eyebrow">
+                CREDIT ASSESSMENT
+            </span>
+
+            <h3>
+                Review Performance
+            </h3>
+
+            <p>
+                Monitor credit assessments and identify profiles
+                that require additional review.
+            </p>
+        </div>
+
+        <a href="404.html" class="credit-review-report">
+            Review Reports
+            <i class="fa-solid fa-file-lines"></i>
+        </a>
+
+    </div>
+
+
+    <div class="credit-review-grid">
+
+        <!-- Score Distribution -->
+
+        <article class="credit-score-panel">
+
+            <div class="score-panel-title">
+                <div>
+                    <span>CREDIT SCORE RANGE</span>
+                    <h4>Current Portfolio</h4>
+                </div>
+
+                <i class="fa-solid fa-chart-simple"></i>
+            </div>
+
+            <div class="score-bars">
+
+                <div class="score-bar-row">
+                    <span>750 - 900</span>
+
+                    <div class="score-bar">
+                        <span style="width: 78%;"></span>
+                    </div>
+
+                    <strong>78%</strong>
+                </div>
+
+                <div class="score-bar-row">
+                    <span>650 - 749</span>
+
+                    <div class="score-bar">
+                        <span style="width: 64%;"></span>
+                    </div>
+
+                    <strong>64%</strong>
+                </div>
+
+                <div class="score-bar-row">
+                    <span>550 - 649</span>
+
+                    <div class="score-bar">
+                        <span style="width: 38%;"></span>
+                    </div>
+
+                    <strong>38%</strong>
+                </div>
+
+                <div class="score-bar-row">
+                    <span>Below 550</span>
+
+                    <div class="score-bar">
+                        <span style="width: 18%;"></span>
+                    </div>
+
+                    <strong>18%</strong>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Review Status -->
+
+        <article class="credit-status-panel">
+
+            <div class="score-panel-title">
+                <div>
+                    <span>REVIEW STATUS</span>
+                    <h4>Assessment Queue</h4>
+                </div>
+
+                <i class="fa-solid fa-list-check"></i>
+            </div>
+
+
+            <div class="review-status-list">
+
+                <div class="review-status-item">
+                    <div class="status-icon status-pending">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+
+                    <div>
+                        <strong>Pending Reviews</strong>
+                        <span>Awaiting analyst assessment</span>
+                    </div>
+
+                    <b>46</b>
+                </div>
+
+
+                <div class="review-status-item">
+                    <div class="status-icon status-progress">
+                        <i class="fa-solid fa-spinner"></i>
+                    </div>
+
+                    <div>
+                        <strong>In Progress</strong>
+                        <span>Currently being evaluated</span>
+                    </div>
+
+                    <b>28</b>
+                </div>
+
+
+                <div class="review-status-item">
+                    <div class="status-icon status-complete">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <strong>Completed</strong>
+                        <span>Reviews completed today</span>
+                    </div>
+
+                    <b>132</b>
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- Analyst Notes -->
+
+    <article class="credit-review-note">
+
+        <div class="review-note-icon">
+            <i class="fa-solid fa-clipboard-check"></i>
+        </div>
+
+        <div class="review-note-content">
+
+            <span>ANALYST NOTE</span>
+
+            <h4>
+                Profiles with recent credit changes need attention
+            </h4>
+
+            <p>
+                Several customer profiles have recent changes in
+                their credit information. Review supporting details
+                before making a final lending decision.
+            </p>
+
+        </div>
+
+        <a href="404.html" class="review-note-action">
+            Open Review
+        
+        </a>
+
+    </article>
+
+</div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PAYMENTS
+            ================================================== -->
+
+            <section
+                class="admin-page"
+                id="page-payments"
+            >
+
+                <div class="page-intro">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            FINANCIAL OPERATIONS
+                        </span>
+
+                        <h2>
+                            Payment Control
+                        </h2>
+
+                        <p>
+                            Monitor repayments and lending
+                            collection performance.
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="404.html"
+                        class="admin-primary-btn"
+                    >
+                        Payment Reports
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="payment-overview">
+
+                    <div class="payment-total">
+
+                        <span>
+                            TOTAL COLLECTION
+                        </span>
+
+                        <strong>
+                            ₹2.64Cr
+                        </strong>
+
+                        <small>
+                            Portfolio collections
+                        </small>
+
+                        <div class="payment-bars">
+
+                            <i style="height:48%"></i>
+                            <i style="height:66%"></i>
+                            <i style="height:53%"></i>
+                            <i style="height:82%"></i>
+                            <i style="height:70%"></i>
+                            <i style="height:91%"></i>
+                            <i style="height:78%"></i>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="payment-side-stat">
+
+                        <span>
+                            ON-TIME PAYMENTS
+                        </span>
+
+                        <strong>
+                            91.8%
+                        </strong>
+
+                        <div class="payment-progress">
+                            <i></i>
+                        </div>
+
+                        <small>
+                            Strong repayment performance
+                        </small>
+
+                    </div>
+
+
+                    <div class="payment-side-stat">
+
+                        <span>
+                            PENDING PAYMENTS
+                        </span>
+
+                        <strong>
+                            ₹18.4L
+                        </strong>
+
+                        <div class="payment-progress warning-progress">
+                            <i></i>
+                        </div>
+
+                        <small>
+                            Requires collection follow-up
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="payment-action-grid">
+
+                    <a href="404.html">
+                        <i class="fa-solid fa-money-check-dollar"></i>
+
+                        <strong>
+                            Collection Center
+                        </strong>
+
+                        <span>
+                            Review repayment activity
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+
+                    <a href="404.html">
+                        <i class="fa-solid fa-receipt"></i>
+
+                        <strong>
+                            Transaction Records
+                        </strong>
+
+                        <span>
+                            Access payment records
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+
+                    <a href="404.html">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+
+                        <strong>
+                            Collection Alerts
+                        </strong>
+
+                        <span>
+                            Review overdue accounts
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- =====================================================
+     PAYMENTS - COLLECTION & SETTLEMENT
+===================================================== -->
+
+<div class="payment-operations">
+
+    <div class="payment-operations-header">
+
+        <div>
+            <span class="admin-eyebrow">
+                PAYMENT OPERATIONS
+            </span>
+
+            <h3>
+                Collections & Settlements
+            </h3>
+
+            <p>
+                Monitor incoming repayments and settlement activity
+                across Stackly lending accounts.
+            </p>
+        </div>
+
+        <a href="404.html" class="payment-operation-btn">
+            Settlement Report
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+
+    </div>
+
+
+    <div class="payment-channel-grid">
+
+        <!-- UPI -->
+
+        <article class="payment-channel">
+
+            <div class="channel-icon">
+                <i class="fa-solid fa-qrcode"></i>
+            </div>
+
+            <div class="channel-main">
+                <span>UPI COLLECTIONS</span>
+                <h4>₹18,42,600</h4>
+                <p>Today's received repayments</p>
+            </div>
+
+            <div class="channel-status">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <strong>+12.8%</strong>
+            </div>
+
+        </article>
+
+
+        <!-- Bank -->
+
+        <article class="payment-channel">
+
+            <div class="channel-icon">
+                <i class="fa-solid fa-building-columns"></i>
+            </div>
+
+            <div class="channel-main">
+                <span>BANK TRANSFERS</span>
+                <h4>₹26,84,200</h4>
+                <p>Settled through banking channels</p>
+            </div>
+
+            <div class="channel-status">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+                <strong>+8.4%</strong>
+            </div>
+
+        </article>
+
+
+        <!-- Auto Debit -->
+
+        <article class="payment-channel">
+
+            <div class="channel-icon">
+                <i class="fa-solid fa-repeat"></i>
+            </div>
+
+            <div class="channel-main">
+                <span>AUTO DEBIT</span>
+                <h4>₹14,76,850</h4>
+                <p>Scheduled repayments collected</p>
+            </div>
+
+            <div class="channel-status">
+                <i class="fa-solid fa-check"></i>
+                <strong>98.2%</strong>
+            </div>
+
+        </article>
+
+
+        <!-- Cash / Manual -->
+
+        <article class="payment-channel">
+
+            <div class="channel-icon">
+                <i class="fa-solid fa-wallet"></i>
+            </div>
+
+            <div class="channel-main">
+                <span>MANUAL PAYMENTS</span>
+                <h4>₹4,28,900</h4>
+                <p>Payments awaiting reconciliation</p>
+            </div>
+
+            <div class="channel-status channel-warning">
+                <i class="fa-solid fa-clock"></i>
+                <strong>23</strong>
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <!-- Reconciliation -->
+
+    <article class="payment-reconciliation">
+
+        <div class="reconciliation-progress">
+
+            <div class="reconciliation-circle">
+                <strong>94%</strong>
+                <span>SETTLED</span>
+            </div>
+
+        </div>
+
+
+        <div class="reconciliation-info">
+
+            <span>DAILY RECONCILIATION</span>
+
+            <h4>
+                Payment settlement is progressing normally
+            </h4>
+
+            <p>
+                Most repayments received today have been matched
+                with their respective loan accounts. A small number
+                of transactions are still awaiting verification.
+            </p>
+
+            <div class="reconciliation-meta">
+
+                <span>
+                    <i class="fa-solid fa-circle-check"></i>
+                    1,284 Matched
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-clock"></i>
+                    82 Pending
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <a href="404.html" class="reconciliation-action">
+            Open Reconciliation
+        </a>
+
+    </article>
+
+</div>
+
+            </section>
+
+
+            <!-- =================================================
+                 REPORTS
+            ================================================== -->
+
+            <section
+                class="admin-page"
+                id="page-reports"
+            >
+
+                <div class="page-intro">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            BUSINESS INTELLIGENCE
+                        </span>
+
+                        <h2>
+                            Lending Reports
+                        </h2>
+
+                        <p>
+                            Generate operational and portfolio
+                            reports for Stackly administration.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="report-grid">
+
+
+                    <a
+                        href="404.html"
+                        class="report-card report-card-large"
+                    >
+
+                        <div class="report-number">
+                            01
+                        </div>
+
+                        <i class="fa-solid fa-chart-column"></i>
+
+                        <h3>
+                            Portfolio Performance
+                        </h3>
+
+                        <p>
+                            Review loan portfolio movement,
+                            repayment performance and lending health.
+                        </p>
+
+                        <span>
+                            Generate Report
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="404.html"
+                        class="report-card"
+                    >
+
+                        <div class="report-number">
+                            02
+                        </div>
+
+                        <i class="fa-solid fa-user-group"></i>
+
+                        <h3>
+                            Client Growth
+                        </h3>
+
+                        <p>
+                            Analyze client acquisition and
+                            account activity.
+                        </p>
+
+                        <span>
+                            Open Report
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="404.html"
+                        class="report-card"
+                    >
+
+                        <div class="report-number">
+                            03
+                        </div>
+
+                        <i class="fa-solid fa-credit-card"></i>
+
+                        <h3>
+                            Credit Quality
+                        </h3>
+
+                        <p>
+                            Review credit score distribution
+                            and risk levels.
+                        </p>
+
+                        <span>
+                            Open Report
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="404.html"
+                        class="report-card"
+                    >
+
+                        <div class="report-number">
+                            04
+                        </div>
+
+                        <i class="fa-solid fa-money-bill-transfer"></i>
+
+                        <h3>
+                            Repayment Analysis
+                        </h3>
+
+                        <p>
+                            Review payment behavior and
+                            collection performance.
+                        </p>
+
+                        <span>
+                            Open Report
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+                </div>
+
+                <!-- =====================================================
+     REPORTS - REPORT LIBRARY
+===================================================== -->
+
+<div class="admin-report-library">
+
+    <div class="report-library-header">
+
+        <div>
+            <span class="admin-eyebrow">
+                INSIGHTS & ANALYTICS
+            </span>
+
+            <h3>
+                Financial Overview
+            </h3>
+
+            <p>
+               Explore important financial insights, portfolio trends
+               and operational data to support better decisions.
+            </p>
+        </div>
+
+        <a href="404.html" class="report-generate-btn">
+            Create Analysis
+            <i class="fa-solid fa-file-circle-plus"></i>
+        </a>
+
+    </div>
+
+
+    <div class="report-library-list">
+
+        <!-- Report 01 -->
+
+        <article class="report-library-item">
+
+            <div class="report-file">
+                <i class="fa-solid fa-file-invoice"></i>
+                <span>PDF</span>
+            </div>
+
+            <div class="report-library-info">
+
+                <span>MONTHLY PERFORMANCE</span>
+
+                <h4>
+                    Lending Performance Report
+                </h4>
+
+                <p>
+                    Loan applications, approvals, disbursements
+                    and repayment performance for the current month.
+                </p>
+
+            </div>
+
+            <div class="report-period">
+                <small>PERIOD</small>
+                <strong>SEP 2026</strong>
+            </div>
+
+            <a href="404.html" class="report-download">
+                <i class="fa-solid fa-download"></i>
+            </a>
+
+        </article>
+
+
+        <!-- Report 02 -->
+
+        <article class="report-library-item">
+
+            <div class="report-file">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>PDF</span>
+            </div>
+
+            <div class="report-library-info">
+
+                <span>CREDIT ANALYTICS</span>
+
+                <h4>
+                    Credit Portfolio Analysis
+                </h4>
+
+                <p>
+                    Overview of credit score distribution and
+                    lending risk across active customer profiles.
+                </p>
+
+            </div>
+
+            <div class="report-period">
+                <small>PERIOD</small>
+                <strong>AUG 2026</strong>
+            </div>
+
+            <a href="404.html" class="report-download">
+                <i class="fa-solid fa-download"></i>
+            </a>
+
+        </article>
+
+
+        <!-- Report 03 -->
+
+        <article class="report-library-item">
+
+            <div class="report-file">
+                <i class="fa-solid fa-money-bill-transfer"></i>
+                <span>CSV</span>
+            </div>
+
+            <div class="report-library-info">
+
+                <span>PAYMENT ANALYTICS</span>
+
+                <h4>
+                    Repayment Collection Report
+                </h4>
+
+                <p>
+                    Detailed collection activity including successful,
+                    pending and reconciled customer payments.
+                </p>
+
+            </div>
+
+            <div class="report-period">
+                <small>PERIOD</small>
+                <strong>AUG 2026</strong>
+            </div>
+
+            <a href="404.html" class="report-download">
+                <i class="fa-solid fa-download"></i>
+            </a>
+
+        </article>
+
+
+        <!-- Report 04 -->
+
+        <article class="report-library-item">
+
+            <div class="report-file">
+                <i class="fa-solid fa-users"></i>
+                <span>XLS</span>
+            </div>
+
+            <div class="report-library-info">
+
+                <span>CLIENT INSIGHTS</span>
+
+                <h4>
+                    Customer Lending Summary
+                </h4>
+
+                <p>
+                    Summary of customer activity, lending products
+                    and account engagement across the platform.
+                </p>
+
+            </div>
+
+            <div class="report-period">
+                <small>PERIOD</small>
+                <strong>Q3 2026</strong>
+            </div>
+
+            <a href="404.html" class="report-download">
+                <i class="fa-solid fa-download"></i>
+            </a>
+
+        </article>
+
+    </div>
+
+
+    <!-- Report Insight -->
+
+    <article class="report-insight">
+
+        <div class="report-insight-icon">
+            <i class="fa-solid fa-lightbulb"></i>
+        </div>
+
+        <div class="report-insight-content">
+
+            <span>MANAGEMENT INSIGHT</span>
+
+            <h4>
+                Lending activity continues to show steady growth
+            </h4>
+
+            <p>
+                Recent reporting indicates stronger application
+                activity and consistent repayment performance
+                across key lending categories.
+            </p>
+
+        </div>
+
+        <a href="404.html" class="report-insight-link">
+            View Analysis
+        
+        </a>
+
+    </article>
+
+</div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SETTINGS
+            ================================================== -->
+
+            <section
+                class="admin-page"
+                id="page-settings"
+            >
+
+                <div class="page-intro">
+
+                    <div>
+
+                        <span class="admin-eyebrow">
+                            ADMINISTRATION
+                        </span>
+
+                        <h2>
+                            Dashboard Settings
+                        </h2>
+
+                        <p>
+                            Manage your Stackly administrator
+                            workspace and platform preferences.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="settings-layout">
+
+
+                    <div class="settings-menu">
+
+                        <button class="setting-tab active">
+                            <i class="fa-solid fa-user-shield"></i>
+                            Admin Profile
+                        </button>
+
+                        <button class="setting-tab">
+                            <i class="fa-solid fa-bell"></i>
+                            Notifications
+                        </button>
+
+                        <button class="setting-tab">
+                            <i class="fa-solid fa-lock"></i>
+                            Security
+                        </button>
+
+                        <button class="setting-tab">
+                            <i class="fa-solid fa-sliders"></i>
+                            Preferences
+                        </button>
+
+                    </div>
+
+
+                    <div class="settings-content">
+
+                        <div class="settings-content-header">
+
+                            <span>
+                                PROFILE INFORMATION
+                            </span>
+
+                            <h3>
+                                Administrator Account
+                            </h3>
+
+                        </div>
+
+
+                        <div class="settings-profile">
+
+                            <div class="large-admin-avatar">
+                                A
+                            </div>
+
+                            <div>
+
+                                <strong>
+                                    Stackly Administrator
+                                </strong>
+
+                                <span id="settingsEmail">
+                                    admin@stackly.com
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="settings-fields">
+
+                            <div>
+                                <label>
+                                    Account Role
+                                </label>
+
+                                <input
+                                    type="text"
+                                    value="Administrator"
+                                    readonly
+                                >
+                            </div>
+
+
+                            <div>
+                                <label>
+                                    Platform
+                                </label>
+
+                                <input
+                                    type="text"
+                                    value="Stackly Credit & Lending"
+                                    readonly
+                                >
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="404.html"
+                            class="admin-primary-btn settings-save"
+                        >
+                            Update Settings
+                        
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="js/admin-dashboard.js"></script>
+
+</body>
+
+</html>

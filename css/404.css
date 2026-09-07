@@ -1,0 +1,686 @@
+/* =====================================================
+   STACKLY 404 PAGE
+===================================================== */
+
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+html,
+body {
+    width: 100%;
+
+    min-height: 100%;
+
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    background: #f8f7f6;
+
+    color: #171823;
+}
+
+
+/* =====================================================
+   PAGE
+===================================================== */
+
+.stackly-404-page {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 20px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(239, 56, 43, 0.055),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(23, 24, 35, 0.06),
+            transparent 30%
+        ),
+        #f8f7f6;
+}
+
+
+/* =====================================================
+   BACKGROUND DOT PATTERN
+===================================================== */
+
+.stackly-404-page::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.35;
+
+    background-image:
+        radial-gradient(
+            #d9d5d1 1px,
+            transparent 1px
+        );
+
+    background-size: 22px 22px;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   BACKGROUND CIRCLES
+===================================================== */
+
+.error-bg-circle {
+    position: absolute;
+
+    border: 1px solid
+        rgba(239, 56, 43, 0.12);
+
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+
+.error-circle-one {
+    width: 280px;
+
+    height: 280px;
+
+    left: -150px;
+
+    top: 12%;
+}
+
+
+.error-circle-two {
+    width: 360px;
+
+    height: 360px;
+
+    right: -200px;
+
+    bottom: 5%;
+}
+
+
+/* =====================================================
+   BACKGROUND DOTS
+===================================================== */
+
+.error-bg-dot {
+    position: absolute;
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #ef382b;
+
+    opacity: 0.35;
+
+    pointer-events: none;
+}
+
+
+.error-dot-one {
+    left: 18%;
+
+    top: 18%;
+}
+
+
+.error-dot-two {
+    right: 17%;
+
+    bottom: 18%;
+
+    width: 5px;
+
+    height: 5px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.stackly-404-card {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(580px, 100%);
+
+    padding: 42px 45px 44px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #e5dfdb;
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 25px 70px rgba(23, 24, 35, 0.08);
+
+    animation:
+        errorCardReveal 0.9s
+        cubic-bezier(.16,1,.3,1)
+        both;
+}
+
+
+@keyframes errorCardReveal {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(45px)
+            scale(0.96);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.stackly-404-logo {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    text-decoration: none;
+}
+
+
+.stackly-404-logo img {
+    width: 130px;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* =====================================================
+   404 VISUAL
+===================================================== */
+
+.stackly-404-visual {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-bottom: 14px;
+}
+
+
+.error-number {
+    color: #171823;
+
+    font-size: 112px;
+
+    line-height: 0.85;
+
+    font-weight: 800;
+
+    letter-spacing: -8px;
+
+    opacity: 0.08;
+}
+
+
+.error-icon {
+    position: relative;
+
+    width: 105px;
+
+    height: 105px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 3px;
+
+    color: #ef382b;
+
+    font-size: 48px;
+
+    background:
+        #fff6f4;
+
+    border-radius: 50%;
+
+    border: 1px solid
+        rgba(239, 56, 43, 0.14);
+
+    animation:
+        errorIconFloat 3s
+        ease-in-out
+        infinite;
+}
+
+
+.error-icon::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 10px;
+
+    border: 1px dashed
+        rgba(239, 56, 43, 0.25);
+
+    border-radius: 50%;
+}
+
+
+@keyframes errorIconFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-7px);
+    }
+
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.stackly-404-label {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #ef382b;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2.2px;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.stackly-404-content h1 {
+    margin-bottom: 13px;
+
+    color: #171823;
+
+    font-size: 29px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.stackly-404-content p {
+    max-width: 470px;
+
+    margin: 0 auto;
+
+    color: #68717d;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.stackly-404-buttons {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    margin-top: 28px;
+}
+
+
+/* =====================================================
+   HOME BUTTON
+===================================================== */
+
+.error-home-btn {
+    min-width: 175px;
+
+    height: 48px;
+
+    padding: 0 20px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    border-radius: 25px;
+
+    background: #ef382b;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.error-home-btn:hover {
+    background: #171823;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(23, 24, 35, 0.16);
+}
+
+
+.error-home-btn i {
+    transition:
+        transform 0.3s ease;
+}
+
+
+.error-home-btn:hover i {
+    transform: translateX(-4px);
+}
+
+
+/* =====================================================
+   PREVIOUS BUTTON
+===================================================== */
+
+.error-back-btn {
+    min-width: 190px;
+
+    height: 48px;
+
+    padding: 0 20px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    border: 1px solid #d8d1cd;
+
+    border-radius: 25px;
+
+    background: #ffffff;
+
+    color: #171823;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.error-back-btn:hover {
+    border-color: #ef382b;
+
+    background: #ef382b;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+
+.error-back-btn i {
+    transition:
+        transform 0.3s ease;
+}
+
+
+.error-back-btn:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .stackly-404-page {
+        padding: 30px 16px;
+    }
+
+
+    .stackly-404-card {
+        width: min(500px, 100%);
+
+        padding: 35px 25px 32px;
+
+        border-radius: 23px;
+    }
+
+
+    .stackly-404-logo img {
+        width: 120px;
+    }
+
+
+    .error-number {
+        font-size: 85px;
+    }
+
+
+    .error-icon {
+        width: 82px;
+
+        height: 82px;
+
+        font-size: 36px;
+    }
+
+
+    .stackly-404-content h1 {
+        font-size: 26px;
+    }
+
+
+    .stackly-404-content p {
+        font-size: 11px;
+
+        line-height: 1.75;
+    }
+
+
+    .stackly-404-buttons {
+        flex-direction: column;
+
+        gap: 10px;
+
+        width: 100%;
+    }
+
+
+    .error-home-btn,
+    .error-back-btn {
+        width: 100%;
+
+        max-width: 280px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .stackly-404-page {
+        min-height: 100svh;
+
+        padding: 20px 12px;
+    }
+
+
+    .stackly-404-card {
+        padding: 30px 18px;
+
+        border-radius: 20px;
+    }
+
+
+    .stackly-404-logo {
+        margin-bottom: 18px;
+    }
+
+
+    .stackly-404-logo img {
+        width: 110px;
+    }
+
+
+    .stackly-404-visual {
+        margin-bottom: 10px;
+    }
+
+
+    .error-number {
+        font-size: 68px;
+
+        letter-spacing: -5px;
+    }
+
+
+    .error-icon {
+        width: 68px;
+
+        height: 68px;
+
+        font-size: 28px;
+    }
+
+
+    .error-icon::before {
+        inset: 7px;
+    }
+
+
+    .stackly-404-content h1 {
+        font-size: 23px;
+    }
+
+
+    .stackly-404-content p {
+        font-size: 10.5px;
+    }
+
+
+    .stackly-404-buttons {
+        margin-top: 22px;
+    }
+
+
+    .error-home-btn,
+    .error-back-btn {
+        height: 45px;
+
+        font-size: 10px;
+    }
+
+}

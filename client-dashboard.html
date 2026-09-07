@@ -1,0 +1,2077 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Stackly Client Dashboard</title>
+
+
+    <!-- Font Awesome -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- Dashboard CSS -->
+
+    <link
+        rel="stylesheet"
+        href="css/client-dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="client-dashboard">
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside
+        class="client-sidebar"
+        id="clientSidebar"
+    >
+
+
+        <!-- LOGO -->
+
+        <a
+            href="#overview"
+            class="client-logo"
+            data-page="overview"
+        >
+
+            <img
+                src="assets/red-logo.webp"
+                alt="Stackly Credit & Lending"
+            >
+
+        </a>
+
+
+        <!-- PROFILE -->
+
+        <div class="sidebar-profile">
+
+            <div class="profile-avatar">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <div class="profile-details">
+
+                <strong>
+                    Stackly Client
+                </strong>
+
+                <span
+                    id="sidebarEmail"
+                >
+                    client@stackly.com
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="client-navigation">
+
+
+            <p class="navigation-label">
+                MAIN MENU
+            </p>
+
+
+            <a
+                href="#overview"
+                class="dashboard-nav active"
+                data-page="overview"
+            >
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+                <span>
+                    Overview
+                </span>
+
+            </a>
+
+
+            <a
+                href="#loans"
+                class="dashboard-nav"
+                data-page="loans"
+            >
+
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+
+                <span>
+                    My Loans
+                </span>
+
+            </a>
+
+
+            <a
+                href="#credit"
+                class="dashboard-nav"
+                data-page="credit"
+            >
+
+                <i class="fa-solid fa-credit-card"></i>
+
+                <span>
+                    Credit Health
+                </span>
+
+            </a>
+
+
+            <a
+                href="#applications"
+                class="dashboard-nav"
+                data-page="applications"
+            >
+
+                <i class="fa-solid fa-file-circle-check"></i>
+
+                <span>
+                    Applications
+                </span>
+
+            </a>
+
+
+            <a
+                href="#payments"
+                class="dashboard-nav"
+                data-page="payments"
+            >
+
+                <i class="fa-solid fa-money-bill-transfer"></i>
+
+                <span>
+                    Payments
+                </span>
+
+            </a>
+
+
+            <p class="navigation-label second-label">
+                SUPPORT
+            </p>
+
+
+            <a
+                href="#profile"
+                class="dashboard-nav"
+                data-page="profile"
+            >
+
+                <i class="fa-solid fa-user-gear"></i>
+
+                <span>
+                    My Profile
+                </span>
+
+            </a>
+
+
+            <a
+                href="#support"
+                class="dashboard-nav"
+                data-page="support"
+            >
+
+                <i class="fa-solid fa-headset"></i>
+
+                <span>
+                    Support Center
+                </span>
+
+            </a>
+
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+
+            <a
+                href="404.html"
+                class="sidebar-help"
+            >
+
+                <i class="fa-solid fa-circle-question"></i>
+
+                <span>
+                    Need Help?
+                </span>
+
+            </a>
+
+
+            <a
+                href="login.html"
+                class="sidebar-logout"
+            >
+
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
+                <span>
+                    Sign Out
+                </span>
+
+            </a>
+
+        </div>
+
+
+    </aside>
+
+
+    <!-- SIDEBAR OVERLAY -->
+
+    <div
+        class="sidebar-overlay"
+        id="sidebarOverlay"
+    ></div>
+
+
+    <!-- =====================================================
+         MAIN AREA
+    ====================================================== -->
+
+    <main class="client-main">
+
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
+
+        <header class="client-header">
+
+
+            <div class="header-left">
+
+
+                <button
+                    class="mobile-menu-btn"
+                    id="mobileMenuBtn"
+                    type="button"
+                >
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+                <div class="header-title">
+
+                    <h1 id="pageTitle">
+                        Overview
+                    </h1>
+
+                    <p id="pageSubtitle">
+                        Your personal credit and lending journey
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-actions">
+
+
+                <!-- SEARCH -->
+
+                <a
+                    href="404.html"
+                    class="header-icon"
+                    aria-label="Search"
+                >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </a>
+
+
+                <!-- BELL -->
+
+                <a
+                    href="404.html"
+                    class="header-icon notification-icon"
+                    aria-label="Notifications"
+                >
+
+                    <i class="fa-regular fa-bell"></i>
+
+                    <span></span>
+
+                </a>
+
+
+                <!-- USER -->
+
+                <div class="header-avatar">
+
+                    <span>
+                        C
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             PAGE CONTAINER
+        ================================================== -->
+
+        <div class="dashboard-content">
+
+
+            <!-- =================================================
+                 OVERVIEW PAGE
+            ================================================== -->
+
+            <section
+                class="dashboard-page active-page"
+                id="page-overview"
+                data-title="Overview"
+                data-subtitle="Your personal credit and lending journey"
+            >
+
+
+                <!-- WELCOME -->
+
+                <div class="overview-welcome">
+
+                    <div>
+
+                        <span class="welcome-label">
+                            STACKLY CLIENT PORTAL
+                        </span>
+
+                        <h2>
+                            Welcome back,
+                            <strong id="welcomeEmail">
+                                Client
+                            </strong>
+                        </h2>
+
+                        <p>
+                            Review your lending options, monitor your
+                            credit progress and keep your financial
+                            journey moving forward.
+                        </p>
+
+                    </div>
+
+
+                    <a
+                        href="404.html"
+                        class="dashboard-primary-btn"
+                    >
+
+                        Explore Lending
+
+                    
+
+                    </a>
+
+                </div>
+
+
+                <!-- OVERVIEW STATS -->
+
+                <div class="overview-stat-grid">
+
+
+                    <article class="overview-stat-card">
+
+                        <div class="stat-icon red">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <span>
+                            CREDIT SCORE
+                        </span>
+
+                        <strong>
+                            742
+                        </strong>
+
+                        <small>
+                            Good standing
+                        </small>
+
+                    </article>
+
+
+                    <article class="overview-stat-card">
+
+                        <div class="stat-icon dark">
+                            <i class="fa-solid fa-wallet"></i>
+                        </div>
+
+                        <span>
+                            ACTIVE LOANS
+                        </span>
+
+                        <strong>
+                            02
+                        </strong>
+
+                        <small>
+                            1 payment upcoming
+                        </small>
+
+                    </article>
+
+
+                    <article class="overview-stat-card">
+
+                        <div class="stat-icon light">
+                            <i class="fa-solid fa-file-circle-check"></i>
+                        </div>
+
+                        <span>
+                            APPLICATIONS
+                        </span>
+
+                        <strong>
+                            03
+                        </strong>
+
+                        <small>
+                            1 under review
+                        </small>
+
+                    </article>
+
+
+                    <article class="overview-stat-card">
+
+                        <div class="stat-icon red">
+                            <i class="fa-solid fa-percent"></i>
+                        </div>
+
+                        <span>
+                            ELIGIBILITY
+                        </span>
+
+                        <strong>
+                            86%
+                        </strong>
+
+                        <small>
+                            Strong lending profile
+                        </small>
+
+                    </article>
+
+
+                </div>
+
+
+                <!-- LOWER AREA -->
+
+                <div class="overview-grid">
+
+
+                    <!-- CREDIT PROGRESS -->
+
+                    <div class="credit-progress-card">
+
+                        <div class="section-card-heading">
+
+                            <div>
+
+                                <span>
+                                    CREDIT PROFILE
+                                </span>
+
+                                <h3>
+                                    Your credit health
+                                </h3>
+
+                            </div>
+
+                            <a href="404.html">
+                                View Report
+                            </a>
+
+                        </div>
+
+
+                        <div class="credit-score-display">
+
+                            <div class="score-circle">
+
+                                <div>
+
+                                    <strong>
+                                        742
+                                    </strong>
+
+                                    <span>
+                                        SCORE
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="score-info">
+
+                                <h4>
+                                    Good Credit Standing
+                                </h4>
+
+                                <p>
+                                    Your current score gives you
+                                    access to a range of lending
+                                    opportunities.
+                                </p>
+
+                                <div class="progress-line">
+
+                                    <span></span>
+
+                                </div>
+
+                                <small>
+                                    86% of your target range
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- QUICK ACTIONS -->
+
+                    <div class="quick-actions-card">
+
+                        <div class="section-card-heading">
+
+                            <div>
+
+                                <span>
+                                    QUICK ACTIONS
+                                </span>
+
+                                <h3>
+                                    Manage your account
+                                </h3>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="404.html"
+                            class="quick-action"
+                        >
+
+                            <i class="fa-solid fa-hand-holding-dollar"></i>
+
+                            <div>
+
+                                <strong>
+                                    Explore a Loan
+                                </strong>
+
+                                <span>
+                                    Find financing options
+                                </span>
+
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                        <a
+                            href="404.html"
+                            class="quick-action"
+                        >
+
+                            <i class="fa-solid fa-file-lines"></i>
+
+                            <div>
+
+                                <strong>
+                                    Check Application
+                                </strong>
+
+                                <span>
+                                    Review application progress
+                                </span>
+
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                        <a
+                            href="404.html"
+                            class="quick-action"
+                        >
+
+                            <i class="fa-solid fa-chart-column"></i>
+
+                            <div>
+
+                                <strong>
+                                    Improve Credit
+                                </strong>
+
+                                <span>
+                                    See recommended actions
+                                </span>
+
+                            </div>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- INSIGHT -->
+
+                <div class="dashboard-insight">
+
+                    <div class="insight-icon">
+
+                        <i class="fa-solid fa-lightbulb"></i>
+
+                    </div>
+
+                    <div>
+
+                        <span>
+                            STACKLY INSIGHT
+                        </span>
+
+                        <h3>
+                            Keeping your credit utilization low
+                            can support a healthier credit profile.
+                        </h3>
+
+                    </div>
+
+                    <a href="404.html">
+                        Learn More
+                    </a>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 LOANS PAGE
+            ================================================== -->
+
+            <section
+                class="dashboard-page"
+                id="page-loans"
+                data-title="My Loans"
+                data-subtitle="Review your current lending products"
+            >
+
+
+                <div class="page-intro dark-intro">
+
+                    <span>
+                        LENDING PORTFOLIO
+                    </span>
+
+                    <h2>
+                        Manage your active loans
+                    </h2>
+
+                    <p>
+                        Keep track of your current borrowing,
+                        repayment progress and available lending
+                        opportunities from one place.
+                    </p>
+
+                    <a
+                        href="404.html"
+                        class="dashboard-primary-btn"
+                    >
+                        Explore New Loan
+                    </a>
+
+                </div>
+
+
+                <div class="loan-list">
+
+
+                    <article class="loan-card">
+
+                        <div class="loan-card-top">
+
+                            <div class="loan-product-icon">
+                                <i class="fa-solid fa-house"></i>
+                            </div>
+
+                            <span class="loan-status">
+                                ACTIVE
+                            </span>
+
+                        </div>
+
+                        <span>
+                            HOME FINANCE
+                        </span>
+
+                        <h3>
+                            Home Loan
+                        </h3>
+
+                        <div class="loan-details">
+
+                            <div>
+                                <small>
+                                    OUTSTANDING
+                                </small>
+
+                                <strong>
+                                    ₹18,40,000
+                                </strong>
+                            </div>
+
+                            <div>
+                                <small>
+                                    MONTHLY PAYMENT
+                                </small>
+
+                                <strong>
+                                    ₹24,800
+                                </strong>
+                            </div>
+
+                        </div>
+
+                        <div class="loan-progress">
+
+                            <div>
+                                <span>
+                                    Repayment progress
+                                </span>
+
+                                <strong>
+                                    64%
+                                </strong>
+                            </div>
+
+                            <div class="loan-progress-bar">
+                                <span></span>
+                            </div>
+
+                        </div>
+
+                        <a href="404.html">
+                            View Loan Details
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+                    <article class="loan-card">
+
+                        <div class="loan-card-top">
+
+                            <div class="loan-product-icon">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+
+                            <span class="loan-status">
+                                ACTIVE
+                            </span>
+
+                        </div>
+
+                        <span>
+                            PERSONAL FINANCE
+                        </span>
+
+                        <h3>
+                            Personal Loan
+                        </h3>
+
+                        <div class="loan-details">
+
+                            <div>
+                                <small>
+                                    OUTSTANDING
+                                </small>
+
+                                <strong>
+                                    ₹4,85,000
+                                </strong>
+                            </div>
+
+                            <div>
+                                <small>
+                                    MONTHLY PAYMENT
+                                </small>
+
+                                <strong>
+                                    ₹14,200
+                                </strong>
+                            </div>
+
+                        </div>
+
+                        <div class="loan-progress">
+
+                            <div>
+                                <span>
+                                    Repayment progress
+                                </span>
+
+                                <strong>
+                                    41%
+                                </strong>
+                            </div>
+
+                            <div class="loan-progress-bar">
+                                <span></span>
+                            </div>
+
+                        </div>
+
+                        <a href="404.html">
+                            View Loan Details
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </article>
+
+
+                </div>
+               
+                <div class="loan-extra-content">
+
+    <article class="loan-mini-card">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        <div>
+            <span>PROTECTION</span>
+            <h3>Secure Your Loan</h3>
+            <p>
+                Keep your repayment information and
+                lending activity protected.
+            </p>
+        </div>
+
+        <a href="404.html">
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </article>
+
+
+    <article class="loan-mini-card">
+
+        <i class="fa-solid fa-chart-line"></i>
+
+        <div>
+            <span>CREDIT HEALTH</span>
+            <h3>Improve Your Credit</h3>
+            <p>
+                Explore simple ways to build a
+                stronger credit profile.
+            </p>
+        </div>
+
+        <a href="404.html">
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </article>
+
+
+    <article class="loan-mini-card">
+
+        <i class="fa-solid fa-hand-holding-dollar"></i>
+
+        <div>
+            <span>FINANCIAL SUPPORT</span>
+            <h3>Need Lending Guidance?</h3>
+            <p>
+                Get helpful guidance for your next
+                borrowing decision.
+            </p>
+        </div>
+
+        <a href="404.html">
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </article>
+
+</div>
+
+                <div class="loan-banner">
+
+                    <div>
+
+                        <span>
+                            LOOKING FOR MORE FINANCING?
+                        </span>
+
+                        <h3>
+                            Find a lending option designed
+                            around your goals.
+                        </h3>
+
+                    </div>
+
+                    <a href="404.html">
+                        View Options
+                
+                    </a>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 CREDIT PAGE
+            ================================================== -->
+
+            <section
+                class="dashboard-page"
+                id="page-credit"
+                data-title="Credit Health"
+                data-subtitle="Understand and improve your credit profile"
+            >
+
+
+                <div class="credit-page-header">
+
+                    <span>
+                        CREDIT HEALTH
+                    </span>
+
+                    <h2>
+                        Build stronger financial confidence.
+                    </h2>
+
+                    <p>
+                        Understand the factors influencing your credit
+                        profile and take practical steps toward healthier
+                        borrowing.
+                    </p>
+
+                </div>
+
+
+                <div class="credit-health-layout">
+
+
+                    <div class="credit-health-score">
+
+                        <div class="big-score-circle">
+
+                            <strong>
+                                742
+                            </strong>
+
+                            <span>
+                                GOOD
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Your credit score
+                        </h3>
+
+                        <p>
+                            Your current score is within a healthy
+                            lending range.
+                        </p>
+
+                        <a href="404.html">
+                            View Full Credit Report
+                        </a>
+
+                    </div>
+
+
+                    <div class="credit-factors">
+
+
+                        <div class="credit-factor">
+
+                            <div class="factor-icon">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    PAYMENT HISTORY
+                                </span>
+
+                                <strong>
+                                    Excellent
+                                </strong>
+
+                            </div>
+
+                            <b>
+                                92%
+                            </b>
+
+                        </div>
+
+
+                        <div class="credit-factor">
+
+                            <div class="factor-icon">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    CREDIT UTILIZATION
+                                </span>
+
+                                <strong>
+                                    Good
+                                </strong>
+
+                            </div>
+
+                            <b>
+                                78%
+                            </b>
+
+                        </div>
+
+
+                        <div class="credit-factor">
+
+                            <div class="factor-icon">
+                                <i class="fa-solid fa-clock-rotate-left"></i>
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    CREDIT HISTORY
+                                </span>
+
+                                <strong>
+                                    Strong
+                                </strong>
+
+                            </div>
+
+                            <b>
+                                84%
+                            </b>
+
+                        </div>
+
+
+                        <div class="credit-factor">
+
+                            <div class="factor-icon">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    ACCOUNT MIX
+                                </span>
+
+                                <strong>
+                                    Good
+                                </strong>
+
+                            </div>
+
+                            <b>
+                                81%
+                            </b>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="credit-tips">
+
+                    <div class="credit-tip">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        <div>
+
+                            <h3>
+                                Pay on time
+                            </h3>
+
+                            <p>
+                                Consistent payments can help
+                                maintain a healthier credit profile.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="credit-tip">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <div>
+
+                            <h3>
+                                Monitor utilization
+                            </h3>
+
+                            <p>
+                                Keep revolving credit balances
+                                comfortably below available limits.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="credit-tip">
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <div>
+
+                            <h3>
+                                Review your report
+                            </h3>
+
+                            <p>
+                                Check your information regularly
+                                and address unexpected changes.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="credit-health-extra">
+
+    <article class="credit-health-mini">
+        <div class="credit-health-icon">
+            <i class="fa-solid fa-gauge-high"></i>
+        </div>
+
+        <div class="credit-health-content">
+            <span>CREDIT MONITORING</span>
+            <h3>Track Your Credit Activity</h3>
+            <p>Stay aware of changes that may affect your overall credit profile.</p>
+        </div>
+
+        <a href="404.html" aria-label="Track credit activity">
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </article>
+
+
+    <article class="credit-health-mini">
+        <div class="credit-health-icon">
+            <i class="fa-solid fa-file-circle-check"></i>
+        </div>
+
+        <div class="credit-health-content">
+            <span>CREDIT REPORT</span>
+            <h3>Review Your Credit Report</h3>
+            <p>Check your credit information carefully and identify areas that need attention.</p>
+        </div>
+
+        <a href="404.html" aria-label="Review credit report">
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </article>
+
+
+    <article class="credit-health-mini">
+        <div class="credit-health-icon">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+        </div>
+
+        <div class="credit-health-content">
+            <span>CREDIT PROGRESS</span>
+            <h3>Build Better Credit Habits</h3>
+            <p>Follow responsible financial habits to support long-term credit improvement.</p>
+        </div>
+
+        <a href="404.html" aria-label="Build credit habits">
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </article>
+
+</div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 APPLICATIONS
+            ================================================== -->
+
+            <section
+                class="dashboard-page"
+                id="page-applications"
+                data-title="Applications"
+                data-subtitle="Track your lending applications"
+            >
+
+
+                <div class="applications-heading">
+
+                    <div>
+
+                        <span>
+                            APPLICATION CENTER
+                        </span>
+
+                        <h2>
+                            Your lending applications
+                        </h2>
+
+                    </div>
+
+                    <a
+                        href="404.html"
+                        class="dashboard-primary-btn"
+                    >
+                        Start New Application
+                    </a>
+
+                </div>
+
+
+                <div class="application-timeline">
+
+
+                    <div class="application-item completed">
+
+                        <div class="application-number">
+                            01
+                        </div>
+
+                        <div class="application-info">
+
+                            <span>
+                                PERSONAL LOAN
+                            </span>
+
+                            <h3>
+                                Personal Loan Application
+                            </h3>
+
+                            <p>
+                                Application documents successfully
+                                submitted and verified.
+                            </p>
+
+                        </div>
+
+                        <strong>
+                            VERIFIED
+                        </strong>
+
+                    </div>
+
+
+                    <div class="application-item active">
+
+                        <div class="application-number">
+                            02
+                        </div>
+
+                        <div class="application-info">
+
+                            <span>
+                                BUSINESS FINANCE
+                            </span>
+
+                            <h3>
+                                Small Business Loan
+                            </h3>
+
+                            <p>
+                                Our lending team is reviewing
+                                your application information.
+                            </p>
+
+                        </div>
+
+                        <strong>
+                            UNDER REVIEW
+                        </strong>
+
+                    </div>
+
+
+                    <div class="application-item pending">
+
+                        <div class="application-number">
+                            03
+                        </div>
+
+                        <div class="application-info">
+
+                            <span>
+                                CREDIT SUPPORT
+                            </span>
+
+                            <h3>
+                                Credit Improvement Request
+                            </h3>
+
+                            <p>
+                                Complete the requested information
+                                to continue.
+                            </p>
+
+                        </div>
+
+                        <strong>
+                            PENDING
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="application-help">
+
+                    <i class="fa-solid fa-file-signature"></i>
+
+                    <div>
+
+                        <h3>
+                            Need help with an application?
+                        </h3>
+
+                        <p>
+                            Our support team can help you understand
+                            the next steps in your lending journey.
+                        </p>
+
+                    </div>
+
+                    <a href="404.html">
+                        Contact Support
+                    </a>
+
+                </div>
+
+
+                <div class="applications-extra">
+
+    <article class="application-mini">
+        <div class="application-mini-number">01</div>
+
+        <div class="application-mini-content">
+            <span>DOCUMENT CHECK</span>
+            <h3>Prepare Your Documents</h3>
+            <p>Keep your income, identity and financial documents ready for a smoother application.</p>
+        </div>
+
+        <a href="404.html" aria-label="Prepare documents">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+    </article>
+
+
+    <article class="application-mini">
+        <div class="application-mini-number">02</div>
+
+        <div class="application-mini-content">
+            <span>APPLICATION STATUS</span>
+            <h3>Check Your Progress</h3>
+            <p>Review the current stage of your submitted lending application and next steps.</p>
+        </div>
+
+        <a href="404.html" aria-label="Check application progress">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+    </article>
+
+
+    <article class="application-mini">
+        <div class="application-mini-number">03</div>
+
+        <div class="application-mini-content">
+            <span>FINANCIAL PLANNING</span>
+            <h3>Choose The Right Option</h3>
+            <p>Compare lending options and consider the repayment structure before applying.</p>
+        </div>
+
+        <a href="404.html" aria-label="Explore lending options">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+    </article>
+
+
+    <article class="application-mini">
+        <div class="application-mini-number">04</div>
+
+        <div class="application-mini-content">
+            <span>APPLICATION SUPPORT</span>
+            <h3>Get Application Help</h3>
+            <p>Find useful guidance if you need assistance during the lending application process.</p>
+        </div>
+
+        <a href="404.html" aria-label="Get application help">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+    </article>
+
+</div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PAYMENTS
+            ================================================== -->
+
+            <section
+                class="dashboard-page"
+                id="page-payments"
+                data-title="Payments"
+                data-subtitle="Review your repayment activity"
+            >
+
+
+                <div class="payments-top">
+
+                    <span>
+                        REPAYMENT CENTER
+                    </span>
+
+                    <h2>
+                        Stay on top of your payments.
+                    </h2>
+
+                    <p>
+                        Review your repayment information and
+                        access convenient payment options.
+                    </p>
+
+                </div>
+
+
+                <div class="payment-balance-card">
+
+                    <div>
+
+                        <span>
+                            TOTAL OUTSTANDING
+                        </span>
+
+                        <strong>
+                            ₹23,25,000
+                        </strong>
+
+                    </div>
+
+                    <div class="balance-icon">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                    </div>
+
+                </div>
+
+
+                <div class="payment-table-wrap">
+
+                    <h3>
+                        Payment Activity
+                    </h3>
+
+
+                    <div class="payment-row payment-heading">
+
+                        <span>
+                            LOAN
+                        </span>
+
+                        <span>
+                            PAYMENT
+                        </span>
+
+                        <span>
+                            STATUS
+                        </span>
+
+                        <span>
+                            ACTION
+                        </span>
+
+                    </div>
+
+
+                    <div class="payment-row">
+
+                        <span>
+                            Home Loan
+                        </span>
+
+                        <strong>
+                            ₹24,800
+                        </strong>
+
+                        <b class="paid">
+                            Paid
+                        </b>
+
+                        <a href="404.html">
+                            View
+                        </a>
+
+                    </div>
+
+
+                    <div class="payment-row">
+
+                        <span>
+                            Personal Loan
+                        </span>
+
+                        <strong>
+                            ₹14,200
+                        </strong>
+
+                        <b class="upcoming">
+                            Upcoming
+                        </b>
+
+                        <a href="404.html">
+                            Manage
+                        </a>
+
+                    </div>
+
+
+                    <div class="payment-row">
+
+                        <span>
+                            Business Loan
+                        </span>
+
+                        <strong>
+                            ₹18,500
+                        </strong>
+
+                        <b class="paid">
+                            Paid
+                        </b>
+
+                        <a href="404.html">
+                            View
+                        </a>
+
+                    </div>
+
+                </div><div class="payments-extra">
+
+    <article class="payment-summary-card">
+        <div class="payment-summary-top">
+            <span>UPCOMING PAYMENT</span>
+            <i class="fa-regular fa-calendar-check"></i>
+        </div>
+
+        <div class="payment-summary-amount">
+            ₹18,600
+        </div>
+
+        <p>Small Business Loan</p>
+
+        <div class="payment-summary-bottom">
+            <div>
+                <small>Due Date</small>
+                <strong>15 Sep 2026</strong>
+            </div>
+
+            <a href="404.html">Pay Now</a>
+        </div>
+    </article>
+
+
+    <article class="payment-summary-card">
+        <div class="payment-summary-top">
+            <span>RECENT PAYMENT</span>
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+
+        <div class="payment-summary-amount">
+            ₹9,750
+        </div>
+
+        <p>Education Loan</p>
+
+        <div class="payment-summary-bottom">
+            <div>
+                <small>Paid On</small>
+                <strong>28 Aug 2026</strong>
+            </div>
+
+            <a href="404.html">View Receipt</a>
+        </div>
+    </article>
+
+
+    <article class="payment-summary-card">
+        <div class="payment-summary-top">
+            <span>AUTO DEBIT</span>
+            <i class="fa-solid fa-arrows-rotate"></i>
+        </div>
+
+        <div class="payment-summary-amount">
+            Active
+        </div>
+
+        <p>Automatic repayment is enabled</p>
+
+        <div class="payment-summary-bottom">
+            <div>
+                <small>Next Debit</small>
+                <strong>15 Sep 2026</strong>
+            </div>
+
+            <a href="404.html">Manage</a>
+        </div>
+    </article>
+
+
+    <article class="payment-summary-card">
+        <div class="payment-summary-top">
+            <span>PAYMENT HISTORY</span>
+            <i class="fa-solid fa-receipt"></i>
+        </div>
+
+        <div class="payment-summary-amount">
+            24
+        </div>
+
+        <p>Successful repayments recorded</p>
+
+        <div class="payment-summary-bottom">
+            <div>
+                <small>Latest Activity</small>
+                <strong>28 Aug 2026</strong>
+            </div>
+
+            <a href="404.html">View History</a>
+        </div>
+    </article>
+
+</div>
+
+
+
+
+                <div class="payment-action">
+
+                    <div>
+
+                        <i class="fa-solid fa-shield-halved"></i>
+
+                        <div>
+
+                            <h3>
+                                Secure payment assistance
+                            </h3>
+
+                            <p>
+                                Need help understanding your repayment
+                                options?
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="404.html">
+                        Get Assistance
+                    </a>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 PROFILE
+            ================================================== -->
+
+            <section
+                class="dashboard-page"
+                id="page-profile"
+                data-title="My Profile"
+                data-subtitle="Manage your Stackly account information"
+            >
+
+
+                <div class="profile-page-header">
+
+                    <div class="large-profile-avatar">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+
+                    <div>
+
+                        <span>
+                            CLIENT PROFILE
+                        </span>
+
+                        <h2>
+                            Your Stackly account
+                        </h2>
+
+                        <p>
+                            Keep your account information
+                            up to date.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="profile-information">
+
+
+                    <div class="profile-information-block">
+
+                        <span>
+                            PERSONAL INFORMATION
+                        </span>
+
+                        <div class="profile-field">
+
+                            <small>
+                                FULL NAME
+                            </small>
+
+                            <strong>
+                                Stackly Client
+                            </strong>
+
+                        </div>
+
+                        <div class="profile-field">
+
+                            <small>
+                                EMAIL ADDRESS
+                            </small>
+
+                            <strong id="profileEmail">
+                                client@stackly.com
+                            </strong>
+
+                        </div>
+
+                        <div class="profile-field">
+
+                            <small>
+                                ACCOUNT TYPE
+                            </small>
+
+                            <strong>
+                                Client Account
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-security">
+
+                        <span>
+                            ACCOUNT SECURITY
+                        </span>
+
+                        <div class="security-item">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <div>
+
+                                <strong>
+                                    Password Protection
+                                </strong>
+
+                                <small>
+                                    Your account is protected
+                                    with secure credentials.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="security-item">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                            <div>
+
+                                <strong>
+                                    Secure Lending Access
+                                </strong>
+
+                                <small>
+                                    Your financial information
+                                    stays protected.
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <a href="404.html">
+                            Manage Security
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================================
+                 SUPPORT
+            ================================================== -->
+
+            <section
+                class="dashboard-page"
+                id="page-support"
+                data-title="Support Center"
+                data-subtitle="We're here to help with your lending journey"
+            >
+
+
+                <div class="support-hero">
+
+                    <div>
+
+                        <span>
+                            STACKLY SUPPORT
+                        </span>
+
+                        <h2>
+                            How can we help you?
+                        </h2>
+
+                        <p>
+                            Find assistance for your applications,
+                            credit profile, repayments and lending
+                            questions.
+                        </p>
+
+                    </div>
+
+                    <div class="support-hero-icon">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                    </div>
+
+                </div>
+
+
+                <div class="support-grid">
+
+
+                    <a
+                        href="404.html"
+                        class="support-card"
+                    >
+
+                        <i class="fa-solid fa-file-circle-question"></i>
+
+                        <h3>
+                            Application Help
+                        </h3>
+
+                        <p>
+                            Get guidance about documents,
+                            application progress and next steps.
+                        </p>
+
+                        <span>
+                            Get Help
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="404.html"
+                        class="support-card"
+                    >
+
+                        <i class="fa-solid fa-credit-card"></i>
+
+                        <h3>
+                            Credit Questions
+                        </h3>
+
+                        <p>
+                            Learn more about your credit profile,
+                            score and improvement options.
+                        </p>
+
+                        <span>
+                            Learn More
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="404.html"
+                        class="support-card"
+                    >
+
+                        <i class="fa-solid fa-money-bill-transfer"></i>
+
+                        <h3>
+                            Payment Support
+                        </h3>
+
+                        <p>
+                            Find assistance with repayments,
+                            balances and payment information.
+                        </p>
+
+                        <span>
+                            Get Assistance
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+
+                <div class="support-contact">
+
+                    <div>
+
+                        <span>
+                            STILL NEED HELP?
+                        </span>
+
+                        <h3>
+                            Speak with the Stackly support team.
+                        </h3>
+
+                    </div>
+
+                    <a href="404.html">
+                        Contact Us
+                    </a>
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<!-- GSAP -->
+
+<script
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js">
+</script>
+
+
+<!-- Dashboard JS -->
+
+<script src="js/client-dashboard.js"></script>
+
+
+</body>
+</html>

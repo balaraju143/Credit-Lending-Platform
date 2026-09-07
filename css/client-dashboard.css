@@ -1,0 +1,4399 @@
+/* =====================================================
+   STACKLY CLIENT DASHBOARD
+===================================================== */
+
+:root {
+
+    --stackly-red: #ef382b;
+    --stackly-dark: #191923;
+    --stackly-purple: #25243e;
+    --stackly-text: #20202d;
+    --stackly-muted: #777984;
+
+    --stackly-bg: #f5f3f2;
+    --stackly-white: #ffffff;
+
+    --stackly-border: #e8e4e2;
+
+}
+
+
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    width: 100%;
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--stackly-bg);
+
+    color: var(--stackly-text);
+}
+
+
+a {
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+button,
+input {
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   DASHBOARD WRAPPER
+===================================================== */
+
+.client-dashboard {
+    min-height: 100vh;
+
+    display: flex;
+
+    background: var(--stackly-bg);
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.client-sidebar {
+    position: fixed;
+
+    left: 0;
+
+    top: 0;
+
+    width: 245px;
+
+    height: 100vh;
+
+    z-index: 1000;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 27px 18px;
+
+    background: var(--stackly-dark);
+
+    color: #ffffff;
+
+    border-right:
+        1px solid rgba(255,255,255,.05);
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.client-logo {
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.client-logo img {
+    width: 130px;
+
+    height: auto;
+
+}
+
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.sidebar-profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding:
+        13px 10px;
+
+    margin-bottom: 25px;
+
+    border:
+        1px solid rgba(255,255,255,.08);
+
+    border-radius: 11px;
+
+    background:
+        rgba(255,255,255,.035);
+}
+
+
+.profile-avatar {
+    width: 36px;
+
+    height: 36px;
+
+    flex: 0 0 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--stackly-red);
+
+    color: #ffffff;
+
+    font-size: 12px;
+}
+
+
+.profile-details {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.profile-details strong {
+    font-size: 11px;
+}
+
+
+.profile-details span {
+    overflow: hidden;
+
+    color: #a9a9b4;
+
+    font-size: 8px;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.client-navigation {
+    flex: 1;
+}
+
+
+.navigation-label {
+    margin:
+        0 10px 10px;
+
+    color: #72727e;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.second-label {
+    margin-top: 27px;
+}
+
+
+.dashboard-nav {
+    position: relative;
+
+    height: 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding:
+        0 13px;
+
+    margin-bottom: 4px;
+
+    border-radius: 8px;
+
+    color: #a7a7b2;
+
+    font-size: 10px;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+.dashboard-nav i {
+    width: 18px;
+
+    text-align: center;
+
+    font-size: 12px;
+}
+
+
+.dashboard-nav:hover {
+    color: #ffffff;
+
+    background:
+        rgba(239,56,43,.12);
+
+    transform: translateX(3px);
+}
+
+
+.dashboard-nav.active {
+    color: #ffffff;
+
+    background: var(--stackly-red);
+
+    box-shadow:
+        0 7px 20px
+        rgba(239,56,43,.18);
+}
+
+
+.dashboard-nav.active i {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   SIDEBAR BOTTOM
+===================================================== */
+
+.sidebar-bottom {
+    padding-top: 18px;
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+}
+
+
+.sidebar-help,
+.sidebar-logout {
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 11px;
+
+    color: #9999a5;
+
+    font-size: 9px;
+
+    border-radius: 7px;
+
+    transition:
+        color .3s ease,
+        background .3s ease;
+}
+
+
+.sidebar-help:hover,
+.sidebar-logout:hover {
+    color: #ffffff;
+
+    background:
+        rgba(255,255,255,.05);
+}
+
+
+.sidebar-logout {
+    color: var(--stackly-red);
+
+    margin-top: 2px;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.client-main {
+    width: calc(100% - 245px);
+
+    min-height: 100vh;
+
+    margin-left: 245px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.client-header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 500;
+
+    height: 78px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 42px;
+
+    background:
+        rgba(255,255,255,.94);
+
+    border-bottom:
+        1px solid var(--stackly-border);
+
+    backdrop-filter: blur(12px);
+}
+
+
+.header-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.header-title h1 {
+    color: var(--stackly-text);
+
+    font-size: 18px;
+
+    line-height: 1.2;
+}
+
+
+.header-title p {
+    margin-top: 3px;
+
+    color: var(--stackly-muted);
+
+    font-size: 9px;
+}
+
+
+.header-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.header-icon {
+    position: relative;
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid var(--stackly-border);
+
+    border-radius: 9px;
+
+    color: #6f6d7a;
+
+    font-size: 12px;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease;
+}
+
+
+.header-icon:hover {
+    color: var(--stackly-red);
+
+    border-color:
+        rgba(239,56,43,.25);
+
+    background:
+        rgba(239,56,43,.05);
+}
+
+
+.notification-icon span {
+    position: absolute;
+
+    right: 8px;
+
+    top: 7px;
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--stackly-red);
+}
+
+
+.header-avatar {
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-left: 3px;
+
+    border-radius: 50%;
+
+    background: var(--stackly-red);
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.mobile-menu-btn {
+    display: none;
+
+    width: 38px;
+
+    height: 38px;
+
+    border:
+        1px solid var(--stackly-border);
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: var(--stackly-dark);
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.dashboard-content {
+    width: 100%;
+
+    max-width: 1450px;
+
+    margin: auto;
+
+    padding:
+        32px 42px 60px;
+}
+
+
+.dashboard-page {
+    display: none;
+}
+
+
+.dashboard-page.active-page {
+    display: block;
+}
+
+
+/* =====================================================
+   WELCOME
+===================================================== */
+
+.overview-welcome {
+    position: relative;
+
+    min-height: 190px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 30px 35px;
+
+    overflow: hidden;
+
+    border-radius: 17px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #25243e,
+            #3a2245
+        );
+
+    color: #ffffff;
+}
+
+
+.overview-welcome::after {
+    content: "";
+
+    position: absolute;
+
+    width: 270px;
+
+    height: 270px;
+
+    right: -80px;
+
+    top: -120px;
+
+    border-radius: 50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+}
+
+
+.welcome-label {
+    color: #ff8279;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.overview-welcome h2 {
+    max-width: 600px;
+
+    margin:
+        10px 0 9px;
+
+    font-size: 28px;
+
+    line-height: 1.2;
+}
+
+
+.overview-welcome h2 strong {
+    color: #ff7167;
+
+    font-weight: 700;
+}
+
+
+.overview-welcome p {
+    max-width: 600px;
+
+    color: #d2d0da;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+}
+
+
+.dashboard-primary-btn {
+    position: relative;
+
+    z-index: 2;
+
+    min-width: 145px;
+
+    height: 43px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 0 18px;
+
+    border-radius: 6px;
+
+    background: var(--stackly-red);
+
+    color: #ffffff;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    transition:
+        transform .3s ease,
+        background .3s ease;
+}
+
+
+.dashboard-primary-btn:hover {
+    transform: translateY(-3px);
+
+    background: #ffffff;
+
+    color: var(--stackly-dark);
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.overview-stat-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-top: 17px;
+}
+
+
+.overview-stat-card {
+    position: relative;
+
+    min-height: 145px;
+
+    padding: 20px;
+
+    overflow: hidden;
+
+    border:
+        1px solid var(--stackly-border);
+
+    border-radius: 13px;
+
+    background: #ffffff;
+}
+
+
+.overview-stat-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 85px;
+
+    height: 85px;
+
+    right: -35px;
+
+    top: -35px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(239,56,43,.06);
+}
+
+
+.stat-icon {
+    width: 33px;
+
+    height: 33px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 14px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+}
+
+
+.stat-icon.red {
+    background:
+        rgba(239,56,43,.10);
+
+    color: var(--stackly-red);
+}
+
+
+.stat-icon.dark {
+    background:
+        rgba(37,36,62,.10);
+
+    color: var(--stackly-purple);
+}
+
+
+.stat-icon.light {
+    background:
+        #f0edf5;
+
+    color: #684f8a;
+}
+
+
+.overview-stat-card > span {
+    display: block;
+
+    color: #797a82;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+}
+
+
+.overview-stat-card > strong {
+    display: block;
+
+    margin: 5px 0 2px;
+
+    color: var(--stackly-text);
+
+    font-size: 25px;
+}
+
+
+.overview-stat-card small {
+    color: var(--stackly-red);
+
+    font-size: 8px;
+}
+
+
+/* =====================================================
+   OVERVIEW GRID
+===================================================== */
+
+.overview-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.3fr 1fr;
+
+    gap: 17px;
+
+    margin-top: 17px;
+}
+
+
+.credit-progress-card,
+.quick-actions-card {
+    min-height: 310px;
+
+    padding: 25px;
+
+    border:
+        1px solid var(--stackly-border);
+
+    border-radius: 13px;
+
+    background: #ffffff;
+}
+
+
+.section-card-heading {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+.section-card-heading span {
+    color: var(--stackly-red);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.section-card-heading h3 {
+    margin-top: 5px;
+
+    font-size: 16px;
+}
+
+
+.section-card-heading a {
+    color: var(--stackly-red);
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   SCORE
+===================================================== */
+
+.credit-score-display {
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+    margin-top: 38px;
+}
+
+
+.score-circle {
+    width: 145px;
+
+    height: 145px;
+
+    flex: 0 0 145px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        conic-gradient(
+            var(--stackly-red) 0 74%,
+            #eee9e7 74% 100%
+        );
+}
+
+
+.score-circle::before {
+    content: "";
+
+    position: absolute;
+}
+
+
+.score-circle > div {
+    width: 111px;
+
+    height: 111px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+}
+
+
+.score-circle strong {
+    font-size: 28px;
+}
+
+
+.score-circle span {
+    margin-top: 3px;
+
+    color: var(--stackly-red);
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.score-info {
+    max-width: 350px;
+}
+
+
+.score-info h4 {
+    font-size: 14px;
+}
+
+
+.score-info p {
+    margin:
+        7px 0 15px;
+
+    color: var(--stackly-muted);
+
+    font-size: 9px;
+
+    line-height: 1.7;
+}
+
+
+.progress-line {
+    width: 100%;
+
+    height: 6px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #eee9e7;
+}
+
+
+.progress-line span {
+    display: block;
+
+    width: 74%;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: var(--stackly-red);
+}
+
+
+.score-info small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #898991;
+
+    font-size: 7px;
+}
+
+
+/* =====================================================
+   QUICK ACTIONS
+===================================================== */
+
+.quick-action {
+    min-height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 10px;
+
+    padding: 10px 12px;
+
+    border:
+        1px solid #eeeae8;
+
+    border-radius: 8px;
+
+    transition:
+        border-color .3s ease,
+        transform .3s ease;
+}
+
+
+.quick-action > i:first-child {
+    width: 34px;
+
+    height: 34px;
+
+    flex: 0 0 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background:
+        rgba(239,56,43,.08);
+
+    color: var(--stackly-red);
+
+    font-size: 11px;
+}
+
+
+.quick-action div {
+    flex: 1;
+}
+
+
+.quick-action strong {
+    display: block;
+
+    font-size: 9px;
+}
+
+
+.quick-action span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #92939a;
+
+    font-size: 7px;
+}
+
+
+.quick-action > i:last-child {
+    color: #a3a4ab;
+
+    font-size: 9px;
+}
+
+
+.quick-action:hover {
+    border-color:
+        rgba(239,56,43,.3);
+
+    transform: translateX(4px);
+}
+
+
+/* =====================================================
+   INSIGHT
+===================================================== */
+
+.dashboard-insight {
+    min-height: 105px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-top: 17px;
+
+    padding: 22px 25px;
+
+    border-radius: 13px;
+
+    background:
+        #eeecef;
+}
+
+
+.insight-icon {
+    width: 43px;
+
+    height: 43px;
+
+    flex: 0 0 43px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--stackly-red);
+
+    color: #ffffff;
+
+    font-size: 13px;
+}
+
+
+.dashboard-insight > div:nth-child(2) {
+    flex: 1;
+}
+
+
+.dashboard-insight span {
+    color: var(--stackly-red);
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.dashboard-insight h3 {
+    margin-top: 5px;
+
+    max-width: 650px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+.dashboard-insight > a {
+    color: var(--stackly-red);
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   INTERNAL PAGE COMMON
+===================================================== */
+
+.page-intro {
+    padding: 42px;
+
+    border-radius: 16px;
+
+    margin-bottom: 20px;
+}
+
+
+.page-intro > span,
+.credit-page-header > span,
+.applications-heading > div > span,
+.payments-top > span,
+.profile-page-header > div > span,
+.support-hero span {
+    color: var(--stackly-red);
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+.page-intro h2 {
+    max-width: 700px;
+
+    margin: 10px 0;
+
+    font-size: 31px;
+
+    line-height: 1.2;
+}
+
+
+.page-intro p {
+    max-width: 650px;
+
+    margin-bottom: 22px;
+
+    font-size: 10px;
+
+    line-height: 1.8;
+}
+
+
+.dark-intro {
+    background:
+        linear-gradient(
+            125deg,
+            #191923,
+            #30263b
+        );
+
+    color: #ffffff;
+}
+
+
+.dark-intro p {
+    color: #c4c2cb;
+}
+
+
+/* =====================================================
+   LOANS
+===================================================== */
+
+.loan-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 17px;
+}
+
+
+.loan-card {
+    padding: 27px;
+
+    border:
+        1px solid var(--stackly-border);
+
+    border-radius: 13px;
+
+    background: #ffffff;
+}
+
+
+.loan-card-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+
+.loan-product-icon {
+    width: 46px;
+
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background:
+        rgba(239,56,43,.09);
+
+    color: var(--stackly-red);
+}
+
+
+.loan-status {
+    padding: 6px 9px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(239,56,43,.08);
+
+    color: var(--stackly-red);
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.loan-card > span {
+    color: #888992;
+
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+}
+
+
+.loan-card h3 {
+    margin: 6px 0 23px;
+
+    font-size: 18px;
+}
+
+
+.loan-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+
+    padding-bottom: 20px;
+
+    border-bottom:
+        1px solid #eeeae8;
+}
+
+
+.loan-details small {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #91929a;
+
+    font-size: 7px;
+}
+
+
+.loan-details strong {
+    font-size: 15px;
+}
+
+
+.loan-progress {
+    margin-top: 19px;
+}
+
+
+.loan-progress > div:first-child {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 7px;
+
+    font-size: 8px;
+}
+
+
+.loan-progress-bar {
+    height: 5px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #eee9e7;
+}
+
+
+.loan-progress-bar span {
+    display: block;
+
+    width: 64%;
+
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: var(--stackly-red);
+}
+
+
+.loan-card > a {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 22px;
+
+    color: var(--stackly-red);
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+.loan-banner {
+    min-height: 130px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-top: 18px;
+
+    padding: 25px 30px;
+
+    border-radius: 13px;
+
+    background: #ffffff;
+
+    border:
+        1px solid var(--stackly-border);
+}
+
+
+.loan-banner span {
+    color: var(--stackly-red);
+
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+}
+
+
+.loan-banner h3 {
+    margin-top: 6px;
+
+    font-size: 15px;
+}
+
+
+.loan-banner a {
+    padding: 12px 18px;
+
+    border-radius: 5px;
+
+    background: var(--stackly-dark);
+
+    color: #ffffff;
+
+    font-size: 8px;
+}
+
+
+/* =====================================================
+   CREDIT
+===================================================== */
+
+.credit-page-header {
+    padding:
+        15px 0 28px;
+}
+
+
+.credit-page-header h2 {
+    max-width: 650px;
+
+    margin: 10px 0;
+
+    font-size: 32px;
+}
+
+
+.credit-page-header p {
+    max-width: 650px;
+
+    color: var(--stackly-muted);
+
+    font-size: 10px;
+
+    line-height: 1.8;
+}
+
+
+.credit-health-layout {
+    display: grid;
+
+    grid-template-columns: .85fr 1.5fr;
+
+    gap: 18px;
+}
+
+
+.credit-health-score {
+    min-height: 390px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    background: var(--stackly-dark);
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+
+.big-score-circle {
+    width: 170px;
+
+    height: 170px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    border-radius: 50%;
+
+    border:
+        12px solid
+        rgba(239,56,43,.28);
+
+    outline:
+        2px solid
+        var(--stackly-red);
+
+    outline-offset: 5px;
+}
+
+
+.big-score-circle strong {
+    font-size: 37px;
+}
+
+
+.big-score-circle span {
+    margin-top: 3px;
+
+    color: #ff8279;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+
+.credit-health-score h3 {
+    margin-top: 30px;
+
+    font-size: 16px;
+}
+
+
+.credit-health-score p {
+    max-width: 260px;
+
+    margin: 8px 0 17px;
+
+    color: #b7b5bf;
+
+    font-size: 9px;
+
+    line-height: 1.6;
+}
+
+
+.credit-health-score a {
+    color: #ff8279;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+.credit-factors {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.credit-factor {
+    min-height: 86px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 15px 20px;
+
+    border:
+        1px solid var(--stackly-border);
+
+    border-radius: 11px;
+
+    background: #ffffff;
+}
+
+
+.factor-icon {
+    width: 40px;
+
+    height: 40px;
+
+    flex: 0 0 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background:
+        rgba(239,56,43,.08);
+
+    color: var(--stackly-red);
+
+    font-size: 12px;
+}
+
+
+.credit-factor div:nth-child(2) {
+    flex: 1;
+}
+
+
+.credit-factor span {
+    display: block;
+
+    color: #8b8c93;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+}
+
+
+.credit-factor strong {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 12px;
+}
+
+
+.credit-factor > b {
+    color: var(--stackly-red);
+
+    font-size: 11px;
+}
+
+
+.credit-tips {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 18px;
+}
+
+
+.credit-tip {
+    padding: 22px;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    border:
+        1px solid var(--stackly-border);
+}
+
+
+.credit-tip > i {
+    color: var(--stackly-red);
+
+    font-size: 15px;
+}
+
+
+.credit-tip h3 {
+    margin: 14px 0 6px;
+
+    font-size: 12px;
+}
+
+
+.credit-tip p {
+    color: var(--stackly-muted);
+
+    font-size: 8px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   APPLICATIONS
+===================================================== */
+
+.applications-heading {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+
+.applications-heading h2 {
+    margin-top: 8px;
+
+    font-size: 29px;
+}
+
+
+.application-timeline {
+    position: relative;
+
+    padding-left: 25px;
+}
+
+
+.application-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 25px;
+
+    top: 20px;
+
+    bottom: 20px;
+
+    width: 1px;
+
+    background: #ddd8d5;
+}
+
+
+.application-item {
+    position: relative;
+
+    min-height: 125px;
+
+    display: grid;
+
+    grid-template-columns: 55px 1fr auto;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 13px;
+
+    padding: 20px 25px;
+
+    border:
+        1px solid var(--stackly-border);
+
+    border-radius: 12px;
+
+    background: #ffffff;
+}
+
+
+.application-number {
+    position: relative;
+
+    z-index: 2;
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--stackly-dark);
+
+    color: #ffffff;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+.application-item.completed
+.application-number {
+    background: var(--stackly-red);
+}
+
+
+.application-item.active
+.application-number {
+    background: var(--stackly-red);
+}
+
+
+.application-info span {
+    color: var(--stackly-red);
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.application-info h3 {
+    margin: 5px 0;
+
+    font-size: 14px;
+}
+
+
+.application-info p {
+    color: var(--stackly-muted);
+
+    font-size: 8px;
+
+    line-height: 1.6;
+}
+
+
+.application-item > strong {
+    padding: 7px 10px;
+
+    border-radius: 20px;
+
+    background: #f2efee;
+
+    color: #77777f;
+
+    font-size: 7px;
+
+    letter-spacing: .7px;
+}
+
+
+.application-item.active > strong {
+    background:
+        rgba(239,56,43,.08);
+
+    color: var(--stackly-red);
+}
+
+
+.application-help {
+    min-height: 110px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    margin-top: 20px;
+
+    padding: 23px;
+
+    border-radius: 12px;
+
+    background: #eae7e8;
+}
+
+
+.application-help > i {
+    color: var(--stackly-red);
+
+    font-size: 22px;
+}
+
+
+.application-help > div {
+    flex: 1;
+}
+
+
+.application-help h3 {
+    font-size: 13px;
+}
+
+
+.application-help p {
+    margin-top: 5px;
+
+    color: #777880;
+
+    font-size: 8px;
+}
+
+
+.application-help a {
+    padding: 12px 18px;
+
+    background: var(--stackly-red);
+
+    color: #ffffff;
+
+    border-radius: 5px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   PAYMENTS
+===================================================== */
+
+.payments-top {
+    padding-bottom: 25px;
+}
+
+
+.payments-top h2 {
+    margin: 10px 0;
+
+    font-size: 31px;
+}
+
+
+.payments-top p {
+    color: var(--stackly-muted);
+
+    font-size: 10px;
+}
+
+
+.payment-balance-card {
+    min-height: 160px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #25243e,
+            #3b263b
+        );
+
+    color: #ffffff;
+}
+
+
+.payment-balance-card span {
+    display: block;
+
+    color: #b8b6c2;
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+}
+
+
+.payment-balance-card strong {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 32px;
+}
+
+
+.balance-icon {
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--stackly-red);
+
+    font-size: 20px;
+}
+
+
+.payment-table-wrap {
+    margin-top: 18px;
+
+    padding: 25px;
+
+    border:
+        1px solid var(--stackly-border);
+
+    border-radius: 13px;
+
+    background: #ffffff;
+}
+
+
+.payment-table-wrap h3 {
+    margin-bottom: 20px;
+
+    font-size: 15px;
+}
+
+
+.payment-row {
+    min-height: 58px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr 1fr .6fr;
+
+    align-items: center;
+
+    gap: 15px;
+
+    border-top:
+        1px solid #eeeae8;
+
+    font-size: 9px;
+}
+
+
+.payment-heading {
+    min-height: 35px;
+
+    border-top: 0;
+
+    color: #8b8b92;
+
+    font-size: 7px;
+
+    letter-spacing: 1px;
+}
+
+
+.payment-row a {
+    color: var(--stackly-red);
+
+    font-weight: 700;
+}
+
+
+.paid {
+    color: #3c8556;
+
+    font-size: 8px;
+}
+
+
+.upcoming {
+    color: var(--stackly-red);
+
+    font-size: 8px;
+}
+
+
+.payment-action {
+    min-height: 100px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-top: 18px;
+
+    padding: 22px;
+
+    border-radius: 12px;
+
+    background: #ffffff;
+
+    border:
+        1px solid var(--stackly-border);
+}
+
+
+.payment-action > div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+.payment-action > div > i {
+    color: var(--stackly-red);
+
+    font-size: 19px;
+}
+
+
+.payment-action h3 {
+    font-size: 12px;
+}
+
+
+.payment-action p {
+    margin-top: 4px;
+
+    color: var(--stackly-muted);
+
+    font-size: 8px;
+}
+
+
+.payment-action > a {
+    padding: 11px 16px;
+
+    border-radius: 5px;
+
+    background: var(--stackly-dark);
+
+    color: #ffffff;
+
+    font-size: 8px;
+}
+
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.profile-page-header {
+    min-height: 180px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    border:
+        1px solid var(--stackly-border);
+}
+
+
+.large-profile-avatar {
+    width: 95px;
+
+    height: 95px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(239,56,43,.09);
+
+    color: var(--stackly-red);
+
+    font-size: 29px;
+}
+
+
+.profile-page-header h2 {
+    margin: 8px 0;
+
+    font-size: 27px;
+}
+
+
+.profile-page-header p {
+    color: var(--stackly-muted);
+
+    font-size: 9px;
+}
+
+
+.profile-information {
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 1fr;
+
+    gap: 18px;
+
+    margin-top: 18px;
+}
+
+
+.profile-information-block,
+.profile-security {
+    padding: 27px;
+
+    border-radius: 13px;
+
+    background: #ffffff;
+
+    border:
+        1px solid var(--stackly-border);
+}
+
+
+.profile-information-block > span,
+.profile-security > span {
+    color: var(--stackly-red);
+
+    font-size: 7px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+
+.profile-field {
+    min-height: 73px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    border-bottom:
+        1px solid #eeeae8;
+}
+
+
+.profile-field:last-child {
+    border-bottom: 0;
+}
+
+
+.profile-field small {
+    color: #91929a;
+
+    font-size: 7px;
+}
+
+
+.profile-field strong {
+    margin-top: 5px;
+
+    font-size: 11px;
+}
+
+
+.security-item {
+    display: flex;
+
+    gap: 12px;
+
+    padding: 17px 0;
+
+    border-bottom:
+        1px solid #eeeae8;
+}
+
+
+.security-item > i {
+    color: var(--stackly-red);
+
+    font-size: 14px;
+}
+
+
+.security-item strong {
+    display: block;
+
+    font-size: 10px;
+}
+
+
+.security-item small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: var(--stackly-muted);
+
+    font-size: 7px;
+
+    line-height: 1.5;
+}
+
+
+.profile-security > a {
+    display: inline-flex;
+
+    gap: 7px;
+
+    margin-top: 18px;
+
+    color: var(--stackly-red);
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   SUPPORT
+===================================================== */
+
+.support-hero {
+    min-height: 230px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 38px;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            130deg,
+            #191923,
+            #34243b
+        );
+
+    color: #ffffff;
+}
+
+
+.support-hero h2 {
+    margin: 10px 0;
+
+    font-size: 31px;
+}
+
+
+.support-hero p {
+    max-width: 580px;
+
+    color: #c0bec8;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+}
+
+
+.support-hero-icon {
+    width: 120px;
+
+    height: 120px;
+
+    flex: 0 0 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(239,56,43,.16);
+
+    color: var(--stackly-red);
+
+    font-size: 38px;
+}
+
+
+.support-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 17px;
+
+    margin-top: 18px;
+}
+
+
+.support-card {
+    min-height: 250px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    padding: 27px;
+
+    border-radius: 13px;
+
+    background: #ffffff;
+
+    border:
+        1px solid var(--stackly-border);
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease;
+}
+
+
+.support-card > i {
+    color: var(--stackly-red);
+
+    font-size: 23px;
+}
+
+
+.support-card h3 {
+    margin: 18px 0 8px;
+
+    font-size: 14px;
+}
+
+
+.support-card p {
+    color: var(--stackly-muted);
+
+    font-size: 9px;
+
+    line-height: 1.7;
+}
+
+
+.support-card span {
+    margin-top: auto;
+
+    color: var(--stackly-red);
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+.support-card:hover {
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(239,56,43,.3);
+}
+
+
+.support-contact {
+    min-height: 120px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-top: 18px;
+
+    padding: 25px;
+
+    border-radius: 13px;
+
+    background: #eae7e8;
+}
+
+
+.support-contact span {
+    color: var(--stackly-red);
+
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+}
+
+
+.support-contact h3 {
+    margin-top: 6px;
+
+    font-size: 14px;
+}
+
+
+.support-contact a {
+    padding: 12px 20px;
+
+    border-radius: 5px;
+
+    background: var(--stackly-red);
+
+    color: #ffffff;
+
+    font-size: 8px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   MOBILE OVERLAY
+===================================================== */
+
+.sidebar-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 900;
+
+    display: none;
+
+    background:
+        rgba(15,15,22,.55);
+}
+
+
+.sidebar-overlay.show {
+    display: block;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1050px) {
+
+    .client-sidebar {
+        width: 220px;
+    }
+
+
+    .client-main {
+        width: calc(100% - 220px);
+
+        margin-left: 220px;
+    }
+
+
+    .dashboard-content {
+        padding-left: 25px;
+
+        padding-right: 25px;
+    }
+
+
+    .overview-stat-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .credit-health-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    .support-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .client-sidebar {
+        left: -270px;
+
+        width: 255px;
+
+        transition:
+            left .35s ease;
+    }
+
+
+    .client-sidebar.sidebar-open {
+        left: 0;
+    }
+
+
+    .client-main {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+
+    .client-header {
+        height: 70px;
+
+        padding:
+            0 15px;
+    }
+
+
+    .mobile-menu-btn {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+    }
+
+
+    .header-title h1 {
+        font-size: 15px;
+    }
+
+
+    .header-title p {
+        max-width: 180px;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+        white-space: nowrap;
+    }
+
+
+    .header-icon {
+        width: 34px;
+
+        height: 34px;
+    }
+
+
+    .header-avatar {
+        width: 34px;
+
+        height: 34px;
+    }
+
+
+    .dashboard-content {
+        padding:
+            18px 14px 40px;
+    }
+
+
+    .overview-welcome {
+        min-height: 250px;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding: 25px 20px;
+    }
+
+
+    .overview-welcome h2 {
+        font-size: 23px;
+    }
+
+
+    .overview-welcome p {
+        font-size: 9px;
+    }
+
+
+    .dashboard-primary-btn {
+        width: 100%;
+    }
+
+
+    .overview-stat-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+
+    .overview-stat-card {
+        min-height: 130px;
+
+        padding: 17px;
+    }
+
+
+    .overview-grid {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+
+    .credit-progress-card,
+    .quick-actions-card {
+        min-height: auto;
+
+        padding: 20px;
+    }
+
+
+    .credit-score-display {
+        align-items: center;
+
+        flex-direction: column;
+
+        gap: 22px;
+
+        margin-top: 25px;
+
+        text-align: center;
+    }
+
+
+    .score-info {
+        width: 100%;
+    }
+
+
+    .dashboard-insight {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+
+        padding: 18px;
+    }
+
+
+    .dashboard-insight > a {
+        width: 100%;
+
+        margin-left: 61px;
+    }
+
+
+    .page-intro {
+        padding: 25px 20px;
+    }
+
+
+    .page-intro h2 {
+        font-size: 25px;
+    }
+
+
+    .loan-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    .loan-banner {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .loan-banner a {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .credit-page-header h2 {
+        font-size: 26px;
+    }
+
+
+    .credit-health-layout {
+        grid-template-columns: 1fr;
+    }
+
+
+    .credit-health-score {
+        min-height: 350px;
+    }
+
+
+    .credit-tips {
+        grid-template-columns: 1fr;
+    }
+
+
+    .applications-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .applications-heading h2 {
+        font-size: 25px;
+    }
+
+
+    .applications-heading .dashboard-primary-btn {
+        width: auto;
+    }
+
+
+    .application-item {
+        grid-template-columns:
+            45px 1fr;
+
+        gap: 13px;
+
+        padding: 17px;
+    }
+
+
+    .application-item > strong {
+        grid-column: 2;
+        width: fit-content;
+    }
+
+
+    .application-timeline {
+        padding-left: 0;
+    }
+
+
+    .application-timeline::before {
+        display: none;
+    }
+
+
+    .payment-balance-card {
+        min-height: 135px;
+
+        padding: 23px;
+    }
+
+
+    .payment-balance-card strong {
+        font-size: 25px;
+    }
+
+
+    .payment-row {
+        grid-template-columns:
+            1.3fr 1fr;
+
+        padding:
+            12px 0;
+    }
+
+
+    .payment-heading {
+        display: none;
+    }
+
+
+    .payment-row > span:nth-child(3),
+    .payment-row > span:nth-child(4) {
+        grid-column: auto;
+    }
+
+
+    .payment-action {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .payment-action > a {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .profile-page-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        text-align: left;
+    }
+
+
+    .profile-information {
+        grid-template-columns: 1fr;
+    }
+
+
+    .support-hero {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        padding: 27px 22px;
+    }
+
+
+    .support-hero h2 {
+        font-size: 26px;
+    }
+
+
+    .support-hero-icon {
+        width: 75px;
+
+        height: 75px;
+
+        flex-basis: 75px;
+
+        font-size: 25px;
+    }
+
+
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .support-contact {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .support-contact a {
+        width: 100%;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .header-actions {
+        gap: 4px;
+    }
+
+
+    .header-title p {
+        display: none;
+    }
+
+
+    .header-icon {
+        width: 32px;
+
+        height: 32px;
+    }
+
+
+    .header-avatar {
+        width: 32px;
+
+        height: 32px;
+    }
+
+
+    .overview-stat-card {
+        padding: 14px;
+    }
+
+
+    .overview-stat-card > strong {
+        font-size: 22px;
+    }
+
+
+    .overview-welcome h2 {
+        font-size: 21px;
+    }
+
+
+    .credit-progress-card,
+    .quick-actions-card {
+        padding: 17px;
+    }
+
+
+    .score-circle {
+        width: 125px;
+
+        height: 125px;
+
+        flex-basis: 125px;
+    }
+
+
+    .score-circle > div {
+        width: 95px;
+
+        height: 95px;
+    }
+
+
+    .score-circle strong {
+        font-size: 24px;
+    }
+
+
+    .page-intro h2,
+    .credit-page-header h2,
+    .payments-top h2 {
+        font-size: 23px;
+    }
+
+
+    .loan-card {
+        padding: 20px;
+    }
+
+
+    .loan-details {
+        gap: 10px;
+    }
+
+
+    .loan-details strong {
+        font-size: 13px;
+    }
+
+
+    .application-item {
+        grid-template-columns:
+            40px 1fr;
+
+        padding: 15px;
+    }
+
+
+    .application-number {
+        width: 36px;
+
+        height: 36px;
+    }
+
+
+    .payment-table-wrap {
+        padding: 17px;
+    }
+
+
+    .profile-page-header {
+        padding: 22px;
+    }
+
+
+    .profile-information-block,
+    .profile-security {
+        padding: 20px;
+    }
+
+}
+
+
+/* =====================================================
+   MY LOANS - EXTRA CONTENT
+===================================================== */
+
+.loan-extra-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 28px;
+}
+
+
+/* =====================================================
+   LOAN MINI CARD
+===================================================== */
+
+.loan-mini-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    min-height: 105px;
+    padding: 20px;
+
+    background: #ffffff;
+    border: 1px solid #e8e8e8;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Red hover background line */
+
+.loan-mini-card::before {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 3px;
+    height: 100%;
+
+    background: #ef382b;
+
+    transform: scaleY(0);
+    transform-origin: bottom;
+
+    transition: transform 0.35s ease;
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.loan-mini-card > i {
+    flex-shrink: 0;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #111111;
+    color: #ffffff;
+
+    font-size: 15px;
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.loan-mini-card > div {
+    min-width: 0;
+    padding-right: 25px;
+}
+
+.loan-mini-card span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #ef382b;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.loan-mini-card h3 {
+    margin: 0 0 5px;
+
+    color: #151515;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+.loan-mini-card p {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   ARROW
+===================================================== */
+
+.loan-mini-card > a {
+    position: absolute;
+
+    right: 16px;
+    top: 50%;
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #dddddd;
+
+    color: #222222;
+    text-decoration: none;
+
+    transform: translateY(-50%);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.loan-mini-card > a i {
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.loan-mini-card:hover {
+    border-color: #ef382b;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.loan-mini-card:hover::before {
+    transform: scaleY(1);
+}
+
+.loan-mini-card:hover > i {
+    background: #ef382b;
+
+    transform: rotate(-5deg) scale(1.05);
+}
+
+.loan-mini-card:hover > a {
+    background: #ef382b;
+    border-color: #ef382b;
+    color: #ffffff;
+
+    transform: translate(3px, -50%);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .loan-extra-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .loan-extra-content {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 22px;
+    }
+
+    .loan-mini-card {
+        min-height: 95px;
+        padding: 17px;
+    }
+
+    .loan-mini-card > i {
+        width: 38px;
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .loan-mini-card h3 {
+        font-size: 14px;
+    }
+
+    .loan-mini-card p {
+        font-size: 10px;
+    }
+
+    .loan-mini-card > a {
+        right: 13px;
+        width: 25px;
+        height: 25px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .loan-extra-content {
+        gap: 12px;
+    }
+
+    .loan-mini-card {
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .loan-mini-card > i {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+
+    .loan-mini-card > div {
+        padding-right: 22px;
+    }
+
+    .loan-mini-card span {
+        font-size: 8px;
+    }
+
+    .loan-mini-card h3 {
+        font-size: 13px;
+    }
+
+    .loan-mini-card p {
+        font-size: 9.5px;
+    }
+
+}
+
+
+/* =====================================================
+   CREDIT HEALTH - EXTRA CONTENT
+===================================================== */
+
+.credit-health-extra {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+
+/* =====================================================
+   CREDIT HEALTH CARD
+===================================================== */
+
+.credit-health-mini {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    min-height: 125px;
+    padding: 22px 20px;
+
+    background: #f7f7f7;
+    border: 1px solid #e5e5e5;
+
+    overflow: hidden;
+
+    transition:
+        background 0.35s ease,
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* Top red animation */
+
+.credit-health-mini::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: #ef382b;
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* =====================================================
+   ICON BOX
+===================================================== */
+
+.credit-health-icon {
+    flex-shrink: 0;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+    border: 1px solid #dddddd;
+
+    color: #151515;
+
+    font-size: 15px;
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.credit-health-content {
+    padding-right: 25px;
+}
+
+.credit-health-content span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #ef382b;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+}
+
+.credit-health-content h3 {
+    margin: 0 0 7px;
+
+    color: #161616;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+.credit-health-content p {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   ARROW
+===================================================== */
+
+.credit-health-mini > a {
+    position: absolute;
+
+    right: 16px;
+    bottom: 17px;
+
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+    border: 1px solid #dddddd;
+
+    color: #222222;
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.credit-health-mini > a i {
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.credit-health-mini:hover {
+    background: #ffffff;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.credit-health-mini:hover::before {
+    transform: scaleX(1);
+}
+
+.credit-health-mini:hover .credit-health-icon {
+    background: #ef382b;
+    border-color: #ef382b;
+    color: #ffffff;
+}
+
+.credit-health-mini:hover > a {
+    background: #ef382b;
+    border-color: #ef382b;
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .credit-health-extra {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .credit-health-extra {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 22px;
+    }
+
+    .credit-health-mini {
+        min-height: 110px;
+        padding: 18px;
+    }
+
+    .credit-health-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .credit-health-content h3 {
+        font-size: 14px;
+    }
+
+    .credit-health-content p {
+        font-size: 10px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .credit-health-extra {
+        gap: 12px;
+    }
+
+    .credit-health-mini {
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .credit-health-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+    }
+
+    .credit-health-content {
+        padding-right: 20px;
+    }
+
+    .credit-health-content span {
+        font-size: 8px;
+    }
+
+    .credit-health-content h3 {
+        font-size: 13px;
+    }
+
+    .credit-health-content p {
+        font-size: 9.5px;
+    }
+
+    .credit-health-mini > a {
+        right: 12px;
+        bottom: 13px;
+
+        width: 24px;
+        height: 24px;
+    }
+
+}
+
+
+/* =====================================================
+   APPLICATIONS - EXTRA CONTENT
+===================================================== */
+
+.applications-extra {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+}
+
+
+/* =====================================================
+   APPLICATION MINI CARD
+===================================================== */
+
+.application-mini {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 125px;
+    padding: 22px 24px;
+
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* =====================================================
+   NUMBER
+===================================================== */
+
+.application-mini-number {
+    flex-shrink: 0;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 18px;
+
+    background: #111111;
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.application-mini-content {
+    min-width: 0;
+    padding-right: 35px;
+}
+
+.application-mini-content span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #ef382b;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.application-mini-content h3 {
+    margin: 0 0 6px;
+
+    color: #151515;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+.application-mini-content p {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   ARROW BUTTON
+===================================================== */
+
+.application-mini > a {
+    position: absolute;
+
+    right: 20px;
+    top: 50%;
+
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f5f5f5;
+    color: #222222;
+
+    text-decoration: none;
+
+    transform: translateY(-50%);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.application-mini > a i {
+    font-size: 9px;
+}
+
+
+/* =====================================================
+   RED SIDE LINE
+===================================================== */
+
+.application-mini::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 3px;
+    height: 100%;
+
+    background: #ef382b;
+
+    transform: scaleY(0);
+    transform-origin: bottom;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.application-mini:hover {
+    border-color: #dddddd;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+}
+
+.application-mini:hover::after {
+    transform: scaleY(1);
+}
+
+.application-mini:hover .application-mini-number {
+    background: #ef382b;
+
+    transform: scale(1.05);
+}
+
+.application-mini:hover > a {
+    background: #ef382b;
+    color: #ffffff;
+
+    transform: translate(3px, -50%);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .applications-extra {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .applications-extra {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        margin-top: 22px;
+    }
+
+    .application-mini {
+        min-height: 110px;
+        padding: 18px;
+    }
+
+    .application-mini-number {
+        width: 42px;
+        height: 42px;
+
+        margin-right: 14px;
+
+        font-size: 10px;
+    }
+
+    .application-mini-content {
+        padding-right: 30px;
+    }
+
+    .application-mini-content h3 {
+        font-size: 14px;
+    }
+
+    .application-mini-content p {
+        font-size: 10px;
+    }
+
+    .application-mini > a {
+        right: 14px;
+
+        width: 25px;
+        height: 25px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .applications-extra {
+        gap: 12px;
+    }
+
+    .application-mini {
+        min-height: 105px;
+        padding: 15px;
+    }
+
+    .application-mini-number {
+        width: 36px;
+        height: 36px;
+
+        margin-right: 11px;
+
+        font-size: 9px;
+    }
+
+    .application-mini-content {
+        padding-right: 25px;
+    }
+
+    .application-mini-content span {
+        font-size: 7px;
+        letter-spacing: 1.2px;
+    }
+
+    .application-mini-content h3 {
+        font-size: 13px;
+    }
+
+    .application-mini-content p {
+        font-size: 9.5px;
+        line-height: 1.5;
+    }
+
+    .application-mini > a {
+        right: 11px;
+
+        width: 23px;
+        height: 23px;
+    }
+
+}
+
+/* =====================================================
+   PAYMENTS - EXTRA CONTENT
+===================================================== */
+
+.payments-extra {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    margin-top: 30px;
+}
+
+
+/* =====================================================
+   PAYMENT SUMMARY CARD
+===================================================== */
+
+.payment-summary-card {
+    position: relative;
+
+    padding: 22px 24px;
+
+    background: #ffffff;
+    border: 1px solid #e7e7e7;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+
+/* =====================================================
+   TOP AREA
+===================================================== */
+
+.payment-summary-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+.payment-summary-top span {
+    color: #ef382b;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1.6px;
+}
+
+.payment-summary-top i {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f5f5f5;
+
+    color: #222222;
+
+    font-size: 12px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+/* =====================================================
+   AMOUNT
+===================================================== */
+
+.payment-summary-amount {
+    margin-bottom: 5px;
+
+    color: #151515;
+
+    font-size: 25px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+.payment-summary-card > p {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   BOTTOM AREA
+===================================================== */
+
+.payment-summary-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-top: 22px;
+    padding-top: 15px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+.payment-summary-bottom div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.payment-summary-bottom small {
+    color: #999999;
+
+    font-size: 9px;
+}
+
+.payment-summary-bottom strong {
+    color: #333333;
+
+    font-size: 10px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   ACTION BUTTON
+===================================================== */
+
+.payment-summary-bottom a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 85px;
+    height: 30px;
+
+    padding: 0 12px;
+
+    background: #111111;
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.payment-summary-bottom a:hover {
+    background: #ef382b;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   RED BOTTOM ACCENT
+===================================================== */
+
+.payment-summary-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 3px;
+
+    background: #ef382b;
+
+    transition: width 0.4s ease;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.payment-summary-card:hover {
+    border-color: #dddddd;
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.payment-summary-card:hover::after {
+    width: 100%;
+}
+
+.payment-summary-card:hover .payment-summary-top i {
+    background: #ef382b;
+    color: #ffffff;
+
+    transform: rotate(5deg);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .payments-extra {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .payments-extra {
+        grid-template-columns: 1fr;
+        gap: 14px;
+
+        margin-top: 22px;
+    }
+
+    .payment-summary-card {
+        padding: 19px;
+    }
+
+    .payment-summary-top {
+        margin-bottom: 15px;
+    }
+
+    .payment-summary-top span {
+        font-size: 8px;
+    }
+
+    .payment-summary-top i {
+        width: 30px;
+        height: 30px;
+        font-size: 11px;
+    }
+
+    .payment-summary-amount {
+        font-size: 22px;
+    }
+
+    .payment-summary-card > p {
+        font-size: 10px;
+    }
+
+    .payment-summary-bottom {
+        margin-top: 18px;
+        padding-top: 13px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .payments-extra {
+        gap: 12px;
+    }
+
+    .payment-summary-card {
+        padding: 16px;
+    }
+
+    .payment-summary-top span {
+        font-size: 7px;
+        letter-spacing: 1.3px;
+    }
+
+    .payment-summary-top i {
+        width: 27px;
+        height: 27px;
+        font-size: 10px;
+    }
+
+    .payment-summary-amount {
+        font-size: 20px;
+    }
+
+    .payment-summary-card > p {
+        font-size: 9.5px;
+    }
+
+    .payment-summary-bottom small {
+        font-size: 8px;
+    }
+
+    .payment-summary-bottom strong {
+        font-size: 9px;
+    }
+
+    .payment-summary-bottom a {
+        min-width: 75px;
+        height: 27px;
+
+        padding: 0 9px;
+
+        font-size: 8px;
+    }
+
+}

@@ -1,0 +1,7637 @@
+/* =========================================================
+   STACKLY CREDIT & LENDING
+   HERO SECTION
+========================================================= */
+
+
+/* =========================================================
+   HERO ROOT
+========================================================= */
+
+.lending-hero {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 650px;
+
+    min-height: 650px;
+
+    overflow: hidden;
+
+    background: #171717;
+
+}
+
+
+/* =========================================================
+   SLIDES CONTAINER
+========================================================= */
+
+.hero-slides {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+}
+
+
+/* =========================================================
+   INDIVIDUAL SLIDE
+========================================================= */
+
+.hero-slide {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    overflow: hidden;
+
+}
+
+
+.hero-slide.active {
+
+    visibility: visible;
+
+    opacity: 1;
+
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero-image {
+
+    position: absolute;
+
+    inset: -3%;
+
+    width: 106%;
+
+    height: 106%;
+
+    background-position: center;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+    transform: scale(1.03);
+
+}
+
+
+/* =========================================================
+   DARK OVERLAY
+========================================================= */
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(17, 18, 28, 0.97) 0%,
+            rgba(17, 18, 28, 0.88) 32%,
+            rgba(17, 18, 28, 0.58) 58%,
+            rgba(17, 18, 28, 0.30) 100%
+        );
+
+    z-index: 2;
+
+}
+
+
+/* =========================================================
+   HERO CONTENT WRAPPER
+========================================================= */
+
+.hero-content-wrapper {
+
+    position: relative;
+
+    z-index: 4;
+
+    width: 100%;
+
+    height: 100%;
+
+    max-width: 1320px;
+
+    margin: 0 auto;
+
+    padding: 0 6%;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+
+    width: 620px;
+
+    max-width: 55%;
+
+    margin-top: 25px;
+
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.hero-eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+}
+
+
+.eyebrow-icon {
+
+    width: 22px;
+
+    height: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #ef382b;
+
+    font-size: 23px;
+
+    line-height: 1;
+
+}
+
+
+/* =========================================================
+   HERO TITLE
+========================================================= */
+
+.hero-title {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: clamp(
+        48px,
+        5vw,
+        72px
+    );
+
+    line-height: 1.08;
+
+    font-weight: 800;
+
+    letter-spacing: -2.5px;
+
+}
+
+
+.hero-title span {
+
+    display: block;
+
+    color: #ffffff;
+
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+========================================================= */
+
+.hero-description {
+
+    width: 520px;
+
+    max-width: 100%;
+
+    margin-top: 26px;
+
+    margin-bottom: 35px;
+
+    color: rgba(255, 255, 255, 0.78);
+
+    font-size: 16px;
+
+    line-height: 1.8;
+
+    font-weight: 400;
+
+}
+
+
+/* =========================================================
+   HERO BUTTON
+========================================================= */
+
+.hero-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    min-width: 175px;
+
+    height: 54px;
+
+    padding: 0 25px;
+
+    background: #ef382b;
+
+    color: #ffffff;
+
+    border-radius: 2px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.hero-button span {
+
+    font-size: 21px;
+
+    transition:
+        transform 0.3s ease;
+
+}
+
+
+.hero-button:hover {
+
+    background: #d92d22;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(
+            239,
+            56,
+            43,
+            0.30
+        );
+
+}
+
+
+.hero-button:hover span {
+
+    transform: translateX(5px);
+
+}
+
+
+/* =========================================================
+   HERO ARROWS
+========================================================= */
+
+.hero-arrow {
+
+    position: absolute;
+
+    z-index: 7;
+
+    top: 50%;
+
+    width: 44px;
+
+    height: 44px;
+
+    margin-top: -22px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.28
+    );
+
+    color: #171717;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(5px);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.hero-arrow span {
+
+    font-size: 29px;
+
+    line-height: 1;
+
+}
+
+
+.hero-prev {
+
+    left: 3%;
+
+}
+
+
+.hero-next {
+
+    right: 3%;
+
+}
+
+
+.hero-arrow:hover {
+
+    background: #ffffff;
+
+    transform: scale(1.08);
+
+}
+
+
+/* =========================================================
+   HERO DOTS
+========================================================= */
+
+.hero-dots {
+
+    position: absolute;
+
+    z-index: 8;
+
+    bottom: 35px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.hero-dot {
+
+    width: 10px;
+
+    height: 10px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.70
+    );
+
+    cursor: pointer;
+
+    transition:
+        width 0.3s ease,
+        background 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.hero-dot.active {
+
+    width: 30px;
+
+    border-radius: 20px;
+
+    background: #ef382b;
+
+}
+
+
+/* =========================================================
+   FLOATING CARDS
+========================================================= */
+
+.hero-floating-cards {
+
+    position: absolute;
+
+    z-index: 9;
+
+    right: 5%;
+
+    bottom: 0;
+
+    display: flex;
+
+    align-items: stretch;
+
+}
+
+
+/* =========================================================
+   SECURITY CARD
+========================================================= */
+
+.security-card {
+
+    width: 220px;
+
+    min-height: 150px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    background: #ef382b;
+
+    color: #ffffff;
+
+}
+
+
+.security-icon {
+
+    width: 48px;
+
+    height: 48px;
+
+    flex-shrink: 0;
+
+    border: 2px solid rgba(
+        255,
+        255,
+        255,
+        0.8
+    );
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.security-icon span {
+
+    font-size: 23px;
+
+}
+
+
+.security-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.security-small {
+
+    margin-bottom: 5px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    opacity: 0.8;
+
+}
+
+
+.security-content strong {
+
+    margin-bottom: 7px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+}
+
+
+.security-content p {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    opacity: 0.9;
+
+}
+
+
+/* =========================================================
+   SUCCESS CARD
+========================================================= */
+
+.success-card {
+
+    position: relative;
+
+    width: 215px;
+
+    min-height: 150px;
+
+    padding: 27px 25px;
+
+    background: #ffffff;
+
+    color: #171717;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.success-label {
+
+    margin-bottom: 5px;
+
+    color: #ef382b;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+}
+
+
+.success-number {
+
+    font-size: 32px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+}
+
+
+.success-text {
+
+    margin-top: 4px;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+}
+
+
+.success-arrow {
+
+    position: absolute;
+
+    right: 25px;
+
+    bottom: 18px;
+
+    color: #ef382b;
+
+    font-size: 30px;
+
+    opacity: 0.45;
+
+}
+
+
+/* =========================================================
+   HERO RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+
+
+    .hero-content {
+
+        max-width: 62%;
+
+    }
+
+
+    .hero-title {
+
+        font-size: 58px;
+
+    }
+
+
+    .hero-floating-cards {
+
+        right: 3%;
+
+    }
+
+
+    .security-card {
+
+        width: 190px;
+
+    }
+
+
+    .success-card {
+
+        width: 190px;
+
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+
+    .lending-hero {
+
+        height: calc(
+            100vh - 70px
+        );
+
+        min-height: 650px;
+
+    }
+
+
+    .hero-content-wrapper {
+
+        padding:
+            50px 25px 180px;
+
+        align-items: center;
+
+        justify-content: center;
+
+        text-align: center;
+
+    }
+
+
+    .hero-content {
+
+        width: 100%;
+
+        max-width: 700px;
+
+        margin-top: 0;
+
+    }
+
+
+    .hero-eyebrow {
+
+        justify-content: center;
+
+        font-size: 12px;
+
+        letter-spacing: 2px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .hero-title {
+
+        font-size: clamp(
+            39px,
+            8vw,
+            56px
+        );
+
+        line-height: 1.12;
+
+        letter-spacing: -1.5px;
+
+    }
+
+
+    .hero-description {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        font-size: 14px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .hero-button {
+
+        height: 52px;
+
+    }
+
+
+    .hero-overlay {
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(
+                    17,
+                    18,
+                    28,
+                    0.72
+                ) 0%,
+                rgba(
+                    17,
+                    18,
+                    28,
+                    0.88
+                ) 100%
+            );
+
+    }
+
+
+    .hero-arrow {
+
+        top: auto;
+
+        bottom: 105px;
+
+        width: 40px;
+
+        height: 40px;
+
+        margin-top: 0;
+
+    }
+
+
+    .hero-prev {
+
+        left: 20px;
+
+    }
+
+
+    .hero-next {
+
+        right: 20px;
+
+    }
+
+
+    .hero-dots {
+
+        bottom: 75px;
+
+    }
+
+
+    .hero-floating-cards {
+
+        left: 50%;
+
+        right: auto;
+
+        bottom: 0;
+
+        transform: translateX(-50%);
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+
+    .security-card {
+
+        width: 50%;
+
+        min-height: 105px;
+
+        padding: 18px;
+
+    }
+
+
+    .success-card {
+
+        width: 50%;
+
+        min-height: 105px;
+
+        padding: 18px;
+
+    }
+
+
+    .security-icon {
+
+        width: 38px;
+
+        height: 38px;
+
+    }
+
+
+    .security-content strong {
+
+        font-size: 13px;
+
+    }
+
+
+    .success-number {
+
+        font-size: 27px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+
+    .lending-hero {
+
+        min-height: 690px;
+
+        height: calc(
+            100vh - 70px
+        );
+
+    }
+
+
+    .hero-content-wrapper {
+
+        padding:
+            40px 20px 165px;
+
+    }
+
+
+    .hero-eyebrow {
+
+        font-size: 10px;
+
+        gap: 8px;
+
+        letter-spacing: 1.7px;
+
+    }
+
+
+    .eyebrow-icon {
+
+        font-size: 18px;
+
+    }
+
+
+    .hero-title {
+
+        font-size: 38px;
+
+        line-height: 1.12;
+
+        letter-spacing: -1px;
+
+    }
+
+
+    .hero-description {
+
+        max-width: 330px;
+
+        margin-top: 20px;
+
+        margin-bottom: 27px;
+
+        font-size: 13px;
+
+    }
+
+
+    .hero-button {
+
+        min-width: 165px;
+
+        height: 49px;
+
+        font-size: 13px;
+
+    }
+
+
+    .hero-floating-cards {
+
+        width: 100%;
+
+    }
+
+
+    .security-card {
+
+        width: 50%;
+
+        min-height: 105px;
+
+        padding: 14px;
+
+        gap: 10px;
+
+    }
+
+
+    .success-card {
+
+        width: 50%;
+
+        min-height: 105px;
+
+        padding: 14px;
+
+    }
+
+
+    .security-icon {
+
+        width: 34px;
+
+        height: 34px;
+
+    }
+
+
+    .security-icon span {
+
+        font-size: 17px;
+
+    }
+
+
+    .security-small {
+
+        font-size: 7px;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .security-content strong {
+
+        font-size: 11px;
+
+    }
+
+
+    .security-content p {
+
+        font-size: 9px;
+
+    }
+
+
+    .success-label {
+
+        font-size: 7px;
+
+        letter-spacing: 1.2px;
+
+    }
+
+
+    .success-number {
+
+        font-size: 24px;
+
+    }
+
+
+    .success-text {
+
+        font-size: 12px;
+
+    }
+
+
+    .success-arrow {
+
+        right: 12px;
+
+        bottom: 10px;
+
+        font-size: 23px;
+
+    }
+
+
+    .hero-arrow {
+
+        bottom: 118px;
+
+    }
+
+
+    .hero-prev {
+
+        left: 12px;
+
+    }
+
+
+    .hero-next {
+
+        right: 12px;
+
+    }
+
+
+    .hero-dots {
+
+        bottom: 83px;
+
+    }
+
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+
+    .lending-hero {
+
+        min-height: 650px;
+
+    }
+
+
+    .hero-title {
+
+        font-size: 32px;
+
+    }
+
+
+    .hero-description {
+
+        font-size: 12px;
+
+    }
+
+
+    .security-card {
+
+        padding: 11px;
+
+    }
+
+
+    .success-card {
+
+        padding: 11px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+   STACKLY CREDIT & LENDING
+   ABOUT / INTRO SECTION
+========================================================= */
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.credit-about-section {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 620px;
+
+    padding: 85px 0 95px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.credit-about-container {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: min(1320px, 90%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(450px, 0.95fr)
+        minmax(480px, 1.05fr);
+
+    align-items: center;
+
+    gap: 75px;
+
+}
+
+
+/* =========================================================
+   LEFT BACKGROUND GEOMETRIC LINES
+========================================================= */
+
+.about-bg-lines {
+
+    position: absolute;
+
+    left: -35px;
+
+    top: 0;
+
+    width: 680px;
+
+    height: 100%;
+
+    opacity: 0.65;
+
+    pointer-events: none;
+
+}
+
+
+.about-bg-lines span {
+
+    position: absolute;
+
+    display: block;
+
+    width: 300px;
+
+    height: 190px;
+
+    border: 1px solid rgba(
+        239,
+        56,
+        43,
+        0.12
+    );
+
+    transform: rotate(
+        35deg
+    );
+
+}
+
+
+/* Individual geometric shapes */
+
+.about-bg-lines span:nth-child(1) {
+
+    left: 40px;
+
+    top: 80px;
+
+    transform:
+        rotate(35deg)
+        skewX(-15deg);
+
+}
+
+
+.about-bg-lines span:nth-child(2) {
+
+    left: 170px;
+
+    top: 20px;
+
+    width: 270px;
+
+    height: 230px;
+
+    transform:
+        rotate(20deg)
+        skewX(-20deg);
+
+}
+
+
+.about-bg-lines span:nth-child(3) {
+
+    left: 10px;
+
+    top: 260px;
+
+    width: 340px;
+
+    height: 220px;
+
+    transform:
+        rotate(45deg)
+        skewX(-20deg);
+
+}
+
+
+.about-bg-lines span:nth-child(4) {
+
+    left: 230px;
+
+    top: 280px;
+
+    width: 280px;
+
+    height: 170px;
+
+    transform:
+        rotate(15deg)
+        skewX(-25deg);
+
+}
+
+
+.about-bg-lines span:nth-child(5) {
+
+    left: 80px;
+
+    top: 400px;
+
+    width: 250px;
+
+    height: 150px;
+
+    transform:
+        rotate(55deg)
+        skewX(-15deg);
+
+}
+
+
+/* =========================================================
+   RIGHT DOT PATTERN
+========================================================= */
+
+.about-bg-dots {
+
+    position: absolute;
+
+    right: -45px;
+
+    top: 30px;
+
+    width: 470px;
+
+    height: 470px;
+
+    opacity: 0.65;
+
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(
+                239,
+                56,
+                43,
+                0.16
+            ) 2px,
+            transparent 2.5px
+        );
+
+    background-size: 16px 16px;
+
+    border-radius: 50%;
+
+    mask-image:
+        radial-gradient(
+            circle,
+            #000 20%,
+            transparent 70%
+        );
+
+    -webkit-mask-image:
+        radial-gradient(
+            circle,
+            #000 20%,
+            transparent 70%
+        );
+
+}
+
+
+/* =========================================================
+   LEFT IMAGE AREA
+========================================================= */
+
+.about-image-area {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 430px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* =========================================================
+   RED VERTICAL BAR
+========================================================= */
+
+.about-red-bar {
+
+    position: absolute;
+
+    left: 17%;
+
+    top: 9%;
+
+    width: 17px;
+
+    height: 88%;
+
+    background: #ef382b;
+
+    z-index: 1;
+
+}
+
+
+/* =========================================================
+   IMAGE WRAPPER
+========================================================= */
+
+.about-image-wrap {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 73%;
+
+    height: 425px;
+
+    overflow: hidden;
+
+    margin-left: 13%;
+
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.about-main-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.8s ease;
+
+}
+
+
+.about-image-wrap:hover
+.about-main-image {
+
+    transform: scale(1.04);
+
+}
+
+
+/* =========================================================
+   EXPERIENCE BADGE
+========================================================= */
+
+.experience-badge {
+
+    position: absolute;
+
+    z-index: 4;
+
+    left: 5%;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    width: 145px;
+
+    height: 145px;
+
+    background: #ffffff;
+
+    border: 1.5px solid #202020;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px
+        rgba(
+            0,
+            0,
+            0,
+            0.06
+        );
+
+}
+
+
+/* Inner border effect */
+
+.experience-badge::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 7px;
+
+    border: 1px solid
+        rgba(
+            239,
+            56,
+            43,
+            0.10
+        );
+
+    border-radius: 50%;
+
+}
+
+
+.experience-badge strong {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: #ef382b;
+
+    font-size: 40px;
+
+    line-height: 1;
+
+    font-weight: 800;
+
+}
+
+
+.experience-badge span {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: 4px;
+
+    color: #222222;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    font-weight: 500;
+
+}
+
+
+/* =========================================================
+   ABOUT CONTENT
+========================================================= */
+
+.about-content {
+
+    position: relative;
+
+    z-index: 3;
+
+    padding-right: 20px;
+
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.about-eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-bottom: 15px;
+
+    color: #ef382b;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+}
+
+
+.about-eyebrow span {
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.about-title {
+
+    max-width: 570px;
+
+    margin: 0 0 32px;
+
+    color: #20202b;
+
+    font-size: clamp(
+        38px,
+        4vw,
+        52px
+    );
+
+    line-height: 1.12;
+
+    letter-spacing: -1.8px;
+
+    font-weight: 800;
+
+}
+
+
+.about-title span {
+
+    display: block;
+
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.about-features {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 0px;
+
+    margin-bottom: 27px;
+    justify-content: start;
+    width: 460px;
+
+}
+
+
+.about-feature {
+    width:220px;
+    min-height: 54px;
+
+    padding: 0 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 0px;
+
+    border: 1px solid #e5e0dc;
+
+    background: #ffffff;
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.about-feature:hover {
+
+    border-color: #ef382b;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(
+            0,
+            0,
+            0,
+            0.05
+        );
+
+}
+
+
+.feature-check {
+
+    width: 16px;
+
+    height: 16px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ef382b;
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+}
+
+
+.about-feature strong {
+
+    color: #242424;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   RED HIGHLIGHT
+========================================================= */
+
+.about-highlight {
+
+    margin: 0 0 25px;
+
+    color: #ef382b;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.about-description {
+
+    max-width: 590px;
+
+    margin: 0;
+
+    color: #666666;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    font-weight: 400;
+
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.about-profile {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 22px;
+
+}
+
+
+/* =========================================================
+   PROFILE PHOTO
+========================================================= */
+
+.profile-photo {
+
+    width: 58px;
+
+    height: 58px;
+
+    padding: 2px;
+
+    border: 1px solid #ef382b;
+
+    border-radius: 50%;
+
+}
+
+
+.profile-photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+}
+
+
+/* =========================================================
+   PROFILE TEXT
+========================================================= */
+
+.profile-signature {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+
+.profile-signature span {
+
+    color: #777777;
+
+    font-size: 11px;
+
+}
+
+
+.profile-signature strong {
+
+    color: #202020;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    font-style: italic;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .credit-about-container {
+
+        width: 92%;
+
+        grid-template-columns:
+            minmax(380px, 0.9fr)
+            minmax(400px, 1.1fr);
+
+        gap: 45px;
+
+    }
+
+
+    .about-image-wrap {
+
+        width: 76%;
+
+        margin-left: 12%;
+
+    }
+
+
+    .about-red-bar {
+
+        left: 13%;
+
+    }
+
+
+    .experience-badge {
+
+        left: 2%;
+
+    }
+
+
+    .about-title {
+
+        font-size: 42px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .credit-about-section {
+
+        min-height: auto;
+
+        padding:
+            75px 0 80px;
+
+    }
+
+
+    .credit-about-container {
+
+        width: 90%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 65px;
+
+    }
+
+
+    /* ---------------------------------------------
+       IMAGE
+    --------------------------------------------- */
+
+    .about-image-area {
+
+        width: 100%;
+
+        max-width: 540px;
+
+        min-height: 390px;
+
+    }
+
+
+    .about-image-wrap {
+
+        width: 76%;
+
+        height: 390px;
+
+        margin-left: 10%;
+
+    }
+
+
+    .about-red-bar {
+
+        left: 12%;
+
+        top: 7%;
+
+        width: 13px;
+
+        height: 86%;
+
+    }
+
+
+    .experience-badge {
+
+        left: 2%;
+
+        width: 125px;
+
+        height: 125px;
+
+    }
+
+
+    .experience-badge strong {
+
+        font-size: 34px;
+
+    }
+
+
+    .experience-badge span {
+
+        font-size: 12px;
+
+    }
+
+
+    /* ---------------------------------------------
+       CONTENT
+    --------------------------------------------- */
+
+    .about-content {
+
+        width: 100%;
+
+        padding: 0;
+
+        text-align: center;
+
+    }
+
+
+    .about-eyebrow {
+
+        justify-content: center;
+
+        font-size: 11px;
+
+        letter-spacing: 2.5px;
+
+    }
+
+
+    .about-title {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        margin-bottom: 27px;
+
+        font-size: 38px;
+
+        line-height: 1.15;
+
+    }
+
+
+    .about-features {
+
+        width: 100%;
+
+        max-width: 580px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        gap: 12px;
+        justify-content: center;
+
+    }
+
+
+    .about-feature {
+
+        justify-content: center;
+
+        padding: 0 12px;
+
+    }
+
+
+    .about-feature strong {
+
+        font-size: 12px;
+
+    }
+
+
+    .about-highlight {
+
+        max-width: 580px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        font-size: 13px;
+
+    }
+
+
+    .about-description {
+
+        max-width: 600px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        font-size: 13px;
+
+    }
+
+
+    .about-profile {
+
+        justify-content: center;
+
+    }
+
+
+    /* Background */
+
+    .about-bg-lines {
+
+        left: -200px;
+
+        width: 550px;
+
+        opacity: 0.4;
+
+    }
+
+
+    .about-bg-dots {
+
+        right: -200px;
+
+        width: 380px;
+
+        height: 380px;
+
+        opacity: 0.35;
+
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .credit-about-section {
+
+        padding:
+            60px 0 70px;
+
+    }
+
+
+    .credit-about-container {
+
+        width: 91%;
+
+        gap: 55px;
+
+    }
+
+
+    .about-image-area {
+
+        min-height: 320px;
+
+    }
+
+
+    .about-image-wrap {
+
+        width: 75%;
+
+        height: 320px;
+
+        margin-left: 12%;
+
+    }
+
+
+    .about-red-bar {
+
+        left: 14%;
+
+        width: 11px;
+
+    }
+
+
+    .experience-badge {
+
+        left: 0;
+
+        width: 108px;
+
+        height: 108px;
+
+    }
+
+
+    .experience-badge::before {
+
+        inset: 6px;
+
+    }
+
+
+    .experience-badge strong {
+
+        font-size: 30px;
+
+    }
+
+
+    .experience-badge span {
+
+        font-size: 10px;
+
+    }
+
+
+    .about-eyebrow {
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+
+    }
+
+
+    .about-title {
+
+        font-size: 32px;
+
+        letter-spacing: -1px;
+
+    }
+
+
+    .about-features {
+
+        grid-template-columns: 1fr;
+
+        max-width: 340px;
+        justify-content: center;
+
+    }
+
+
+    .about-feature {
+
+        min-height: 52px;
+        justify-content: center;
+
+    }
+
+
+    .about-highlight {
+
+        font-size: 12px;
+
+    }
+
+
+    .about-description {
+
+        font-size: 12px;
+
+        line-height: 1.8;
+
+    }
+
+
+    .profile-signature strong {
+
+        font-size: 16px;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .about-image-wrap {
+
+        height: 285px;
+
+    }
+
+
+    .about-image-area {
+
+        min-height: 285px;
+
+    }
+
+
+    .experience-badge {
+
+        width: 96px;
+
+        height: 96px;
+
+    }
+
+
+    .experience-badge strong {
+
+        font-size: 27px;
+
+    }
+
+
+    .experience-badge span {
+
+        font-size: 9px;
+
+    }
+
+
+    .about-title {
+
+        font-size: 29px;
+
+    }
+   .about-features{
+    justify-content: center;
+    text-align: center;
+    width: 180px;
+   }
+}
+
+
+
+/* =========================================================
+   STACKLY CREDIT & LENDING
+   SERVICES SECTION
+========================================================= */
+
+.credit-services-section {
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 650px;
+
+    padding: 95px 0 90px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND IMAGE
+========================================================= */
+
+.services-bg {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.90),
+            rgba(255,255,255,0.94)
+        ),
+        url("../assets/background.webp");
+
+    background-size: cover;
+
+    background-position: center;
+
+    opacity: 0.65;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.services-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(975px, 90%);
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.services-heading {
+
+    display: grid;
+
+    grid-template-columns:
+        1.1fr
+        0.9fr;
+
+    align-items: start;
+
+    gap: 70px;
+
+    margin-bottom: 48px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.services-eyebrow {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #ef382b;
+
+    font-size: 12px;
+
+    line-height: 1.4;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.services-title {
+
+    max-width: 560px;
+
+    margin: 0;
+
+    color: #20202b;
+
+    font-size: clamp(
+        38px,
+        4vw,
+        45px
+    );
+
+    line-height: 1.08;
+
+    letter-spacing: -1.5px;
+
+    font-weight: 800;
+}
+
+
+.services-title span {
+
+    display: block;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.services-intro {
+
+    max-width: 390px;
+
+    margin: 25px 0 0;
+
+    color: #666666;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
+   SERVICE GRID
+========================================================= */
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
+.credit-service-card {
+
+    position: relative;
+
+    min-height: 333px;
+
+    padding: 40px 25px 30px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 15px 40px
+        rgba(
+            0,
+            0,
+            0,
+            0.06
+        );
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.credit-service-card:hover {
+
+    transform:
+        translateY(-7px);
+
+    box-shadow:
+        0 22px 50px
+        rgba(
+            0,
+            0,
+            0,
+            0.10
+        );
+}
+
+
+/* =========================================================
+   ICON BOX
+========================================================= */
+
+.service-icon-box {
+
+    position: relative;
+
+    width: 75px;
+
+    height: 80px;
+
+    margin-bottom: 24px;
+
+    background: #faf9f7;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   RED LEFT LINE
+========================================================= */
+
+.service-icon-box::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 3px;
+
+    height: 100%;
+
+    background: #ef382b;
+
+    transform:
+        scaleY(0.18);
+
+    transform-origin:
+        top center;
+
+    transition:
+        transform 0.55s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        );
+}
+
+
+/* =========================================================
+   RED FILL SWEEP
+========================================================= */
+
+.service-icon-box::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 3px;
+
+    height: 0;
+
+    background: #ef382b;
+
+    transition:
+        height 0.55s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        );
+}
+
+
+/* =========================================================
+   HOVER RED ANIMATION
+========================================================= */
+
+.credit-service-card:hover
+.service-icon-box::before {
+
+    transform:
+        scaleY(1);
+}
+
+
+.credit-service-card:hover
+.service-icon-box::after {
+
+    height: 100%;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.service-icon {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 47px;
+
+    height: 47px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #24242c;
+
+    transition:
+        color 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+.service-icon svg {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+}
+
+
+.credit-service-card:hover
+.service-icon {
+
+    color: #ef382b;
+
+    transform:
+        scale(1.08)
+        rotate(-2deg);
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.credit-service-card h3 {
+
+    margin: 0 0 14px;
+
+    color: #24242c;
+
+    font-size: 17px;
+
+    line-height: 1.3;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.credit-service-card p {
+
+    margin: 0;
+
+    color: #656872;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   READ MORE
+========================================================= */
+
+.service-read-more {
+
+    position:static;
+
+    left: 25px;
+
+    bottom: 39px;
+
+    color: #ef382b;
+
+    font-size: 11px;
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    text-decoration:
+        underline;
+
+    text-underline-offset: 3px;
+
+    transition:
+        letter-spacing 0.3s ease;
+}
+
+
+.service-read-more:hover {
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================================
+   CORNER DETAIL
+========================================================= */
+
+.card-corner {
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: 0;
+
+    width: 0;
+
+    height: 0;
+
+    border-left:
+        13px solid transparent;
+
+    border-bottom:
+        13px solid #ef382b;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .services-container {
+
+        width: 90%;
+    }
+
+
+    .services-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 22px;
+    }
+
+
+    .credit-service-card {
+
+        min-height: 330px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .credit-services-section {
+
+        padding:
+            75px 0 75px;
+    }
+
+
+    .services-heading {
+
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+
+        text-align: center;
+
+        margin-bottom: 40px;
+    }
+
+
+    .services-title {
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        font-size: 36px;
+    }
+
+
+    .services-eyebrow {
+
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .services-intro {
+
+        max-width: 580px;
+
+        margin:
+            15px auto 0;
+
+        font-size: 13px;
+    }
+
+
+    .services-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+
+        max-width: 650px;
+
+        margin: 0 auto;
+    }
+
+
+    .credit-service-card {
+
+        min-height: 325px;
+
+        padding:
+            32px 22px 30px;
+
+        text-align: center;
+    }
+
+
+    .service-icon-box {
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .credit-service-card h3 {
+
+        font-size: 16px;
+    }
+
+
+    .credit-service-card p {
+
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+
+    .service-read-more {
+
+        left: 0;
+
+        right: 0;
+
+        bottom: 32px;
+
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .credit-services-section {
+
+        padding:
+            60px 0 65px;
+    }
+
+
+    .services-container {
+
+        width: 90%;
+    }
+
+
+    .services-title {
+
+        font-size: 31px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .services-intro {
+
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+
+    .services-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+        max-width: 340px;
+    }
+
+
+    .credit-service-card {
+
+        min-height: 320px;
+
+        padding:
+            35px 25px 30px;
+    }
+
+
+    .service-icon-box {
+
+        width: 72px;
+
+        height: 76px;
+    }
+
+
+    .credit-service-card h3 {
+
+        font-size: 17px;
+    }
+
+
+    .credit-service-card p {
+
+        max-width: 280px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+    .services-title {
+
+        font-size: 28px;
+    }
+
+
+    .credit-service-card {
+
+        min-height: 315px;
+    }
+
+}
+
+
+/* =========================================================
+   STACKLY CREDIT & LENDING
+   CASE STUDY SECTION
+========================================================= */
+
+.credit-case-section {
+
+    position: relative;
+
+    width: 100%;
+
+    padding: 95px 0 90px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.case-container {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1025px, 90%);
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.case-heading {
+
+    text-align: center;
+
+    margin-bottom: 52px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.case-eyebrow {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #ef382b;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.case-title {
+
+    margin: 0;
+
+    color: #20202b;
+
+    font-size: clamp(
+        38px,
+        4vw,
+        43px
+    );
+
+    line-height: 1.08;
+
+    letter-spacing: -1.5px;
+
+    font-weight: 800;
+}
+
+
+.case-title span {
+
+    display: block;
+}
+
+
+/* =========================================================
+   CASE GRID
+========================================================= */
+
+.case-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 24px;
+}
+
+
+/* =========================================================
+   CASE CARD
+========================================================= */
+
+.case-card {
+
+    position: relative;
+
+    display: block;
+
+    height: 392px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    background: #15151c;
+
+    isolation: isolate;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.case-card img {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transform: scale(1);
+
+    transition:
+        transform 0.9s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        );
+}
+
+
+/* =========================================================
+   DEFAULT DARK OVERLAY
+========================================================= */
+
+.case-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(10,10,16,0.78),
+            rgba(10,10,16,0.05)
+        );
+
+    opacity: 0.72;
+
+    transition:
+        opacity 0.45s ease;
+}
+
+
+/* =========================================================
+   HOVER SWEEP OVERLAY
+========================================================= */
+
+.case-overlay::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: -105%;
+
+    top: 0;
+
+    width: 105%;
+
+    height: 100%;
+
+    background:
+        rgba(
+            25,
+            25,
+            32,
+            0.82
+        );
+
+    transform:
+        skewX(-8deg);
+
+    transition:
+        left 0.65s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        );
+}
+
+
+/* Hover overlay moves LEFT → RIGHT */
+
+.case-card:hover
+.case-overlay::before {
+
+    left: 0;
+}
+
+
+.case-card:hover
+.case-overlay {
+
+    opacity: 0.95;
+}
+
+
+/* =========================================================
+   IMAGE ZOOM
+========================================================= */
+
+.case-card:hover img {
+
+    transform:
+        scale(1.08);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.case-content {
+
+    position: absolute;
+
+    z-index: 4;
+
+    left: 25px;
+
+    right: 15px;
+
+    bottom: 23px;
+
+    transform:
+        translateY(0);
+
+    transition:
+        transform 0.45s
+        ease;
+}
+
+
+.case-card:hover
+.case-content {
+
+    transform:
+        translateY(-8px);
+}
+
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.case-content h3 {
+
+    margin: 0 0 6px;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    line-height: 1.25;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CATEGORY
+========================================================= */
+
+.case-content span {
+
+    display: block;
+
+    color: #ef382b;
+
+    font-size: 10px;
+
+    line-height: 1.3;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   PLUS BUTTON
+========================================================= */
+
+.case-plus {
+
+    position: absolute;
+
+    z-index: 5;
+
+    top: 25px;
+
+    right: 24px;
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ef382b;
+
+    color: #ffffff;
+
+    font-size: 25px;
+
+    line-height: 1;
+
+    font-weight: 400;
+
+    opacity: 0;
+
+    transform:
+        translateY(-20px)
+        scale(0.7);
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.45s
+        cubic-bezier(
+            0.22,
+            1,
+            0.36,
+            1
+        );
+}
+
+
+.case-card:hover
+.case-plus {
+
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+}
+
+
+/* =========================================================
+   PLUS HOVER
+========================================================= */
+
+.case-plus:hover {
+
+    background: #ffffff;
+
+    color: #ef382b;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .case-container {
+
+        width: 90%;
+    }
+
+
+    .case-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 20px;
+    }
+
+
+    .case-card {
+
+        height: 370px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .credit-case-section {
+
+        padding:
+            75px 0 75px;
+    }
+
+
+    .case-heading {
+
+        margin-bottom: 40px;
+    }
+
+
+    .case-title {
+
+        font-size: 36px;
+    }
+
+
+    .case-eyebrow {
+
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .case-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        max-width: 650px;
+
+        margin: 0 auto;
+
+        gap: 18px;
+    }
+
+
+    .case-card {
+
+        height: 350px;
+    }
+
+
+    .case-content {
+
+        left: 20px;
+
+        bottom: 20px;
+    }
+
+
+    .case-content h3 {
+
+        font-size: 16px;
+    }
+
+
+    .case-plus {
+
+        top: 18px;
+
+        right: 18px;
+
+        width: 36px;
+
+        height: 36px;
+
+        font-size: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 520px) {
+
+    .credit-case-section {
+
+        padding:
+            60px 0 65px;
+    }
+
+
+    .case-container {
+
+        width: 90%;
+    }
+
+
+    .case-title {
+
+        font-size: 31px;
+
+        letter-spacing: -1px;
+    }
+
+
+    .case-grid {
+
+        grid-template-columns: 1fr;
+
+        max-width: 340px;
+
+        gap: 18px;
+    }
+
+
+    .case-card {
+
+        height: 390px;
+    }
+
+
+    .case-content {
+
+        left: 24px;
+
+        bottom: 24px;
+    }
+
+
+    .case-content h3 {
+
+        font-size: 18px;
+    }
+
+}
+
+
+
+/* =====================================================
+   STACKLY TESTIMONIALS
+   FINLON REFERENCE LAYOUT
+===================================================== */
+
+.credit-testimonials-section {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   TOP AREA
+===================================================== */
+
+.testimonial-heading-wrap {
+    position: relative;
+
+    width: min(1280px, 90%);
+    height: 219px;
+
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADING - LEFT
+===================================================== */
+
+.testimonial-heading {
+    position: absolute;
+
+    left: 0;
+    top: 22px;
+
+    width: 52%;
+
+    padding: 0;
+
+    z-index: 5;
+}
+
+
+.testimonial-eyebrow {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #ef382b;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.testimonial-heading h2 {
+    margin: 0;
+
+    color: #20202b;
+
+    font-size: 42px;
+    line-height: 1.12;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+
+/* =====================================================
+   RIGHT IMAGE
+   THIS IS THE IMPORTANT PART
+===================================================== */
+
+.testimonial-main-image {
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    width: 59%;
+    height: 480px;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+
+.testimonial-main-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transform: scale(1.01);
+
+    transition: transform 1s ease;
+}
+
+
+.testimonial-main-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =====================================================
+   MAIN RED + IMAGE AREA
+===================================================== */
+
+.testimonial-main {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 430px;
+
+    margin: 0;
+
+    display: block;
+}
+
+
+/* =====================================================
+   RED TESTIMONIAL BOX
+===================================================== */
+
+.testimonial-red-box {
+    position: relative;
+
+    width: 54%;
+
+    height: 330px;
+
+    min-height: 330px;
+
+    background: #ef382b;
+
+    color: #fff;
+
+    overflow: hidden;
+
+    z-index: 3;
+}
+
+
+/* =====================================================
+   GLOBE / DOT PATTERN
+===================================================== */
+
+.testimonial-globe {
+    position: absolute;
+
+    left: 75px;
+    top: 5px;
+
+    width: 390px;
+    height: 320px;
+
+    opacity: 0.58;
+
+    border-radius: 50%;
+
+    background-image:
+        radial-gradient(
+            circle,
+            rgba(255,255,255,0.9) 1px,
+            transparent 1.5px
+        );
+
+    background-size: 5px 5px;
+
+    transform:
+        perspective(500px)
+        rotateY(-18deg);
+
+    mask-image:
+        radial-gradient(
+            ellipse at center,
+            #000 45%,
+            transparent 72%
+        );
+
+    -webkit-mask-image:
+        radial-gradient(
+            ellipse at center,
+            #000 45%,
+            transparent 72%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   QUOTE MARK
+===================================================== */
+
+.testimonial-quote {
+    position: absolute;
+
+    left: 45%;
+
+    top: 37px;
+
+    display: flex;
+
+    z-index: 6;
+
+    color: #fff;
+}
+
+
+.testimonial-quote span {
+    display: block;
+
+    font-family: Georgia, serif;
+
+    font-size: 78px;
+
+    line-height: .55;
+
+    font-weight: 400;
+}
+
+
+/* =====================================================
+   SLIDER AREA
+===================================================== */
+
+.testimonial-slider {
+    position: absolute;
+
+    top: 0;
+    right: 35px;
+
+    width: 45%;
+
+    height: 330px;
+
+    margin: 0;
+
+    z-index: 7;
+}
+
+
+/* =====================================================
+   TESTIMONIAL ITEM
+===================================================== */
+
+.testimonial-item {
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateX(90px);
+
+    pointer-events: none;
+}
+
+
+.testimonial-item.active {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateX(0);
+
+    pointer-events: auto;
+}
+
+
+/* =====================================================
+   TESTIMONIAL TEXT
+===================================================== */
+
+.testimonial-text {
+    position: absolute;
+
+    top: 53px;
+    left: 0;
+
+    width: 100%;
+
+    padding: 0;
+
+    color: #fff;
+
+    font-size: 14px;
+
+    line-height: 1.85;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   CLIENT
+===================================================== */
+
+.testimonial-client {
+    position: absolute;
+
+    left: 0;
+    bottom: 49px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.testimonial-client img {
+    width: 84px;
+    height: 84px;
+
+    display: block;
+
+    object-fit: cover;
+
+    padding: 3px;
+
+    border: 1px dashed rgba(255,255,255,.9);
+
+    background: #ef382b;
+}
+
+
+.client-details {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.testimonial-stars {
+    margin-bottom: 5px;
+
+    color: #fff;
+
+    font-size: 13px;
+
+    line-height: 1;
+
+    letter-spacing: 1px;
+}
+
+
+.client-details h3 {
+    margin: 0 0 3px;
+
+    color: #fff;
+
+    font-size: 16px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+
+.client-details span {
+    color: #fff;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1.1px;
+}
+
+
+/* =====================================================
+   DOTS
+===================================================== */
+
+.testimonial-dots {
+    position: absolute;
+
+    right: 65px;
+    bottom: 48px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    z-index: 10;
+}
+
+
+.testimonial-dot {
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.4);
+
+    cursor: pointer;
+
+    transition:
+        width .3s ease,
+        height .3s ease,
+        background .3s ease;
+}
+
+
+.testimonial-dot.active {
+    width: 11px;
+    height: 11px;
+
+    background: #fff;
+}
+
+/* =====================================================
+   TESTIMONIAL MAIN
+===================================================== */
+
+.testimonial-main {
+    position: relative;
+
+    width: 100%;
+
+    height: 330px;
+
+    display: block;
+
+    overflow: visible;
+}
+
+
+/* =====================================================
+   RED TESTIMONIAL BOX
+===================================================== */
+
+.testimonial-red-box {
+    position: relative;
+
+    width: 54%;
+
+    height: 330px;
+
+    background: #ef382b;
+
+    color: #fff;
+
+    overflow: hidden;
+
+    z-index: 3;
+}
+
+
+/* =====================================================
+   RIGHT SIDE IMAGE
+===================================================== */
+
+.testimonial-image-box {
+    display: block !important;
+
+    position: absolute;
+
+    top: -149px;
+    right: 8%;
+
+    width: 38%;
+
+    height: 478px;
+
+    overflow: hidden;
+
+    z-index: 2;
+
+    background: #ddd;
+}
+
+
+.testimonial-image-box img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transform: scale(1.01);
+
+    transition: transform 1s ease;
+}
+
+
+.testimonial-image-box:hover img {
+    transform: scale(1.05);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .testimonial-heading-wrap {
+        width: 92%;
+    }
+
+    .testimonial-heading h2 {
+        font-size: 38px;
+    }
+
+    .testimonial-main-image {
+        width: 58%;
+    }
+
+    .testimonial-red-box {
+        width: 55%;
+    }
+
+    .testimonial-slider {
+        width: 45%;
+        right: 30px;
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .testimonial-heading-wrap {
+        width: 90%;
+
+        height: auto;
+
+        padding-bottom: 35px;
+    }
+
+
+    .testimonial-heading {
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        width: 100%;
+
+        padding-top: 55px;
+
+        text-align: center;
+    }
+
+
+    .testimonial-heading h2 {
+        font-size: 36px;
+    }
+
+
+    .testimonial-main-image {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        width: 100%;
+        height: 330px;
+
+        margin-top: 35px;
+    }
+
+
+    .testimonial-main {
+        display: block;
+
+        height: auto;
+    }
+
+      .testimonial-image-box {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        width: 100%;
+
+        height: 330px;
+
+        z-index: 1;
+    }
+
+    .testimonial-red-box {
+        width: 100%;
+
+        height: 350px;
+
+        z-index: 3;
+    }
+    .testimonial-red-box {
+        width: 100%;
+
+        height: 350px;
+        min-height: 350px;
+    }
+
+
+    .testimonial-slider {
+        right: 8%;
+
+        width: 72%;
+
+        height: 350px;
+    }
+
+
+    .testimonial-globe {
+        left: 0;
+    }
+
+
+    .testimonial-quote {
+        left: 8%;
+    }
+
+
+   
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .testimonial-heading-wrap {
+        width: 100%;
+
+        padding-bottom: 0;
+    }
+
+
+    .testimonial-heading {
+        padding:
+            55px
+            20px
+            32px;
+    }
+
+
+    .testimonial-eyebrow {
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .testimonial-heading h2 {
+        font-size: 31px;
+
+        line-height: 1.15;
+
+        letter-spacing: -.5px;
+    }
+
+
+    .testimonial-main-image {
+        width: 100%;
+
+        height: 280px;
+
+        margin-top: 0;
+    }
+
+
+    .testimonial-red-box {
+        width: 100%;
+
+        height: 430px;
+    }
+
+   .testimonial-image-box {
+        height: 280px;
+    }
+    .testimonial-globe {
+        left: -90px;
+
+        top: 50px;
+
+        width: 350px;
+        height: 300px;
+    }
+
+
+    .testimonial-quote {
+        left: 22px;
+
+        top: 47px;
+    }
+
+
+    .testimonial-quote span {
+        font-size: 65px;
+    }
+
+
+    .testimonial-slider {
+        position: absolute;
+
+        top: 0;
+        right: 20px;
+
+        width: calc(100% - 40px);
+
+        height: 430px;
+    }
+
+
+    .testimonial-text {
+        top: 105px;
+
+        left: 5px;
+
+        width: calc(100% - 10px);
+
+        font-size: 13px;
+
+        line-height: 1.8;
+    }
+
+
+    .testimonial-client {
+        left: 5px;
+
+        bottom: 58px;
+
+        gap: 12px;
+    }
+
+
+    .testimonial-client img {
+        width: 70px;
+        height: 70px;
+    }
+
+
+    .client-details h3 {
+        font-size: 15px;
+    }
+
+
+    .client-details span {
+        font-size: 9px;
+    }
+
+
+    .testimonial-dots {
+        right: 25px;
+
+        bottom: 35px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .testimonial-heading h2 {
+        font-size: 28px;
+    }
+
+
+    .testimonial-main-image {
+        height: 250px;
+    }
+
+
+    .testimonial-red-box {
+        height: 440px;
+    }
+
+
+    .testimonial-slider {
+        height: 440px;
+    }
+
+
+    .testimonial-text {
+        font-size: 12.5px;
+
+        line-height: 1.75;
+    }
+
+
+    .testimonial-client img {
+        width: 64px;
+        height: 64px;
+    }
+
+}
+
+
+/* =====================================================
+   STACKLY CREDIT & LENDING TEAM
+===================================================== */
+
+.credit-team-section {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 680px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    padding:
+        75px
+        0
+        60px;
+}
+
+
+/* =====================================================
+   ABSTRACT BACKGROUND
+===================================================== */
+
+.team-bg-pattern {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 455px;
+
+    background-color: #f7f7f6;
+
+    opacity: 1;
+
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+
+/* contour lines */
+
+.team-bg-pattern::before,
+.team-bg-pattern::after {
+    content: "";
+
+    position: absolute;
+
+    inset: -80px;
+
+    background:
+        repeating-radial-gradient(
+            ellipse at 15% 45%,
+            transparent 0,
+            transparent 27px,
+            rgba(220,220,218,.38) 28px,
+            transparent 30px
+        );
+
+    transform:
+        rotate(-5deg)
+        scale(1.25);
+
+    opacity: .65;
+}
+
+
+.team-bg-pattern::after {
+    background:
+        repeating-radial-gradient(
+            ellipse at 80% 20%,
+            transparent 0,
+            transparent 30px,
+            rgba(225,225,223,.35) 31px,
+            transparent 33px
+        );
+
+    transform:
+        rotate(8deg)
+        scale(1.2);
+
+    opacity: .5;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.team-heading {
+    position: relative;
+
+    z-index: 3;
+
+    width: 100%;
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+
+.team-eyebrow {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #ef382b;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.team-heading h2 {
+    margin: 0;
+
+    color: #20202b;
+
+    font-size: clamp(35px, 4vw, 43px);
+
+    line-height: 1.12;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+
+/* =====================================================
+   TEAM CONTAINER
+===================================================== */
+
+.team-container {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(975px, 90%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+
+/* =====================================================
+   TEAM CARD
+===================================================== */
+
+.credit-team-card {
+    position: relative;
+
+    width: 100%;
+
+    cursor: pointer;
+
+    overflow: visible;
+
+    transition:
+        transform .4s ease;
+}
+
+
+.credit-team-card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.team-image-wrap {
+    position: relative;
+
+    width: 100%;
+
+    height: 296px;
+
+    overflow: hidden;
+
+    background: #ddd;
+}
+
+
+.team-image-wrap img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transform:
+        scale(1.02);
+
+    transition:
+        transform .8s ease;
+}
+
+
+.credit-team-card:hover
+.team-image-wrap img {
+    transform:
+        scale(1.06);
+}
+
+
+/* =====================================================
+   IMAGE OVERLAY
+===================================================== */
+
+.team-image-wrap::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,.16),
+            transparent 45%
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity .4s ease;
+}
+
+
+.credit-team-card:hover
+.team-image-wrap::after {
+    opacity: 1;
+}
+
+
+/* =====================================================
+   SOCIAL CARD
+===================================================== */
+
+.team-social-card {
+    position: absolute;
+
+    right: 0;
+
+    bottom: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    height: 34px;
+
+    padding: 0 10px;
+
+    background: #ef382b;
+
+    transform:
+        translateY(100%);
+
+    opacity: 0;
+
+    z-index: 5;
+
+    transition:
+        transform .45s ease,
+        opacity .35s ease;
+}
+
+
+.credit-team-card:hover
+.team-social-card {
+    transform:
+        translateY(0);
+
+    opacity: 1;
+}
+
+
+.team-social-card a {
+    width: 28px;
+
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    transition:
+        background .25s ease,
+        transform .25s ease;
+}
+
+
+.team-social-card a:hover {
+    background: rgba(0,0,0,.12);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =====================================================
+   TEAM INFO
+===================================================== */
+
+.team-info {
+    position: relative;
+
+    width: 88%;
+
+    min-height: 83px;
+
+    margin-top: 0;
+
+    padding:
+        20px
+        25px;
+
+    background: #eeeae7;
+
+    border-left:
+        3px solid #20202b;
+
+    z-index: 4;
+
+    transition:
+        background .4s ease,
+        box-shadow .4s ease,
+        border-color .4s ease,
+        transform .4s ease;
+}
+
+
+/* =====================================================
+   ACTIVE / MIDDLE CARD
+===================================================== */
+
+.active-team-card .team-info {
+    background: #ffffff;
+
+    border-left:
+        3px solid #ef382b;
+
+    box-shadow:
+        0 18px 35px
+        rgba(0,0,0,.08);
+
+    transform:
+        translateY(0);
+}
+
+
+/* =====================================================
+   HOVER CARD INFO
+===================================================== */
+
+.credit-team-card:hover .team-info {
+    background: #ffffff;
+
+    border-left-color: #ef382b;
+
+    box-shadow:
+        0 15px 30px
+        rgba(0,0,0,.08);
+}
+
+
+/* =====================================================
+   NAME
+===================================================== */
+
+.team-info h3 {
+    margin: 0 0 7px;
+
+    color: #20202b;
+
+    font-size: 16px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   ROLE
+===================================================== */
+
+.team-info span {
+    display: block;
+
+    color: #ef382b;
+
+    font-size: 10px;
+
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   CARD 2 SLIGHTLY LOWER
+===================================================== */
+
+.team-card-2 {
+    margin-top: 0;
+}
+
+
+/* =====================================================
+   GSAP INITIAL STATE SUPPORT
+===================================================== */
+
+.team-heading,
+.team-eyebrow,
+.team-heading h2,
+.credit-team-card,
+.team-image-wrap,
+.team-info {
+    will-change: transform, opacity;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .credit-team-section {
+        padding-top: 65px;
+
+        min-height: auto;
+    }
+
+
+    .team-bg-pattern {
+        height: 500px;
+    }
+
+
+    .team-container {
+        width: 90%;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
+        gap: 16px;
+    }
+
+
+    .team-image-wrap {
+        height: 260px;
+    }
+
+
+    .team-info {
+        width: 90%;
+
+        padding:
+            18px
+            18px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .credit-team-section {
+        padding:
+            60px
+            0
+            70px;
+    }
+
+
+    .team-bg-pattern {
+        height: 100%;
+
+        min-height: 100%;
+
+        opacity: .75;
+    }
+
+
+    .team-heading {
+        padding:
+            0
+            20px;
+
+        margin-bottom: 40px;
+    }
+
+
+    .team-eyebrow {
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .team-heading h2 {
+        font-size: 31px;
+
+        line-height: 1.15;
+    }
+
+
+    .team-container {
+        width: 88%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 40px;
+
+        align-items: center;
+    }
+
+
+    .credit-team-card {
+        width: 100%;
+
+        max-width: 380px;
+    }
+
+
+    .team-image-wrap {
+        width: 100%;
+
+        height: 340px;
+    }
+
+
+    .team-info {
+        width: 88%;
+
+        min-height: 80px;
+
+        padding:
+            19px
+            22px;
+    }
+
+
+    /* keep social icons visible on tap/hover */
+
+    .credit-team-card:hover
+    .team-social-card {
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .credit-team-section {
+        padding-top: 50px;
+    }
+
+
+    .team-heading h2 {
+        font-size: 28px;
+    }
+
+
+    .team-container {
+        width: 90%;
+    }
+
+
+    .team-image-wrap {
+        height: 300px;
+    }
+
+
+    .team-info {
+        width: 90%;
+
+        padding:
+            17px
+            18px;
+    }
+
+
+    .team-info h3 {
+        font-size: 15px;
+    }
+
+
+    .team-info span {
+        font-size: 9px;
+    }
+
+}
+
+
+/* =====================================================
+   STACKLY CREDIT & LENDING
+   WORK PROCESS SECTION
+===================================================== */
+
+.credit-process-section {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 620px;
+
+    padding:
+        78px
+        0
+        85px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.process-heading {
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    margin-bottom: 40px;
+
+    text-align: center;
+}
+
+
+.process-eyebrow {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #ef382b;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.process-heading h2 {
+    margin: 0;
+
+    color: #20202b;
+
+    font-size: clamp(34px, 4vw, 42px);
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+
+/* =====================================================
+   PROCESS WRAPPER
+===================================================== */
+
+.process-wrapper {
+    position: relative;
+
+    width: min(1000px, 90%);
+
+    height: 360px;
+
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   CONNECTING SVG LINE
+===================================================== */
+
+.process-connecting-line {
+    position: absolute;
+
+    top: 32px;
+    left: 0;
+
+    width: 100%;
+
+    height: 180px;
+
+    z-index: 1;
+
+    overflow: visible;
+
+    pointer-events: none;
+}
+
+
+.process-line-path {
+    fill: none;
+
+    stroke: #e5ddd8;
+
+    stroke-width: 2;
+
+    stroke-dasharray: 6 6;
+
+    stroke-linecap: round;
+
+    opacity: .9;
+}
+
+
+/* =====================================================
+   PROCESS STEP
+===================================================== */
+
+.process-step {
+    position: absolute;
+
+    width: 180px;
+
+    text-align: center;
+
+    z-index: 5;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   STEP POSITIONS
+===================================================== */
+
+.process-step-1 {
+    left: 0;
+
+    top: 0;
+}
+
+
+.process-step-2 {
+    left: 25%;
+
+    top: 83px;
+}
+
+
+.process-step-3 {
+    left: 50%;
+
+    top: 40px;
+}
+
+
+.process-step-4 {
+    right: 0;
+
+    top: 0;
+}
+
+
+/* =====================================================
+   ICON CIRCLE
+===================================================== */
+
+.process-icon-wrap {
+    position: relative;
+
+    width: 105px;
+
+    height: 105px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* =====================================================
+   CIRCLE
+===================================================== */
+
+.process-icon {
+    position: relative;
+
+    width: 105px;
+
+    height: 105px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    border: 1px solid #e7dfda;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,.06);
+
+    transition:
+        background .4s ease,
+        border-color .4s ease,
+        box-shadow .4s ease,
+        transform .4s ease;
+}
+
+
+.process-icon i {
+    color: #ef382b;
+
+    font-size: 32px;
+
+    transition:
+        color .35s ease,
+        transform .4s ease;
+}
+
+
+/* =====================================================
+   ACTIVE CIRCLE
+===================================================== */
+
+.active-process-step .process-icon {
+    background: #ef382b;
+
+    border-color: #ef382b;
+
+    box-shadow:
+        0 18px 45px
+        rgba(239,56,43,.20);
+}
+
+
+.active-process-step .process-icon i {
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   HOVER CIRCLE
+===================================================== */
+
+.process-step:hover .process-icon {
+    background: #ef382b;
+
+    border-color: #ef382b;
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 20px 45px
+        rgba(239,56,43,.22);
+}
+
+
+.process-step:hover .process-icon i {
+    color: #ffffff;
+
+    transform:
+        scale(1.12)
+        rotate(-4deg);
+}
+
+
+/* =====================================================
+   NUMBER BADGE
+===================================================== */
+
+.process-number {
+    position: absolute;
+
+    top: 0;
+
+    right: -4px;
+
+    width: 30px;
+
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ef382b;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    z-index: 10;
+
+    box-shadow:
+        0 4px 12px
+        rgba(239,56,43,.15);
+
+    transition:
+        transform .35s ease,
+        background .35s ease;
+}
+
+
+/* alternate dark number */
+
+.process-step-3 .process-number {
+    background: #20202b;
+}
+
+
+.process-step:hover .process-number {
+    transform:
+        scale(1.12);
+}
+
+
+.process-step-3:hover .process-number {
+    background: #ef382b;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.process-content {
+    width: 180px;
+
+    margin: 0 auto;
+}
+
+
+.process-content h3 {
+    margin: 0 0 12px;
+
+    color: #20202b;
+
+    font-size: 16px;
+
+    line-height: 1.25;
+
+    font-weight: 700;
+}
+
+
+.process-content p {
+    margin: 0;
+
+    color: #66707a;
+
+    font-size: 13px;
+
+    line-height: 1.85;
+
+    font-weight: 400;
+}
+
+
+/* =====================================================
+   FLOATING FINANCE BADGES
+===================================================== */
+
+.process-floating {
+    position: absolute;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #f1e9e4;
+
+    opacity: .75;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+.process-floating i {
+    font-size: 42px;
+
+    font-weight: 300;
+}
+
+
+/* top left */
+
+.process-float-1 {
+    left: 17%;
+
+    top: 70px;
+
+    transform:
+        rotate(-12deg);
+}
+
+
+/* top right */
+
+.process-float-2 {
+    right: 18%;
+
+    top: 38px;
+
+    transform:
+        rotate(-15deg);
+}
+
+
+/* bottom right */
+
+.process-float-3 {
+    right: 13%;
+
+    bottom: 50px;
+
+    transform:
+        rotate(15deg);
+}
+
+
+/* bottom left */
+
+.process-float-4 {
+    left: 18%;
+
+    bottom: 35px;
+
+    transform:
+        rotate(-10deg);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .credit-process-section {
+        padding-top: 70px;
+    }
+
+
+    .process-wrapper {
+        width: 94%;
+    }
+
+
+    .process-step {
+        width: 165px;
+    }
+
+
+    .process-content {
+        width: 165px;
+    }
+
+
+    .process-icon-wrap,
+    .process-icon {
+        width: 115px;
+        height: 115px;
+    }
+
+
+    .process-icon i {
+        font-size: 34px;
+    }
+
+
+    .process-step-2 {
+        left: 25%;
+    }
+
+
+    .process-step-3 {
+        left: 50%;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .credit-process-section {
+        min-height: auto;
+
+        padding:
+            60px
+            0
+            70px;
+    }
+
+
+    .process-heading {
+        padding: 0 20px;
+
+        margin-bottom: 55px;
+    }
+
+
+    .process-eyebrow {
+        font-size: 10px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .process-heading h2 {
+        font-size: 30px;
+
+        line-height: 1.15;
+    }
+
+
+    /* ---------------------------------------------
+       MOBILE PROCESS
+    --------------------------------------------- */
+
+    .process-wrapper {
+        width: 90%;
+
+        height: auto;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 60px;
+    }
+
+
+    /* hide desktop curve */
+
+    .process-connecting-line {
+        display: none;
+    }
+
+
+    .process-step {
+        position: relative;
+
+        top: auto !important;
+
+        left: auto !important;
+
+        right: auto !important;
+
+        width: 100%;
+
+        max-width: 330px;
+    }
+
+
+    .process-icon-wrap,
+    .process-icon {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    .process-icon i {
+        font-size: 36px;
+    }
+
+
+    .process-content {
+        width: 100%;
+
+        max-width: 290px;
+    }
+
+
+    .process-content h3 {
+        font-size: 17px;
+    }
+
+
+    .process-content p {
+        font-size: 13px;
+
+        line-height: 1.8;
+    }
+
+
+    /* ---------------------------------------------
+       MOBILE VERTICAL CONNECTING LINE
+    --------------------------------------------- */
+
+    .process-step:not(:last-child)::after {
+        content: "";
+
+        position: absolute;
+
+        left: 50%;
+
+        top: 140px;
+
+        width: 1px;
+
+        height: 60px;
+
+        border-left:
+            2px dashed #e5ddd8;
+
+        transform:
+            translateX(-50%);
+    }
+
+
+    /* ---------------------------------------------
+       FLOATING DECORATIONS
+    --------------------------------------------- */
+
+    .process-float-1 {
+        left: 7%;
+
+        top: 150px;
+    }
+
+
+    .process-float-2 {
+        right: 6%;
+
+        top: 340px;
+    }
+
+
+    .process-float-3 {
+        right: 7%;
+
+        bottom: 330px;
+    }
+
+
+    .process-float-4 {
+        left: 7%;
+
+        bottom: 100px;
+    }
+
+
+    .process-floating i {
+        font-size: 30px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .process-heading h2 {
+        font-size: 27px;
+    }
+
+
+    .process-wrapper {
+        width: 92%;
+
+        gap: 55px;
+    }
+
+
+    .process-icon-wrap,
+    .process-icon {
+        width: 110px;
+        height: 110px;
+    }
+
+
+    .process-icon i {
+        font-size: 32px;
+    }
+
+
+    .process-number {
+        width: 31px;
+
+        height: 31px;
+
+        font-size: 11px;
+    }
+
+
+    .process-content {
+        max-width: 280px;
+    }
+
+
+    .process-content h3 {
+        font-size: 16px;
+    }
+
+
+    .process-content p {
+        font-size: 12.5px;
+    }
+
+}
+
+
+/* =====================================================
+   STACKLY CREDIT & LENDING BENEFITS
+===================================================== */
+
+.credit-benefits-section {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 575px;
+
+    background: #f3efec;
+
+    overflow: hidden;
+
+    padding:
+        75px
+        0
+        0;
+}
+
+
+/* =====================================================
+   LEFT GEOMETRIC BACKGROUND
+===================================================== */
+
+.benefits-bg-shape {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 27%;
+
+    height: 502px;
+
+    background: #e8e3df;
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            76% 100%,
+            0 100%
+        );
+
+    z-index: 0;
+}
+
+
+.benefits-bg-shape::after {
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+    top: 0;
+
+    width: 15%;
+
+    height: 100%;
+
+    background: #ffffff;
+
+    clip-path:
+        polygon(
+            45% 0,
+            100% 0,
+            55% 100%,
+            0 100%
+        );
+}
+
+
+/* =====================================================
+   RIGHT DOT PATTERN
+===================================================== */
+
+.benefits-dots {
+    position: absolute;
+
+    right: -50px;
+    top: 5px;
+
+    width: 280px;
+    height: 500px;
+
+    opacity: .45;
+
+    background-image:
+        radial-gradient(
+            circle,
+            #d9d1cc 1.5px,
+            transparent 1.7px
+        );
+
+    background-size: 10px 10px;
+
+    mask-image:
+        radial-gradient(
+            ellipse at right center,
+            #000 15%,
+            transparent 70%
+        );
+
+    -webkit-mask-image:
+        radial-gradient(
+            ellipse at right center,
+            #000 15%,
+            transparent 70%
+        );
+
+    z-index: 0;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.benefits-container {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(1200px, 90%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        48% 52%;
+
+    align-items: center;
+}
+
+
+/* =====================================================
+   IMAGE AREA
+===================================================== */
+
+.benefits-image-area {
+    position: relative;
+
+    height: 500px;
+
+    display: flex;
+
+    align-items: flex-start;
+}
+
+
+.benefits-image-frame {
+    position: relative;
+
+    width: 530px;
+
+    height: 500px;
+
+    overflow: hidden;
+
+    background: #ddd;
+}
+
+
+.benefits-main-image {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transform:
+        scale(1.04);
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.benefits-content {
+    position: relative;
+
+    padding:
+        10px
+        0
+        0
+        45px;
+}
+
+
+.benefits-eyebrow {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #ef382b;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+}
+
+
+.benefits-title {
+    max-width: 500px;
+
+    margin: 0 0 25px;
+
+    color: #20202b;
+
+    font-size: 31px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    letter-spacing: -.6px;
+}
+
+
+/* =====================================================
+   TABS
+===================================================== */
+
+.benefits-tabs {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    margin-bottom: 27px;
+}
+
+
+.benefit-tab {
+    padding:
+        9px
+        19px;
+
+    border: 0;
+
+    background: #ffffff;
+
+    color: #20202b;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition:
+        background .35s ease,
+        color .35s ease,
+        transform .3s ease;
+}
+
+
+.benefit-tab.active {
+    background: #ef382b;
+
+    color: #ffffff;
+}
+
+
+.benefit-tab:hover {
+    transform:
+        translateY(-2px);
+}
+
+
+/* =====================================================
+   DYNAMIC CONTENT
+===================================================== */
+
+.benefits-dynamic {
+    position: relative;
+
+    max-width: 500px;
+
+    min-height: 220px;
+}
+
+
+.benefits-indicator {
+    position: absolute;
+
+    left: -48px;
+
+    top: 0;
+
+    width: 17px;
+
+    height: 17px;
+
+    border:
+        2px solid #ef382b;
+
+    border-radius: 50%;
+}
+
+
+.benefits-description {
+    margin: 0 0 25px;
+
+    color: #65707a;
+
+    font-size: 11px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   SMALL IMAGE + LIST
+===================================================== */
+
+.benefits-details {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+.benefits-small-image {
+    flex-shrink: 0;
+
+    width: 105px;
+
+    height: 105px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+
+.benefits-small-img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.benefits-list {
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+.benefits-list li {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 10px;
+
+    color: #20202b;
+
+    font-size: 10px;
+
+    line-height: 1.3;
+}
+
+
+.benefits-list li:last-child {
+    margin-bottom: 0;
+}
+
+
+.benefits-list i {
+    color: #ef382b;
+
+    font-size: 10px;
+}
+
+/* =====================================================
+   BOTTOM STATISTIC - RIGHT SIDE ONLY
+===================================================== */
+
+.benefits-stat {
+    position: relative;
+
+    z-index: 10;
+
+    width: 52%;
+
+    height: 75px;
+
+    margin-left: 48%;
+
+    margin-right: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e8e1dd;
+    margin-top:-60px;
+}
+
+
+.benefits-stat-icon {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #ef382b;
+
+    background: #f7f1ed;
+
+    font-size: 21px;
+}
+
+
+.benefits-stat-number {
+    color: #20202b;
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+
+.benefits-stat-text {
+    color: #66707a;
+
+    font-size: 11px;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .credit-benefits-section {
+        padding-top: 60px;
+    }
+
+
+    .benefits-container {
+        width: 92%;
+
+        grid-template-columns:
+            45% 55%;
+    }
+
+
+    .benefits-image-frame {
+        width: 100%;
+
+        height: 440px;
+    }
+
+
+    .benefits-image-area {
+        height: 440px;
+    }
+
+
+    .benefits-content {
+        padding-left: 35px;
+    }
+
+
+    .benefits-title {
+        font-size: 27px;
+    }
+
+
+    .benefits-details {
+        gap: 18px;
+    }
+
+
+    .benefits-small-image {
+        width: 90px;
+        height: 90px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .credit-benefits-section {
+        padding:
+            65px
+            0
+            0;
+
+        min-height: auto;
+    }
+
+
+    .benefits-bg-shape {
+        width: 100%;
+
+        height: 250px;
+
+        opacity: .55;
+    }
+
+
+    .benefits-dots {
+        right: -100px;
+
+        top: 30px;
+
+        opacity: .3;
+    }
+
+
+    .benefits-container {
+        width: 90%;
+
+        display: flex;
+
+        flex-direction: column;
+    }
+
+
+    .benefits-image-area {
+        width: 100%;
+
+        height: 330px;
+
+        order: 1;
+    }
+
+
+    .benefits-image-frame {
+        width: 100%;
+
+        height: 330px;
+    }
+
+
+    .benefits-content {
+        width: 100%;
+
+        padding:
+            45px
+            0
+            40px;
+
+        order: 2;
+    }
+
+
+    .benefits-eyebrow {
+        font-size: 10px;
+    }
+
+
+    .benefits-title {
+        font-size: 28px;
+
+        line-height: 1.15;
+    }
+
+
+    .benefits-tabs {
+        width: 100%;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 5px;
+    }
+
+
+    .benefit-tab {
+        padding:
+            9px
+            13px;
+
+        font-size: 9px;
+    }
+
+
+    .benefits-dynamic {
+        min-height: 280px;
+    }
+
+
+    .benefits-indicator {
+        display: none;
+    }
+
+
+    .benefits-description {
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+
+    .benefits-details {
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+
+    .benefits-small-image {
+        width: 85px;
+
+        height: 85px;
+    }
+
+
+    .benefits-list li {
+        font-size: 10px;
+
+        line-height: 1.5;
+    }
+
+
+    .benefits-stat {
+        width: 90%;
+
+        margin:
+            0 auto;
+
+        height: 80px;
+
+        gap: 10px;
+        margin-top: -110px;
+    }
+
+
+    .benefits-stat-icon {
+        width: 42px;
+
+        height: 42px;
+
+        font-size: 18px;
+    }
+
+
+    .benefits-stat-number {
+        font-size: 23px;
+    }
+
+
+    .benefits-stat-text {
+        font-size: 9px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .benefits-image-area,
+    .benefits-image-frame {
+        height: 290px;
+    }
+
+
+    .benefits-title {
+        font-size: 25px;
+    }
+
+
+    .benefit-tab {
+        padding:
+            8px
+            10px;
+    }
+
+
+    .benefits-details {
+        gap: 13px;
+    }
+
+
+    .benefits-small-image {
+        width: 75px;
+
+        height: 75px;
+    }
+
+
+    .benefits-list li {
+        font-size: 9px;
+    }
+
+}
+
+
+/* =====================================================
+   STACKLY CREDIT & LENDING - INSIGHTS
+===================================================== */
+
+.credit-insights-section {
+    position: relative;
+
+    width: 100%;
+
+    padding:
+        78px
+        0
+        90px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+    
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.insights-container {
+    width: min(975px, 90%);
+
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.insights-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    margin-bottom: 38px;
+}
+
+
+.insights-heading {
+    position: relative;
+}
+
+
+.insights-eyebrow {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #ef382b;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+.insights-heading h2 {
+    margin: 0;
+
+    color: #20202b;
+
+    font-size: clamp(35px, 4vw, 40px);
+
+    line-height: 1.12;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+
+/* =====================================================
+   VIEW ALL BUTTON
+===================================================== */
+
+.insights-view-btn {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 185px;
+
+    height: 52px;
+
+    margin-top: 0;
+
+    background: #eee9e5;
+
+    color: #20202b;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    transition:
+        background .35s ease,
+        color .35s ease,
+        transform .35s ease;
+}
+
+
+.insights-view-btn:hover {
+    background: #ef382b;
+
+    color: #ffffff;
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.insights-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.insight-card {
+    position: relative;
+
+    display: block;
+
+    height: 338px;
+
+    overflow: hidden;
+
+    background: #20202b;
+
+    text-decoration: none;
+
+    isolation: isolate;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.insight-image-wrap {
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+}
+
+
+.insight-image-wrap img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transform: scale(1.04);
+
+    transition:
+        transform .8s ease;
+}
+
+
+.insight-card:hover
+.insight-image-wrap img {
+    transform:
+        scale(1.09);
+}
+
+
+/* =====================================================
+   DARK GRADIENT
+===================================================== */
+
+.insight-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 28%,
+            rgba(20,20,29,.15) 42%,
+            rgba(20,20,29,.92) 100%
+        );
+
+    z-index: 2;
+
+    transition:
+        background .5s ease;
+}
+
+
+.insight-card:hover
+.insight-overlay {
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(20,20,29,.05),
+            rgba(20,20,29,.94) 100%
+        );
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.insight-content {
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    z-index: 5;
+
+    padding:
+        0
+        33px
+        30px;
+}
+
+
+/* =====================================================
+   META
+===================================================== */
+
+.insight-meta {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+.insight-meta span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    font-weight: 500;
+}
+
+
+.insight-meta i {
+    color: #ef382b;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.insight-content h3 {
+    max-width: 285px;
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    line-height: 1.35;
+
+    font-weight: 700;
+
+    letter-spacing: -.3px;
+
+    transition:
+        transform .4s ease;
+}
+
+
+.insight-card:hover
+.insight-content h3 {
+    transform:
+        translateY(-4px);
+}
+
+
+/* =====================================================
+   RED TOP ACCENT
+===================================================== */
+
+.insight-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    width: 0;
+
+    height: 3px;
+
+    background: #ef382b;
+
+    z-index: 10;
+
+    transition:
+        width .45s ease;
+}
+
+
+.insight-card:hover::before {
+    width: 100%;
+}
+
+
+/* =====================================================
+   GSAP SUPPORT
+===================================================== */
+
+.insight-card,
+.insight-image-wrap,
+.insight-content,
+.insight-meta,
+.insight-content h3 {
+    will-change:
+        transform,
+        opacity;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .credit-insights-section {
+        padding:
+            65px
+            0
+            75px;
+    }
+
+
+    .insights-container {
+        width: 90%;
+    }
+
+
+    .insights-grid {
+        gap: 18px;
+    }
+
+
+    .insight-card {
+        height: 320px;
+    }
+
+
+    .insight-content {
+        padding:
+            0
+            23px
+            24px;
+    }
+
+
+    .insight-content h3 {
+        font-size: 18px;
+    }
+
+
+    .insight-meta {
+        gap: 12px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .credit-insights-section {
+        padding:
+            60px
+            0
+            70px;
+    }
+
+
+    .insights-container {
+        width: 90%;
+    }
+
+
+    .insights-header {
+        flex-direction: column;
+
+        gap: 25px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .insights-heading h2 {
+        font-size: 30px;
+
+        line-height: 1.15;
+    }
+
+
+    .insights-eyebrow {
+        font-size: 9px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .insights-view-btn {
+        width: 170px;
+
+        min-width: 0;
+
+        height: 47px;
+    }
+
+
+    .insights-grid {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .insight-card {
+        width: 100%;
+
+        max-width: 380px;
+
+        height: 350px;
+
+        margin: 0 auto;
+    }
+
+
+    .insight-content {
+        padding:
+            0
+            25px
+            27px;
+    }
+
+
+    .insight-content h3 {
+        font-size: 20px;
+
+        max-width: 310px;
+    }
+
+
+    .insight-meta {
+        margin-bottom: 15px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .insights-heading h2 {
+        font-size: 27px;
+    }
+
+
+    .insight-card {
+        height: 320px;
+    }
+
+
+    .insight-content {
+        padding:
+            0
+            20px
+            22px;
+    }
+
+
+    .insight-content h3 {
+        font-size: 18px;
+    }
+
+
+    .insight-meta {
+        gap: 10px;
+    }
+
+
+    .insight-meta span {
+        font-size: 9px;
+    }
+
+}
+
+
+/* =====================================================
+   STACKLY CREDIT & LENDING CTA
+===================================================== */
+
+.credit-cta-section {
+    position: static;
+
+    width: 100%;
+
+    padding:
+        0 0 0;
+
+    background: #20202b;
+
+    overflow: hidden;
+    margin-top: -40px;
+}
+
+
+/* =====================================================
+   CTA CARD
+===================================================== */
+
+.credit-cta-card {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(975px, 90%);
+
+    min-height: 205px;
+
+    margin: 0 auto;
+
+    padding:
+        38px
+        68px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ef382b 0%,
+            #f04436 55%,
+            #ed3b30 100%
+        );
+}
+
+
+/* =====================================================
+   BACKGROUND PERSPECTIVE DESIGN
+===================================================== */
+
+.cta-background-pattern {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -1;
+
+    opacity: .22;
+
+    background-image:
+        linear-gradient(
+            35deg,
+            transparent 48%,
+            rgba(120,20,15,.5) 49%,
+            transparent 50%
+        ),
+        linear-gradient(
+            -35deg,
+            transparent 48%,
+            rgba(120,20,15,.5) 49%,
+            transparent 50%
+        ),
+        linear-gradient(
+            90deg,
+            transparent 49%,
+            rgba(120,20,15,.35) 50%,
+            transparent 51%
+        );
+
+    background-size:
+        150px 100px,
+        150px 100px,
+        130px 100%;
+}
+
+
+/* central perspective lines */
+
+.cta-background-pattern::before {
+    content: "";
+
+    position: absolute;
+
+    left: 42%;
+
+    top: -30%;
+
+    width: 22%;
+
+    height: 160%;
+
+    border-left:
+        2px solid rgba(120,20,15,.35);
+
+    border-right:
+        2px solid rgba(120,20,15,.35);
+
+    transform:
+        perspective(300px)
+        rotateX(5deg)
+        skewX(-4deg);
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.cta-content {
+    position: relative;
+
+    max-width: 590px;
+}
+
+
+.cta-eyebrow {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: rgba(255,255,255,.85);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+
+.cta-content h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 31px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    letter-spacing: -.5px;
+}
+
+
+.cta-content p {
+    max-width: 560px;
+
+    margin:
+        12px 0 0;
+
+    color: rgba(255,255,255,.88);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   CTA BUTTON
+===================================================== */
+
+.cta-button {
+    position: relative;
+
+    flex-shrink: 0;
+
+    width: 165px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    color: #20202b;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    transition:
+        background .35s ease,
+        color .35s ease,
+        transform .35s ease;
+}
+
+
+.cta-button:hover {
+    background: #20202b;
+
+    color: #ffffff;
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =====================================================
+   DECORATIVE CIRCLE
+===================================================== */
+
+.credit-cta-card::after {
+    content: "";
+
+    position: absolute;
+
+    right: 30%;
+
+    bottom: -22px;
+
+    width: 22px;
+
+    height: 22px;
+
+    border:
+        2px solid rgba(255,255,255,.5);
+
+    border-radius: 50%;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .credit-cta-card {
+        width: 92%;
+
+        padding:
+            35px
+            45px;
+    }
+
+
+    .cta-content h2 {
+        font-size: 27px;
+    }
+
+
+    .cta-button {
+        width: 145px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .credit-cta-section {
+        padding-bottom: 0;
+    }
+
+
+    .credit-cta-card {
+        width: 90%;
+
+        min-height: auto;
+
+        padding:
+            40px
+            28px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        gap: 25px;
+    }
+
+
+    .cta-eyebrow {
+        font-size: 9px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .cta-content h2 {
+        font-size: 27px;
+
+        line-height: 1.2;
+    }
+
+
+    .cta-content p {
+        font-size: 11px;
+
+        line-height: 1.7;
+    }
+
+
+    .cta-button {
+        width: 145px;
+
+        height: 48px;
+    }
+
+
+    .credit-cta-card::after {
+        right: 12%;
+
+        bottom: 15px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .credit-cta-card {
+        padding:
+            35px
+            22px;
+    }
+
+
+    .cta-content h2 {
+        font-size: 24px;
+    }
+
+
+    .cta-content p {
+        font-size: 10px;
+    }
+
+}

@@ -1,0 +1,3181 @@
+/* =====================================================
+   STACKLY BLOG HERO
+===================================================== */
+
+.blog-hero-section {
+    position: relative;
+
+    width: 100%;
+
+    height: 340px;
+
+    overflow: hidden;
+
+    background: #171722;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.blog-hero-bg {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+
+.blog-hero-bg img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transform: scale(1.1);
+
+    will-change: transform;
+}
+
+
+/* =====================================================
+   DARK OVERLAY
+===================================================== */
+
+.blog-hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(12, 12, 23, 0.88) 0%,
+            rgba(12, 12, 23, 0.68) 45%,
+            rgba(12, 12, 23, 0.42) 100%
+        );
+}
+
+
+/* =====================================================
+   CONTENT CONTAINER
+===================================================== */
+
+.blog-hero-container {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(1200px, 90%);
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.blog-hero-content {
+    margin-left: 5%;
+
+    margin-top: 12px;
+}
+
+
+/* =====================================================
+   BREADCRUMB
+===================================================== */
+
+.blog-breadcrumb {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+    opacity: 0;
+}
+
+
+/* HOME */
+
+.blog-breadcrumb a {
+    color: #bcbcc4;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+/* HOME HOVER */
+
+.blog-breadcrumb a:hover {
+    color: #ef382b;
+}
+
+
+/* Slash */
+
+.blog-breadcrumb b {
+    color: #85858e;
+
+    font-size: 11px;
+
+    font-weight: 400;
+}
+
+
+/* Current page */
+
+.blog-breadcrumb .active {
+    color: #ef382b;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+}
+/* =====================================================
+   TITLE
+===================================================== */
+
+.blog-hero-content h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 50px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+
+    opacity: 0;
+}
+
+
+/* =====================================================
+   RED CIRCLE
+===================================================== */
+
+.blog-hero-circle {
+    position: absolute;
+
+    z-index: 4;
+
+    left: 41%;
+
+    top: 63%;
+
+    width: 26px;
+
+    height: 26px;
+
+    border: 2px solid #ef382b;
+
+    border-radius: 50%;
+
+    opacity: 0;
+
+    transform: scale(0.5);
+}
+
+
+/* =====================================================
+   SMALL DOT
+===================================================== */
+
+.blog-hero-dot {
+    position: absolute;
+
+    z-index: 4;
+
+    left: 35%;
+
+    top: 72%;
+
+    width: 9px;
+
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #ef382b;
+
+    opacity: 0;
+
+    transform: scale(0.5);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .blog-hero-section {
+        height: 320px;
+    }
+
+
+    .blog-hero-container {
+        width: 90%;
+    }
+
+
+    .blog-hero-content {
+        margin-left: 3%;
+    }
+
+
+    .blog-hero-content h1 {
+        font-size: 44px;
+    }
+
+
+    .blog-hero-circle {
+        left: 48%;
+    }
+
+
+    .blog-hero-dot {
+        left: 39%;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .blog-hero-section {
+        height: 285px;
+    }
+
+
+    .blog-hero-container {
+        width: 88%;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+
+    .blog-hero-content {
+        margin: 20px 0 0;
+    }
+
+
+    .blog-breadcrumb {
+        justify-content: center;
+
+        gap: 8px;
+
+        margin-bottom: 14px;
+    }
+
+
+    .blog-breadcrumb span,
+    .blog-breadcrumb b {
+        font-size: 9px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .blog-hero-content h1 {
+        font-size: 37px;
+    }
+
+
+    .blog-hero-circle {
+        left: auto;
+
+        right: 22%;
+
+        top: 68%;
+
+        width: 20px;
+
+        height: 20px;
+    }
+
+
+    .blog-hero-dot {
+        left: 22%;
+
+        top: 72%;
+
+        width: 7px;
+
+        height: 7px;
+    }
+
+
+    .blog-hero-bg img {
+        object-position: center;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .blog-hero-section {
+        height: 270px;
+    }
+
+
+    .blog-hero-content h1 {
+        font-size: 33px;
+    }
+
+}
+
+
+/* =====================================================
+   STACKLY BLOG INTRO
+===================================================== */
+
+.stackly-blog-intro {
+    position: relative;
+
+    width: 100%;
+
+    padding: 90px 0 100px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.blog-intro-container {
+    width: min(1020px, 90%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 75px;
+
+    align-items: center;
+}
+
+
+/* =====================================================
+   LEFT VISUAL
+===================================================== */
+
+.blog-intro-visual {
+    position: relative;
+
+    min-height: 470px;
+
+    opacity: 1;
+}
+
+
+/* =====================================================
+   MAIN IMAGE
+===================================================== */
+
+.blog-main-image {
+    position: absolute;
+
+    top: 0;
+
+    left: 70px;
+
+    width: 310px;
+
+    height: 430px;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    transform: translateX(-100px);
+}
+
+
+.blog-main-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s ease;
+}
+
+
+.blog-main-image:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =====================================================
+   RED EXPERIENCE BOX
+===================================================== */
+
+.blog-experience-box {
+    position: absolute;
+
+    z-index: 8;
+
+    left: -13px;
+
+    top: 42px;
+
+    width: 166px;
+
+    height: 180px;
+
+    padding: 15px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background: #ef382b;
+
+    color: #ffffff;
+
+    opacity: 0;
+
+    transform: translateX(-45px);
+}
+
+
+.blog-play-icon {
+    width: 48px;
+
+    height: 48px;
+
+    margin-bottom: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #ef382b;
+
+    font-size: 17px;
+
+    box-shadow:
+        0 0 0 5px rgba(255,255,255,0.12);
+}
+
+
+.blog-experience-box strong {
+    display: block;
+
+    font-size: 35px;
+
+    line-height: 1;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+
+.blog-experience-box span {
+    font-size: 11px;
+
+    line-height: 1.4;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   RED TRIANGLE / SHAPE
+===================================================== */
+
+.blog-experience-shape {
+    position: absolute;
+
+    z-index: 5;
+
+    left: -13px;
+
+    top: 222px;
+
+    width: 0;
+
+    height: 0;
+
+    border-top: 45px solid #c9241a;
+
+    border-right: 65px solid transparent;
+
+    opacity: 0;
+}
+
+
+/* =====================================================
+   SMALL IMAGE
+===================================================== */
+
+.blog-small-image {
+    position: absolute;
+
+    z-index: 7;
+
+    left: 255px;
+
+    top: 188px;
+
+    width: 205px;
+
+    height: 195px;
+
+    padding: 7px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.07);
+
+    opacity: 0;
+
+    transform:
+        translateX(-70px)
+        translateY(35px);
+}
+
+
+.blog-small-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* =====================================================
+   SMALL IMAGE OVERLAY
+===================================================== */
+
+.blog-small-overlay {
+    position: absolute;
+
+    inset: 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: rgba(15,15,25,0.15);
+
+    color: #ef382b;
+
+    opacity: 0;
+
+    transition:
+        opacity 0.3s ease;
+}
+
+
+.blog-small-image:hover .blog-small-overlay {
+    opacity: 1;
+}
+
+
+.blog-small-overlay i {
+    width: 35px;
+
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   DOTS
+===================================================== */
+
+.blog-visual-dots {
+    position: absolute;
+
+    z-index: 1;
+
+    right: -5px;
+
+    top: 30px;
+
+    width: 85px;
+
+    height: 125px;
+
+    background-image:
+        radial-gradient(
+            circle,
+            #dedede 1.5px,
+            transparent 1.5px
+        );
+
+    background-size: 9px 9px;
+
+    opacity: 0;
+
+    transform: translateX(40px);
+}
+
+
+/* =====================================================
+   RIGHT CONTENT
+===================================================== */
+
+.blog-intro-content {
+    opacity: 0;
+
+    transform: translateX(90px);
+}
+
+
+.blog-intro-eyebrow {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #ef382b;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+.blog-intro-content h2 {
+    margin: 0 0 23px;
+
+    color: #151626;
+
+    font-size: 38px;
+
+    line-height: 1.14;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+
+.blog-intro-description {
+    max-width: 570px;
+
+    margin: 0 0 25px;
+
+    color: #68717d;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   CHECKLIST
+===================================================== */
+
+.blog-intro-checklist {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 35px;
+
+    row-gap: 13px;
+
+    max-width: 590px;
+
+    margin-bottom: 32px;
+}
+
+
+.blog-check-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #20213a;
+
+    font-size: 12.5px;
+
+    font-weight: 600;
+
+    opacity: 0;
+
+    transform: translateX(30px);
+}
+
+
+.blog-check-item i {
+    color: #ef382b;
+
+    font-size: 15px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.blog-check-item:hover i {
+    transform: scale(1.2);
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.blog-intro-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 11px;
+
+    min-width: 185px;
+
+    height: 47px;
+
+    padding: 0 17px;
+
+    border: 1px solid #ef382b;
+
+    background: #ffffff;
+
+    color: #ef382b;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.blog-intro-button span {
+    width: 1px;
+
+    height: 17px;
+
+    background: #ef382b;
+
+    transition:
+        background 0.3s ease;
+}
+
+
+.blog-intro-button i {
+    font-size: 9px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.blog-intro-button:hover {
+    background: #ef382b;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+
+.blog-intro-button:hover span {
+    background: #ffffff;
+}
+
+
+.blog-intro-button:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .blog-intro-container {
+        gap: 45px;
+    }
+
+
+    .blog-main-image {
+        left: 35px;
+
+        width: 290px;
+
+        height: 410px;
+    }
+
+
+    .blog-small-image {
+        left: 205px;
+
+        width: 190px;
+
+        height: 180px;
+    }
+
+
+    .blog-experience-box {
+        left: -20px;
+    }
+
+
+    .blog-intro-content h2 {
+        font-size: 32px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .stackly-blog-intro {
+        padding: 70px 0 80px;
+    }
+
+
+    .blog-intro-container {
+        width: 88%;
+
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+    }
+
+
+    /* Visual */
+
+    .blog-intro-visual {
+        min-height: 440px;
+
+        width: 100%;
+
+        max-width: 430px;
+
+        margin: 0 auto;
+    }
+
+
+    .blog-main-image {
+        left: 45px;
+
+        width: 265px;
+
+        height: 390px;
+    }
+
+
+    .blog-experience-box {
+        left: 0;
+
+        top: 45px;
+
+        width: 145px;
+
+        height: 165px;
+    }
+
+
+    .blog-experience-box strong {
+        font-size: 31px;
+    }
+
+
+    .blog-small-image {
+        left: 220px;
+
+        top: 205px;
+
+        width: 175px;
+
+        height: 170px;
+    }
+
+
+    .blog-experience-shape {
+        left: 0;
+
+        top: 210px;
+    }
+
+
+    .blog-visual-dots {
+        right: 0;
+
+        top: 20px;
+    }
+
+
+    /* Content */
+
+    .blog-intro-content {
+        text-align: center;
+    }
+
+
+    .blog-intro-eyebrow {
+        font-size: 9px;
+
+        letter-spacing: 1.8px;
+    }
+
+
+    .blog-intro-content h2 {
+        font-size: 29px;
+
+        line-height: 1.2;
+    }
+
+
+    .blog-intro-description {
+        font-size: 12px;
+
+        line-height: 1.8;
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .blog-intro-checklist {
+        text-align: center;
+
+        max-width: 180px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        column-gap: 15px;
+    }
+
+
+    .blog-check-item {
+        font-size: 11px;
+    }
+
+
+    .blog-intro-button {
+        min-width: 175px;
+
+        height: 46px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .blog-intro-visual {
+        min-height: 390px;
+    }
+
+
+    .blog-main-image {
+        left: 38px;
+
+        width: 235px;
+
+        height: 345px;
+    }
+
+
+    .blog-experience-box {
+        left: -5px;
+
+        top: 35px;
+
+        width: 130px;
+
+        height: 150px;
+    }
+
+
+    .blog-play-icon {
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 14px;
+    }
+
+
+    .blog-experience-box strong {
+        font-size: 27px;
+    }
+
+
+    .blog-experience-box span {
+        font-size: 9px;
+    }
+
+
+    .blog-small-image {
+        left: 185px;
+
+        top: 180px;
+
+        width: 155px;
+
+        height: 150px;
+    }
+
+
+    .blog-intro-content h2 {
+        font-size: 25px;
+    }
+
+
+    .blog-intro-checklist {
+        grid-template-columns: 1fr;
+
+        row-gap: 12px;
+        text-align: center;
+    }
+
+}
+
+
+/* =====================================================
+   STACKLY - FINANCIAL JOURNEY SECTION
+===================================================== */
+
+.stackly-financial-journey {
+    position: relative;
+    width: 100%;
+    padding: 95px 0 100px;
+    background:#dedede;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.stackly-financial-journey .stackly-blog-container {
+    width: min(1080px, 90%);
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.stackly-financial-journey .stackly-blog-heading {
+    max-width: 720px;
+    margin: 0 auto 55px;
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(55px);
+}
+
+
+.stackly-financial-journey .stackly-blog-eyebrow {
+    display: block;
+    margin-bottom: 13px;
+
+    color: #ef382b;
+
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2.3px;
+}
+
+
+.stackly-financial-journey .stackly-blog-heading h2 {
+    margin: 0 0 18px;
+
+    color: #151626;
+
+    font-size: 38px;
+    line-height: 1.18;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+
+.stackly-financial-journey .stackly-blog-heading p {
+    max-width: 650px;
+    margin: 0 auto;
+
+    color: #68717d;
+
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.stackly-financial-journey .stackly-blog-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 26px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.stackly-financial-journey .stackly-blog-card {
+    position: relative;
+
+    background: #ffffff;
+
+    border: 1px solid #eeeae7;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.025);
+
+    opacity: 0;
+    transform: translateY(90px);
+
+    transition:
+        box-shadow 0.35s ease,
+        transform 0.35s ease;
+}
+
+
+.stackly-financial-journey .stackly-blog-card:hover {
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.09);
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.stackly-financial-journey .blog-card-image {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: 220px;
+
+    overflow: hidden;
+
+    text-decoration: none;
+}
+
+
+.stackly-financial-journey .blog-card-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scale(1);
+
+    transition:
+        transform 0.7s ease;
+}
+
+
+/* =====================================================
+   DARK OVERLAY
+   LEFT -> RIGHT
+===================================================== */
+
+.stackly-financial-journey .blog-image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        rgba(18, 18, 28, 0.84);
+
+    transform: translateX(-101%);
+
+    transition:
+        transform 0.55s
+        cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+
+.stackly-financial-journey .blog-card-image:hover
+.blog-image-overlay {
+    transform: translateX(0);
+}
+
+
+.stackly-financial-journey .blog-card-image:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =====================================================
+   PLUS
+===================================================== */
+
+.stackly-financial-journey .blog-plus {
+    position: absolute;
+
+    z-index: 5;
+
+    left: 50%;
+    top: 50%;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    font-size: 40px;
+    font-weight: 200;
+    line-height: 1;
+
+    opacity: 0;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.25)
+        rotate(-45deg);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.45s ease;
+}
+
+
+.stackly-financial-journey
+.blog-card-image:hover .blog-plus {
+    opacity: 1;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1)
+        rotate(0deg);
+}
+
+
+/* =====================================================
+   STEP BADGE
+===================================================== */
+
+.stackly-financial-journey .blog-date {
+    position: absolute;
+
+    z-index: 7;
+
+    right: 0;
+    bottom: 0;
+
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ef382b;
+
+    color: #ffffff;
+}
+
+
+.stackly-financial-journey .blog-date strong {
+    font-size: 17px;
+
+    line-height: 1;
+
+    font-weight: 700;
+}
+
+
+.stackly-financial-journey .blog-date small {
+    margin-top: 4px;
+
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.stackly-financial-journey .blog-card-content {
+    padding: 27px 25px 26px;
+}
+
+
+/* =====================================================
+   META
+===================================================== */
+
+.stackly-financial-journey .blog-meta {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 15px;
+
+    color: #ef382b;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+
+.stackly-financial-journey .blog-meta span {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+
+.stackly-financial-journey .blog-meta i {
+    color: #ef382b;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   CARD TITLE
+===================================================== */
+
+.stackly-financial-journey .blog-card-content h3 {
+    margin: 0 0 15px;
+
+    color: #10111b;
+
+    font-size: 20px;
+
+    line-height: 1.4;
+
+    font-weight: 700;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.stackly-financial-journey .stackly-blog-card:hover
+.blog-card-content h3 {
+    color: #ef382b;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.stackly-financial-journey .blog-card-content p {
+    margin: 0 0 24px;
+
+    color: #657080;
+
+    font-size: 12.5px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   LEARN MORE BUTTON
+===================================================== */
+
+.stackly-financial-journey .blog-read-more {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 43px;
+
+    background: #f2eeeb;
+
+    color: #171823;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.stackly-financial-journey .blog-read-more:hover {
+    background: #ef382b;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   BOTTOM BUTTON
+===================================================== */
+
+.stackly-financial-journey .blog-view-all {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 48px;
+
+    opacity: 0;
+    transform: translateY(35px);
+}
+
+
+.stackly-financial-journey .blog-view-all a {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    min-width: 195px;
+
+    height: 48px;
+
+    padding: 0 20px;
+
+    border: 1px solid #ef382b;
+
+    background: #ffffff;
+
+    color: #ef382b;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.stackly-financial-journey .blog-view-all a i {
+    font-size: 10px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.stackly-financial-journey .blog-view-all a:hover {
+    background: #ef382b;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+
+.stackly-financial-journey .blog-view-all a:hover i {
+    transform: translateX(5px);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .stackly-financial-journey {
+        padding: 75px 0 80px;
+    }
+
+    .stackly-financial-journey .stackly-blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 22px;
+    }
+
+    .stackly-financial-journey .stackly-blog-heading h2 {
+        font-size: 33px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .stackly-financial-journey {
+        padding: 65px 0 70px;
+    }
+
+    .stackly-financial-journey
+    .stackly-blog-container {
+        width: 88%;
+    }
+
+    .stackly-financial-journey
+    .stackly-blog-heading {
+        margin-bottom: 40px;
+    }
+
+    .stackly-financial-journey
+    .stackly-blog-eyebrow {
+        font-size: 9px;
+
+        letter-spacing: 1.8px;
+    }
+
+    .stackly-financial-journey
+    .stackly-blog-heading h2 {
+        font-size: 28px;
+
+        line-height: 1.22;
+    }
+
+    .stackly-financial-journey
+    .stackly-blog-heading p {
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+    .stackly-financial-journey
+    .stackly-blog-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .stackly-financial-journey
+    .blog-card-image {
+        height: 220px;
+    }
+
+    .stackly-financial-journey
+    .blog-card-content {
+        padding: 25px 22px;
+    }
+
+    .stackly-financial-journey
+    .blog-card-content h3 {
+        font-size: 19px;
+    }
+
+    .stackly-financial-journey
+    .blog-card-content p {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .stackly-financial-journey
+    .blog-card-image {
+        height: 205px;
+    }
+
+    .stackly-financial-journey
+    .blog-card-content h3 {
+        font-size: 18px;
+    }
+
+}
+
+
+/* =====================================================
+   STACKLY FAQ SECTION
+===================================================== */
+
+.stackly-faq-section {
+    position: relative;
+
+    width: 100%;
+
+    padding: 95px 0 105px;
+
+    background: #f6f6f8;
+
+    overflow: hidden;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.stackly-faq-container {
+    width: min(1100px, 90%);
+
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.stackly-faq-heading {
+    max-width: 760px;
+
+    margin: 0 auto 55px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform: translateY(50px);
+}
+
+
+.stackly-faq-eyebrow {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #ef382b;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2.3px;
+
+    text-transform: uppercase;
+}
+
+
+.stackly-faq-heading h2 {
+    margin: 0 0 17px;
+
+    color: #171823;
+
+    font-size: 38px;
+
+    line-height: 1.18;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+
+.stackly-faq-heading p {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: #68717d;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.stackly-faq-main {
+    display: grid;
+
+    grid-template-columns: 0.92fr 1fr;
+
+    gap: 50px;
+
+    align-items: start;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.stackly-faq-image-wrap {
+    position: relative;
+
+    overflow: hidden;
+
+    height: 465px;
+
+    opacity: 0;
+
+    transform: translateY(100px);
+}
+
+
+.stackly-faq-image {
+    width: 100%;
+
+    height: 100%;
+
+    overflow: hidden;
+}
+
+
+.stackly-faq-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transform: scale(1.04);
+
+    transition:
+        transform 0.7s ease;
+}
+
+
+.stackly-faq-image-wrap:hover img {
+    transform: scale(1.07);
+}
+
+
+/* =====================================================
+   FAQ LIST
+===================================================== */
+
+.stackly-faq-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+
+    opacity: 0;
+
+    transform: translateX(90px);
+}
+
+
+/* =====================================================
+   FAQ ITEM
+===================================================== */
+
+.stackly-faq-item {
+    width: 100%;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    border: 1px solid #eeeeef;
+
+    transition:
+        box-shadow 0.3s ease;
+}
+
+
+.stackly-faq-item.active {
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.05);
+}
+
+
+/* =====================================================
+   QUESTION
+===================================================== */
+
+.stackly-faq-question {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 64px;
+
+    padding: 0 20px 0 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    border: 0;
+
+    background: #ffffff;
+
+    color: #171823;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    font-family: inherit;
+}
+
+
+/* =====================================================
+   PLUS / MINUS BOX
+===================================================== */
+
+.faq-icon {
+    flex: 0 0 38px;
+
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #171823;
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    font-weight: 300;
+
+    line-height: 1;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.stackly-faq-item.active .faq-icon {
+    background: #ef382b;
+
+    transform: rotate(180deg);
+}
+
+
+/* =====================================================
+   QUESTION TEXT
+===================================================== */
+
+.faq-question-text {
+    color: #171823;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    font-weight: 600;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.stackly-faq-question:hover .faq-question-text {
+    color: #ef382b;
+}
+
+
+/* =====================================================
+   ANSWER
+===================================================== */
+
+.stackly-faq-answer {
+    height: 0;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+
+.stackly-faq-answer p {
+    margin: 0;
+
+    padding: 0 22px 20px 65px;
+
+    color: #68717d;
+
+    font-size: 12px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .stackly-faq-section {
+        padding: 75px 0 85px;
+    }
+
+
+    .stackly-faq-main {
+        grid-template-columns: 0.85fr 1fr;
+
+        gap: 35px;
+    }
+
+
+    .stackly-faq-image-wrap {
+        height: 430px;
+    }
+
+
+    .stackly-faq-heading h2 {
+        font-size: 33px;
+    }
+
+
+    .faq-question-text {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .stackly-faq-section {
+        padding: 70px 0 75px;
+    }
+
+
+    .stackly-faq-container {
+        width: 88%;
+    }
+
+
+    .stackly-faq-heading {
+        margin-bottom: 40px;
+    }
+
+
+    .stackly-faq-eyebrow {
+        font-size: 9px;
+
+        letter-spacing: 1.8px;
+    }
+
+
+    .stackly-faq-heading h2 {
+        font-size: 28px;
+
+        line-height: 1.22;
+    }
+
+
+    .stackly-faq-heading p {
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+
+    .stackly-faq-main {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+
+    .stackly-faq-image-wrap {
+        height: 390px;
+
+        width: 100%;
+    }
+
+
+    .stackly-faq-list {
+        gap: 12px;
+    }
+
+
+    .stackly-faq-question {
+        min-height: 60px;
+
+        padding-right: 12px;
+
+        gap: 13px;
+    }
+
+
+    .faq-icon {
+        flex-basis: 36px;
+
+        width: 36px;
+
+        height: 36px;
+
+        font-size: 20px;
+    }
+
+
+    .faq-question-text {
+        font-size: 11.5px;
+    }
+
+
+    .stackly-faq-answer p {
+        padding:
+            0 18px 18px 61px;
+
+        font-size: 11.5px;
+
+        line-height: 1.8;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .stackly-faq-heading h2 {
+        font-size: 25px;
+    }
+
+
+    .stackly-faq-image-wrap {
+        height: 340px;
+    }
+
+
+    .faq-question-text {
+        font-size: 11px;
+    }
+
+
+    .stackly-faq-answer p {
+        padding-left: 55px;
+
+        font-size: 11px;
+    }
+
+}
+
+/* =====================================================
+   FAQ GSAP INITIAL SUPPORT
+===================================================== */
+
+.stackly-faq-heading,
+.stackly-faq-image-wrap,
+.stackly-faq-item {
+    will-change: transform, opacity;
+}
+
+
+/* Keep FAQ answers closed initially */
+
+.stackly-faq-answer {
+    height: 0;
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   STACKLY PROFESSIONAL TEAM
+===================================================== */
+
+.stackly-team-section {
+    position: relative;
+
+    width: 100%;
+
+    padding: 95px 0 85px;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.stackly-team-container {
+    width: min(1060px, 90%);
+
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.stackly-team-heading {
+    max-width: 720px;
+
+    margin: 0 auto 50px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform: translateY(45px);
+}
+
+
+.stackly-team-eyebrow {
+    display: block;
+
+    margin-bottom: 13px;
+
+    color: #ef382b;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2.3px;
+}
+
+
+.stackly-team-heading h2 {
+    margin: 0 0 17px;
+
+    color: #171823;
+
+    font-size: 38px;
+
+    line-height: 1.18;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+
+.stackly-team-heading p {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: #68717d;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   TEAM GRID
+===================================================== */
+
+.stackly-team-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+
+/* =====================================================
+   TEAM CARD
+===================================================== */
+
+.stackly-team-card {
+    position: relative;
+
+    opacity: 0;
+
+    transform:
+        translateY(-120px)
+        rotateX(-8deg);
+
+    transform-origin: center top;
+}
+
+
+/* =====================================================
+   IMAGE
+===================================================== */
+
+.stackly-team-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 370px;
+
+    overflow: hidden;
+
+    background: #171823;
+
+    cursor: pointer;
+}
+
+
+.stackly-team-image img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.7s ease;
+}
+
+
+/* =====================================================
+   OVERLAY
+===================================================== */
+
+.team-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(12, 13, 22, 0.94),
+            rgba(12, 13, 22, 0.38),
+            rgba(12, 13, 22, 0.05)
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.45s ease;
+}
+
+
+.stackly-team-image:hover .team-overlay {
+    opacity: 1;
+}
+
+
+.stackly-team-image:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =====================================================
+   DECORATIVE CORNERS
+===================================================== */
+
+.team-corner {
+    position: absolute;
+
+    z-index: 5;
+
+    width: 55px;
+
+    height: 55px;
+
+    border-color: #ffffff;
+
+    border-style: solid;
+
+    opacity: 0;
+
+    transition:
+        opacity 0.35s ease,
+        transform 0.45s ease;
+}
+
+
+.team-corner-top {
+    top: 15px;
+
+    left: 15px;
+
+    border-width: 2px 0 0 2px;
+
+    border-radius: 0 25px 0 0;
+
+    transform:
+        translate(-12px, -12px);
+}
+
+
+.team-corner-bottom {
+    right: 15px;
+
+    bottom: 15px;
+
+    border-width: 0 2px 2px 0;
+
+    border-radius: 0 0 25px 0;
+
+    transform:
+        translate(12px, 12px);
+}
+
+
+.stackly-team-image:hover .team-corner {
+    opacity: 1;
+
+    transform: translate(0, 0);
+}
+
+
+/* =====================================================
+   TEAM INFO
+===================================================== */
+
+.team-info {
+    position: absolute;
+
+    z-index: 6;
+
+    left: 25px;
+
+    bottom: 25px;
+
+    color: #ffffff;
+
+    opacity: 0;
+
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.45s ease;
+}
+
+
+.stackly-team-image:hover .team-info {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+.team-info h3 {
+    margin: 0 0 5px;
+
+    color: #ffffff;
+
+    font-size: 19px;
+
+    line-height: 1.2;
+
+    font-weight: 700;
+}
+
+
+.team-info span {
+    color: #ef382b;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.7px;
+
+    text-transform: uppercase;
+}
+
+
+/* =====================================================
+   SOCIAL ICONS
+===================================================== */
+
+.team-socials {
+    position: absolute;
+
+    z-index: 7;
+
+    top: 22px;
+
+    right: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    opacity: 0;
+
+    transform: translateX(25px);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.45s ease;
+}
+
+
+.stackly-team-image:hover .team-socials {
+    opacity: 1;
+
+    transform: translateX(0);
+}
+
+
+.team-socials a {
+    width: 32px;
+
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,0.7);
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.team-socials a:hover {
+    background: #ef382b;
+
+    border-color: #ef382b;
+
+    color: #ffffff;
+}
+
+
+/* =====================================================
+   DOTS
+===================================================== */
+
+.stackly-team-dots {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    margin-top: 38px;
+
+    opacity: 0;
+}
+
+
+.team-dot {
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #d7d7d9;
+}
+
+
+.team-dot.active {
+    width: 10px;
+
+    height: 10px;
+
+    border: 1px solid #ef382b;
+
+    background: #ffffff;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .stackly-team-section {
+        padding: 75px 0 75px;
+    }
+
+
+    .stackly-team-heading h2 {
+        font-size: 33px;
+    }
+
+
+    .stackly-team-grid {
+        gap: 18px;
+    }
+
+
+    .stackly-team-image {
+        height: 330px;
+    }
+
+
+    .team-info {
+        left: 18px;
+
+        bottom: 20px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .stackly-team-section {
+        padding: 65px 0 70px;
+    }
+
+
+    .stackly-team-container {
+        width: 88%;
+    }
+
+
+    .stackly-team-heading {
+        margin-bottom: 40px;
+    }
+
+
+    .stackly-team-eyebrow {
+        font-size: 9px;
+
+        letter-spacing: 1.8px;
+    }
+
+
+    .stackly-team-heading h2 {
+        font-size: 28px;
+
+        line-height: 1.22;
+    }
+
+
+    .stackly-team-heading p {
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+
+    .stackly-team-grid {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        max-width: 380px;
+
+        margin: 0 auto;
+    }
+
+
+    .stackly-team-image {
+        height: 420px;
+    }
+
+
+    /* Keep hover content accessible on touch */
+
+    .stackly-team-image:active .team-overlay,
+    .stackly-team-image:focus-within .team-overlay {
+        opacity: 1;
+    }
+
+
+    .stackly-team-image:active .team-info,
+    .stackly-team-image:focus-within .team-info {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+
+    .stackly-team-image:active .team-socials,
+    .stackly-team-image:focus-within .team-socials {
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .stackly-team-heading h2 {
+        font-size: 25px;
+    }
+
+
+    .stackly-team-image {
+        height: 360px;
+    }
+
+
+    .team-info h3 {
+        font-size: 17px;
+    }
+
+}
+
+
+
+/* =====================================================
+   STACKLY CREDIT & LENDING CTA
+===================================================== */
+
+.credit-cta-section {
+    position: static;
+
+    width: 100%;
+
+    padding:
+        0 0 0;
+
+    background: #20202b;
+
+    overflow: hidden;
+    margin-top: -40px;
+}
+
+
+/* =====================================================
+   CTA CARD
+===================================================== */
+
+.credit-cta-card {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(975px, 90%);
+
+    min-height: 205px;
+
+    margin: 0 auto;
+
+    padding:
+        38px
+        68px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 40px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ef382b 0%,
+            #f04436 55%,
+            #ed3b30 100%
+        );
+}
+
+
+/* =====================================================
+   BACKGROUND PERSPECTIVE DESIGN
+===================================================== */
+
+.cta-background-pattern {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -1;
+
+    opacity: .22;
+
+    background-image:
+        linear-gradient(
+            35deg,
+            transparent 48%,
+            rgba(120,20,15,.5) 49%,
+            transparent 50%
+        ),
+        linear-gradient(
+            -35deg,
+            transparent 48%,
+            rgba(120,20,15,.5) 49%,
+            transparent 50%
+        ),
+        linear-gradient(
+            90deg,
+            transparent 49%,
+            rgba(120,20,15,.35) 50%,
+            transparent 51%
+        );
+
+    background-size:
+        150px 100px,
+        150px 100px,
+        130px 100%;
+}
+
+
+/* central perspective lines */
+
+.cta-background-pattern::before {
+    content: "";
+
+    position: absolute;
+
+    left: 42%;
+
+    top: -30%;
+
+    width: 22%;
+
+    height: 160%;
+
+    border-left:
+        2px solid rgba(120,20,15,.35);
+
+    border-right:
+        2px solid rgba(120,20,15,.35);
+
+    transform:
+        perspective(300px)
+        rotateX(5deg)
+        skewX(-4deg);
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.cta-content {
+    position: relative;
+
+    max-width: 590px;
+}
+
+
+.cta-eyebrow {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: rgba(255,255,255,.85);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 3px;
+}
+
+
+.cta-content h2 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 31px;
+
+    line-height: 1.15;
+
+    font-weight: 700;
+
+    letter-spacing: -.5px;
+}
+
+
+.cta-content p {
+    max-width: 560px;
+
+    margin:
+        12px 0 0;
+
+    color: rgba(255,255,255,.88);
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   CTA BUTTON
+===================================================== */
+
+.cta-button {
+    position: relative;
+
+    flex-shrink: 0;
+
+    width: 165px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    color: #20202b;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    transition:
+        background .35s ease,
+        color .35s ease,
+        transform .35s ease;
+}
+
+
+.cta-button:hover {
+    background: #20202b;
+
+    color: #ffffff;
+
+    transform:
+        translateY(-3px);
+}
+
+
+/* =====================================================
+   DECORATIVE CIRCLE
+===================================================== */
+
+.credit-cta-card::after {
+    content: "";
+
+    position: absolute;
+
+    right: 30%;
+
+    bottom: -22px;
+
+    width: 22px;
+
+    height: 22px;
+
+    border:
+        2px solid rgba(255,255,255,.5);
+
+    border-radius: 50%;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .credit-cta-card {
+        width: 92%;
+
+        padding:
+            35px
+            45px;
+    }
+
+
+    .cta-content h2 {
+        font-size: 27px;
+    }
+
+
+    .cta-button {
+        width: 145px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .credit-cta-section {
+        padding-bottom: 0;
+    }
+
+
+    .credit-cta-card {
+        width: 90%;
+
+        min-height: auto;
+
+        padding:
+            40px
+            28px;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: center;
+
+        gap: 25px;
+    }
+
+
+    .cta-eyebrow {
+        font-size: 9px;
+
+        letter-spacing: 2.5px;
+    }
+
+
+    .cta-content h2 {
+        font-size: 27px;
+
+        line-height: 1.2;
+    }
+
+
+    .cta-content p {
+        font-size: 11px;
+
+        line-height: 1.7;
+    }
+
+
+    .cta-button {
+        width: 145px;
+
+        height: 48px;
+    }
+
+
+    .credit-cta-card::after {
+        right: 12%;
+
+        bottom: 15px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .credit-cta-card {
+        padding:
+            35px
+            22px;
+    }
+
+
+    .cta-content h2 {
+        font-size: 24px;
+    }
+
+
+    .cta-content p {
+        font-size: 10px;
+    }
+
+}

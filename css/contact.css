@@ -1,0 +1,1629 @@
+/* =====================================================
+   STACKLY CONTACT HERO
+===================================================== */
+
+.stackly-contact-hero {
+    position: relative;
+
+    width: 100%;
+
+    height: 340px;
+
+    overflow: hidden;
+
+    background: #171823;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =====================================================
+   BACKGROUND
+===================================================== */
+
+.stackly-contact-hero-bg {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    overflow: hidden;
+}
+
+
+.stackly-contact-hero-bg img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transform: scale(1.12);
+}
+
+
+/* =====================================================
+   OVERLAY
+===================================================== */
+
+.stackly-contact-hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(20, 20, 31, 0.96) 0%,
+            rgba(20, 20, 31, 0.84) 35%,
+            rgba(20, 20, 31, 0.48) 70%,
+            rgba(20, 20, 31, 0.58) 100%
+        );
+
+    opacity: 0;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.stackly-contact-hero-container {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(1200px, 90%);
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.stackly-contact-hero-content {
+    margin-left: 0;
+
+    padding-top: 5px;
+}
+
+
+/* =====================================================
+   BREADCRUMB
+===================================================== */
+
+.stackly-contact-breadcrumb {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 18px;
+
+    opacity: 0;
+
+    transform: translateY(25px);
+}
+
+
+.stackly-contact-breadcrumb a {
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    letter-spacing: 2px;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease;
+}
+
+
+.stackly-contact-breadcrumb a:hover {
+    color: #ef382b;
+}
+
+
+.stackly-contact-breadcrumb b {
+    color: #a5a5ad;
+
+    font-size: 11px;
+
+    font-weight: 400;
+}
+
+
+.stackly-contact-breadcrumb span {
+    color: #ef382b;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.stackly-contact-hero-content h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 50px;
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+
+    opacity: 0;
+
+    transform: translateY(45px);
+}
+
+
+/* =====================================================
+   RED CIRCLE
+===================================================== */
+
+.stackly-contact-circle {
+    position: absolute;
+
+    z-index: 4;
+
+    left: 41%;
+
+    top: 63%;
+
+    width: 25px;
+
+    height: 25px;
+
+    border: 2px solid #ef382b;
+
+    border-radius: 50%;
+
+    opacity: 0;
+
+    transform: scale(0.4);
+}
+
+
+.stackly-contact-circle::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #ef382b;
+
+    transform:
+        translate(-50%, -50%);
+}
+
+
+/* =====================================================
+   DECORATIVE DOT
+===================================================== */
+
+.stackly-contact-dot {
+    position: absolute;
+
+    z-index: 4;
+
+    left: 35%;
+
+    top: 73%;
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #ef382b;
+
+    opacity: 0;
+
+    transform: scale(0);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .stackly-contact-hero {
+        height: 315px;
+    }
+
+
+    .stackly-contact-hero-container {
+        width: 88%;
+    }
+
+
+    .stackly-contact-hero-content h1 {
+        font-size: 44px;
+    }
+
+
+    .stackly-contact-circle {
+        left: 45%;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .stackly-contact-hero {
+        height: 285px;
+    }
+
+
+    .stackly-contact-hero-bg img {
+        object-position: center;
+    }
+
+
+    .stackly-contact-hero-container {
+        width: 88%;
+
+        justify-content: center;
+
+        text-align: center;
+    }
+
+
+    .stackly-contact-hero-content {
+        padding-top: 10px;
+
+        margin: 0 auto;
+    }
+
+
+    .stackly-contact-breadcrumb {
+        justify-content: center;
+
+        gap: 7px;
+
+        margin-bottom: 14px;
+    }
+
+
+    .stackly-contact-breadcrumb a,
+    .stackly-contact-breadcrumb span {
+        font-size: 9px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .stackly-contact-breadcrumb b {
+        font-size: 9px;
+    }
+
+
+    .stackly-contact-hero-content h1 {
+        font-size: 36px;
+
+        letter-spacing: -0.5px;
+    }
+
+
+    .stackly-contact-circle {
+        left: 72%;
+
+        top: 69%;
+
+        width: 19px;
+
+        height: 19px;
+    }
+
+
+    .stackly-contact-circle::after {
+        width: 4px;
+
+        height: 4px;
+    }
+
+
+    .stackly-contact-dot {
+        left: 24%;
+
+        top: 72%;
+
+        width: 6px;
+
+        height: 6px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .stackly-contact-hero {
+        height: 270px;
+    }
+
+
+    .stackly-contact-hero-content h1 {
+        font-size: 32px;
+    }
+
+}
+
+
+/* =====================================================
+   STACKLY CONTACT SECTION
+===================================================== */
+
+.stackly-contact-section {
+    position: relative;
+
+    width: 100%;
+
+    padding: 100px 0;
+
+    background: #ffffff;
+
+    overflow: hidden;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.stackly-contact-container {
+    width: min(1080px, 90%);
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        0.72fr 1.28fr;
+
+    gap: 65px;
+
+    align-items: start;
+}
+
+
+/* =====================================================
+   LEFT CONTENT
+===================================================== */
+
+.stackly-contact-info {
+    opacity: 0;
+
+    transform: translateX(-90px);
+
+    will-change: transform, opacity;
+}
+
+
+.stackly-contact-eyebrow {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #ef382b;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 2.3px;
+}
+
+
+.stackly-contact-info h2 {
+    margin: 0 0 22px;
+
+    color: #171823;
+
+    font-size: 38px;
+
+    line-height: 1.18;
+
+    font-weight: 700;
+
+    letter-spacing: -0.6px;
+}
+
+
+.stackly-contact-description {
+    margin: 0 0 30px;
+
+    color: #68717d;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+/* =====================================================
+   CONTACT DETAILS
+===================================================== */
+
+.stackly-contact-details {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 19px;
+
+    margin-bottom: 30px;
+}
+
+
+.stackly-contact-detail {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    opacity: 0;
+
+    transform: translateX(-35px);
+
+    will-change: transform, opacity;
+}
+
+
+.contact-detail-icon {
+    flex: 0 0 42px;
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f3efed;
+
+    color: #ef382b;
+
+    font-size: 13px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.stackly-contact-detail:hover
+.contact-detail-icon {
+    background: #ef382b;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+
+.stackly-contact-detail div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.stackly-contact-detail small {
+    color: #ef382b;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+}
+
+
+.stackly-contact-detail a,
+.stackly-contact-detail div > span {
+    color: #303441;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    text-decoration: none;
+}
+
+
+.stackly-contact-detail a:hover {
+    color: #ef382b;
+}
+
+
+/* =====================================================
+   SOCIAL
+===================================================== */
+
+.stackly-contact-social {
+    display: flex;
+
+    gap: 9px;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    will-change: transform, opacity;
+}
+
+
+.stackly-contact-social a {
+    width: 36px;
+
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f3efed;
+
+    color: #171823;
+
+    font-size: 11px;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.stackly-contact-social a:hover {
+    background: #ef382b;
+
+    color: #ffffff;
+
+    transform: translateY(-4px);
+}
+
+
+/* =====================================================
+   FORM WRAPPER
+===================================================== */
+
+.stackly-contact-form-wrap {
+    opacity: 0;
+
+    transform: translateX(100px);
+
+    will-change: transform, opacity;
+}
+
+
+/* =====================================================
+   FORM ROW
+===================================================== */
+
+.contact-form-row {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 16px;
+
+    margin-bottom: 16px;
+}
+
+
+/* =====================================================
+   FIELD
+===================================================== */
+
+.contact-field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.contact-field label {
+    color: #171823;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   INPUTS
+===================================================== */
+
+.contact-field input,
+.contact-field textarea {
+    box-sizing: border-box;
+
+    width: 100%;
+
+    border: 1px solid #ebe7e4;
+
+    outline: none;
+
+    background: #f4f0ed;
+
+    color: #171823;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    border-radius: 0;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.contact-field input {
+    height: 57px;
+
+    padding: 0 17px;
+}
+
+
+.contact-field textarea {
+    min-height: 145px;
+
+    padding: 15px 17px;
+
+    resize: vertical;
+}
+
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+    color: #858993;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   FOCUS
+===================================================== */
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+    border-color: #ef382b;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 2px rgba(239, 56, 43, 0.06);
+}
+
+
+/* =====================================================
+   INVALID INPUT
+===================================================== */
+
+.contact-field input.input-error,
+.contact-field textarea.input-error {
+    border-color: #ef382b;
+
+    background: #fff8f7;
+}
+
+
+/* =====================================================
+   ERROR MESSAGE
+===================================================== */
+
+.contact-error {
+    display: block;
+
+    min-height: 0;
+
+    margin-top: 0;
+
+    color: #ef382b;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+
+    opacity: 0;
+
+    transform: translateY(-4px);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.contact-error.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   MESSAGE FIELD
+===================================================== */
+
+.contact-message-field {
+    margin-top: 2px;
+
+    margin-bottom: 22px;
+}
+
+
+/* =====================================================
+   SUBMIT
+===================================================== */
+
+.stackly-contact-submit {
+    min-width: 175px;
+
+    height: 52px;
+
+    padding: 0 22px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 13px;
+
+    border: 1px solid #ef382b;
+
+    background: #ef382b;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.stackly-contact-submit i {
+    font-size: 10px;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.stackly-contact-submit:hover {
+    background: #171823;
+
+    border-color: #171823;
+
+    transform: translateY(-3px);
+}
+
+
+.stackly-contact-submit:hover i {
+    transform: translateX(5px);
+}
+
+
+/* =====================================================
+   SUCCESS MESSAGE
+===================================================== */
+
+.contact-success {
+    display: none;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 15px;
+
+    color: #23843d;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+.contact-success.show {
+    display: flex;
+}
+
+
+.contact-success i {
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .stackly-contact-section {
+        padding: 80px 0;
+    }
+
+
+    .stackly-contact-container {
+        grid-template-columns:
+            0.8fr 1.2fr;
+
+        gap: 40px;
+    }
+
+
+    .stackly-contact-info h2 {
+        font-size: 32px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .stackly-contact-section {
+        padding: 65px 0 75px;
+    }
+
+
+    .stackly-contact-container {
+        width: 88%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 45px;
+    }
+
+
+    .stackly-contact-info {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .stackly-contact-eyebrow {
+        font-size: 9px;
+
+        letter-spacing: 1.8px;
+    }
+
+
+    .stackly-contact-info h2 {
+        font-size: 28px;
+
+        line-height: 1.22;
+    }
+
+
+    .stackly-contact-description {
+        font-size: 12px;
+
+        line-height: 1.8;
+    }
+
+
+    .stackly-contact-details {
+        width: max-content;
+
+        max-width: 100%;
+
+        margin-left: auto;
+
+        margin-right: auto;
+
+        align-items: flex-start;
+
+        text-align: left;
+    }
+
+
+    .stackly-contact-social {
+        justify-content: center;
+    }
+
+
+    .stackly-contact-form-wrap {
+        width: 100%;
+    }
+
+
+    .contact-form-row {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+
+        margin-bottom: 16px;
+    }
+
+
+    .contact-field input {
+        height: 55px;
+    }
+
+
+    .contact-field textarea {
+        min-height: 135px;
+    }
+
+
+    .stackly-contact-submit {
+        width: 100%;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .stackly-contact-info h2 {
+        font-size: 25px;
+    }
+
+
+    .stackly-contact-description {
+        font-size: 11.5px;
+    }
+
+
+    .contact-detail-icon {
+        width: 38px;
+
+        height: 38px;
+
+        flex-basis: 38px;
+    }
+
+
+    .stackly-contact-detail a,
+    .stackly-contact-detail div > span {
+        font-size: 11px;
+    }
+
+}
+
+
+/* =====================================================
+   STACKLY CONTACT LOCATION
+===================================================== */
+
+.stackly-location-section {
+    position: relative;
+
+    width: 100%;
+
+    background: #f3efed;
+
+    overflow: hidden;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =====================================================
+   CONTACT STRIP
+===================================================== */
+
+.stackly-location-container {
+    position: relative;
+
+    z-index: 5;
+
+    width: min(1080px, 90%);
+
+    min-height: 150px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    align-items: center;
+
+    gap: 45px;
+}
+
+
+/* =====================================================
+   CONTACT ITEM
+===================================================== */
+
+.stackly-location-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+    min-width: 0;
+
+    text-decoration: none;
+
+    opacity: 0;
+
+    transform: translateY(45px);
+
+    will-change: transform, opacity;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.stackly-location-item:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.location-icon {
+    flex: 0 0 52px;
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ef382b;
+
+    color: #ffffff;
+
+    font-size: 15px;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.stackly-location-item:hover
+.location-icon {
+    background: #171823;
+
+    transform: scale(1.08);
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.location-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
+    min-width: 0;
+}
+
+
+.location-content span {
+    color: #68717d;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+
+.location-content strong {
+    color: #171823;
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   PHONE / EMAIL HOVER
+===================================================== */
+
+.stackly-location-item:hover
+.location-content strong {
+    color: #ef382b;
+}
+
+
+/* =====================================================
+   DECORATIVE LEFT LINE
+===================================================== */
+
+.location-line-left {
+    position: absolute;
+
+    z-index: 1;
+
+    left: 7.5%;
+
+    top: 13px;
+
+    width: 310px;
+
+    height: 85px;
+
+    border-top: 2px dashed #ebe3df;
+
+    border-right: 2px dashed #ebe3df;
+
+    border-radius: 0 80px 0 0;
+
+    transform:
+        rotate(-12deg);
+
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+
+/* =====================================================
+   DECORATIVE RIGHT LINE
+===================================================== */
+
+.location-line-right {
+    position: absolute;
+
+    z-index: 1;
+
+    right: 7.5%;
+
+    top: 8px;
+
+    width: 300px;
+
+    height: 100px;
+
+    border-top: 2px dashed #ebe3df;
+
+    border-left: 2px dashed #ebe3df;
+
+    border-radius: 80px 0 0 0;
+
+    transform:
+        rotate(12deg);
+
+    pointer-events: none;
+
+    opacity: 0;
+}
+
+
+/* =====================================================
+   MAP
+===================================================== */
+
+.stackly-location-map {
+    position: relative;
+
+    width: 100%;
+
+    height: 400px;
+
+    overflow: hidden;
+
+    background: #e8e8e8;
+
+    opacity: 0;
+
+    transform: translateY(55px);
+
+    will-change: transform, opacity;
+}
+
+
+.stackly-location-map iframe {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    border: 0;
+
+    filter:
+        saturate(0.92)
+        contrast(0.96);
+}
+
+
+/* =====================================================
+   MAP OVERLAY
+===================================================== */
+
+.location-map-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.05),
+            rgba(255,255,255,0)
+        );
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .stackly-location-container {
+        width: 88%;
+
+        gap: 25px;
+    }
+
+
+    .location-icon {
+        width: 46px;
+
+        height: 46px;
+
+        flex-basis: 46px;
+
+        font-size: 13px;
+    }
+
+
+    .location-content span {
+        font-size: 10px;
+    }
+
+
+    .location-content strong {
+        font-size: 11px;
+    }
+
+
+    .stackly-location-map {
+        height: 350px;
+    }
+
+
+    .location-line-left {
+        left: 2%;
+
+        width: 220px;
+    }
+
+
+    .location-line-right {
+        right: 2%;
+
+        width: 220px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .stackly-location-container {
+        width: 90%;
+
+        padding: 45px 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+       justify-content: center;
+        gap: 22px;
+    }
+
+
+    .stackly-location-item{
+        width:100%;
+        display:flex;
+        align-items:center;          
+        justify-content:center;
+        gap:16px;
+        transform:none;
+        margin-left:80px;
+    }
+
+    .stackly-location-item:hover {
+        transform:
+            translateX(3px);
+    }
+
+
+       .location-icon{
+        width:48px;
+        height:48px;
+        min-width:48px;
+        min-height:48px;
+        border-radius:50%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-shrink:0;
+        margin:0;                  
+    }
+
+    .location-icon i{
+        font-size:16px;
+        line-height:1;
+    }
+
+    .location-content{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;     
+        gap:4px;
+    }
+
+    .location-content span{
+        font-size:11px;
+    }
+
+    .location-content strong{
+        font-size:14px;
+        line-height:1.4;
+    }
+
+
+    .stackly-location-map {
+        height: 300px;
+
+        transform:
+            translateY(45px);
+    }
+
+
+    /* Hide large desktop decorative curves */
+
+    .location-line-left {
+        left: -80px;
+
+        top: 10px;
+
+        width: 180px;
+
+        height: 55px;
+    }
+
+
+    .location-line-right {
+        right: -80px;
+
+        top: auto;
+
+        bottom: 10px;
+
+        width: 180px;
+
+        height: 55px;
+    }
+
+}
+
+/* =====================================================
+   SMALL MOBILE - CONTACT LOCATION FIX
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .stackly-location-container {
+        width: 90%;
+        padding: 40px 0;
+        gap: 22px;
+    }
+
+
+    .stackly-location-item {
+        width: 100%;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 14px;
+
+        transform: none;
+    }
+
+
+    /* =================================================
+       CENTER RED ICON
+    ================================================= */
+
+    .location-icon {
+        width: 42px;
+        height: 42px;
+
+        min-width: 42px;
+        min-height: 42px;
+
+        flex: 0 0 42px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0;
+
+        padding: 0;
+
+        border-radius: 50%;
+
+        font-size: 12px;
+
+        line-height: 1;
+    }
+
+
+    .location-icon i {
+        display: block;
+
+        font-size: 12px;
+
+        line-height: 1;
+
+        margin: 0;
+    }
+
+
+    /* =================================================
+       CENTER TEXT WITH ICON
+    ================================================= */
+
+    .location-content {
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 4px;
+
+        min-width: 0;
+    }
+
+
+    .location-content span {
+        font-size: 10px;
+
+        line-height: 1.4;
+    }
+
+
+    .location-content strong {
+        font-size: 11px;
+
+        line-height: 1.4;
+    }
+
+
+    /* =================================================
+       MAP
+    ================================================= */
+
+    .stackly-location-map {
+        height: 270px;
+    }
+
+}
