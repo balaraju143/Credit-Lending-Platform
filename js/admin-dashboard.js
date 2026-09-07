@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", function () {
        SETTINGS TABS
     ====================================================== */
 
-    const settingTabs =
+   const settingTabs =
         document.querySelectorAll(
             ".setting-tab"
         );
@@ -344,8 +344,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-
 });
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
