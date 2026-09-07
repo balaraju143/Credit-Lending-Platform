@@ -1373,3 +1373,278 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (typeof gsap === "undefined") return;
+
+    const faqSection = document.querySelector(".stackly-faq-section");
+
+    if (!faqSection) return;
+
+
+    /* =====================================================
+       SECTION REVEAL
+    ===================================================== */
+
+    const intro = faqSection.querySelector(".stackly-faq-intro");
+    const items = faqSection.querySelectorAll(".stackly-faq-item");
+
+    gsap.fromTo(
+        intro,
+        {
+            x: -80,
+            opacity: 0
+        },
+        {
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: faqSection,
+                start: "top 78%",
+                once: true
+            }
+        }
+    );
+
+
+    /* =====================================================
+       FAQ CARDS REVEAL
+    ===================================================== */
+
+    gsap.fromTo(
+        items,
+        {
+            x: 70,
+            opacity: 0
+        },
+        {
+            x: 0,
+            opacity: 1,
+            duration: 0.8,
+            stagger: 0.12,
+            ease: "power3.out",
+            scrollTrigger: {
+                trigger: faqSection,
+                start: "top 72%",
+                once: true
+            }
+        }
+    );
+
+
+    /* =====================================================
+       FAQ OPEN / CLOSE
+    ===================================================== */
+
+    items.forEach(function (item) {
+
+        const button = item.querySelector(".stackly-faq-question");
+        const answer = item.querySelector(".stackly-faq-answer");
+
+        button.addEventListener("click", function () {
+
+            const isActive = item.classList.contains("active");
+
+
+            /* Close all other FAQs */
+
+            items.forEach(function (otherItem) {
+
+                if (otherItem !== item) {
+
+                    otherItem.classList.remove("active");
+
+                    const otherAnswer =
+                        otherItem.querySelector(".stackly-faq-answer");
+
+                    gsap.to(otherAnswer, {
+                        height: 0,
+                        opacity: 0,
+                        duration: 0.4,
+                        ease: "power2.inOut"
+                    });
+
+                }
+
+            });
+
+
+            /* Close current */
+
+            if (isActive) {
+
+                item.classList.remove("active");
+
+                gsap.to(answer, {
+                    height: 0,
+                    opacity: 0,
+                    duration: 0.4,
+                    ease: "power2.inOut"
+                });
+
+                return;
+            }
+
+
+            /* Open current */
+
+            item.classList.add("active");
+
+            gsap.fromTo(
+                answer,
+                {
+                    height: 0,
+                    opacity: 0
+                },
+                {
+                    height: "auto",
+                    opacity: 1,
+                    duration: 0.55,
+                    ease: "power3.out"
+                }
+            );
+
+        });
+
+    });
+
+
+    /* =====================================================
+       OPEN FIRST FAQ
+    ===================================================== */
+
+    const firstItem = items[0];
+
+    if (firstItem) {
+
+        const firstAnswer =
+            firstItem.querySelector(".stackly-faq-answer");
+
+        gsap.set(firstAnswer, {
+            height: "auto",
+            opacity: 1
+        });
+
+    }
+
+});
+
+
+/* =====================================================
+   CONTACT - FINANCIAL SUPPORT GSAP
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    if (typeof gsap === "undefined") return;
+
+    if (typeof ScrollTrigger !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
+    }
+
+    const section =
+        document.querySelector(".contact-support-section");
+
+    if (!section) return;
+
+
+    /* LEFT CONTENT */
+
+    gsap.fromTo(
+        ".contact-support-main",
+        {
+            x: -90,
+            opacity: 0
+        },
+        {
+            x: 0,
+            opacity: 1,
+            duration: 1.1,
+            ease: "power3.out",
+
+            scrollTrigger: {
+                trigger: section,
+                start: "top 78%",
+                once: true
+            }
+        }
+    );
+
+
+    /* NUMBER */
+
+    gsap.fromTo(
+        ".contact-support-number",
+        {
+            y: 30,
+            opacity: 0
+        },
+        {
+            y: 0,
+            opacity: 1,
+            duration: .8,
+            delay: .3,
+            ease: "power3.out",
+
+            scrollTrigger: {
+                trigger: section,
+                start: "top 78%",
+                once: true
+            }
+        }
+    );
+
+
+    /* RIGHT ITEMS */
+
+    gsap.fromTo(
+        ".contact-support-item",
+        {
+            x: 80,
+            opacity: 0
+        },
+        {
+            x: 0,
+            opacity: 1,
+            duration: .8,
+            stagger: .15,
+            ease: "power3.out",
+
+            scrollTrigger: {
+                trigger: ".contact-support-side",
+                start: "top 78%",
+                once: true
+            }
+        }
+    );
+
+
+    /* BUTTON */
+
+    gsap.fromTo(
+        ".contact-support-button",
+        {
+            y: 35,
+            opacity: 0
+        },
+        {
+            y: 0,
+            opacity: 1,
+            duration: .7,
+            delay: .5,
+            ease: "power3.out",
+
+            scrollTrigger: {
+                trigger: ".contact-support-side",
+                start: "top 78%",
+                once: true
+            }
+        }
+    );
+
+});

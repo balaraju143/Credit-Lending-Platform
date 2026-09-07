@@ -191,7 +191,7 @@ button {
 
     line-height: 1;
 
-    color: #1c1c1c;
+    color: #ef382b;
 
     font-size: 22px;
 
@@ -206,7 +206,7 @@ button {
 
     margin-top: 5px;
 
-    color: #777777;
+    color:#ef382b;
 
     font-size: 7px;
 
@@ -1182,6 +1182,11 @@ body.menu-open {
 
 .footer-brand {
     max-width: 360px;
+      display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+
 }
 
 
@@ -1194,9 +1199,9 @@ body.menu-open {
 
     align-items: center;
 
-    gap: 10px;
+    gap: 24px;
 
-    margin-bottom: 27px;
+    margin-bottom: 35px;
 
     color: #ffffff;
 
@@ -1847,3 +1852,34 @@ body.menu-open {
 
 }
 
+/* =====================================================
+   FIX FOOTER LOGO COLOR
+   SAME RED APPEARANCE AS HEADER
+===================================================== */
+
+.stackly-footer .brand-logo-img {
+    opacity: 1 !important;
+    filter: none !important;
+    mix-blend-mode: normal !important;
+    -webkit-filter: none !important;
+}
+/* Footer logo small box */
+.stackly-footer .brand-logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 175px;
+    height: 55px;
+
+    padding: 8px 12px;
+
+    background: #ffffff;
+    border-radius: 3px;
+}
+
+.stackly-footer .brand-logo-img {
+    width: 170px;
+    height: auto;
+    display: block;
+}

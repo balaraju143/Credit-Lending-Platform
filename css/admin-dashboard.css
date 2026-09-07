@@ -477,7 +477,7 @@ input {
 ========================================================= */
 
 .admin-header {
-    position: sticky;
+    position: sticky !important;
 
     height: 82px;
 
@@ -6219,6 +6219,431 @@ input {
 
     .report-insight-content p {
         font-size: 8.5px;
+    }
+
+}
+
+
+
+/* ADMIN DASHBOARD FONT SIZE ONLY */
+
+.admin-dashboard p {
+    font-size: 13px !important;
+}
+
+.admin-dashboard small {
+    font-size: 11px !important;
+}
+
+.admin-dashboard .admin-nav-link {
+    font-size: 12px !important;
+}
+
+.admin-dashboard .sidebar-label {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .admin-profile-text strong {
+    font-size: 13px !important;
+}
+
+.admin-dashboard .admin-profile-text span {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .header-heading span {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .header-admin-text strong {
+    font-size: 11px !important;
+}
+
+.admin-dashboard .header-admin-text small {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .admin-primary-btn {
+    font-size: 11px !important;
+}
+
+.admin-dashboard .admin-stat-card > span {
+    font-size: 11px !important;
+}
+
+.admin-dashboard .admin-stat-card > small {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .pipeline-info strong {
+    font-size: 12px !important;
+}
+
+.admin-dashboard .pipeline-info span {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .quick-actions a {
+    font-size: 11px !important;
+}
+
+.admin-dashboard .application-summary-card span {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .admin-table th {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .admin-table td {
+    font-size: 11px !important;
+}
+
+.admin-dashboard .status {
+    font-size: 9px !important;
+}
+
+.admin-dashboard .client-feature-card > span {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .client-feature-card p {
+    font-size: 12px !important;
+}
+
+.admin-dashboard .client-feature-card a {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .client-row strong {
+    font-size: 12px !important;
+}
+
+.admin-dashboard .client-row span {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .client-metric span {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .credit-score-big span {
+    font-size: 9px !important;
+}
+
+.admin-dashboard .credit-score-big small {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .credit-health-card p {
+    font-size: 11px !important;
+}
+
+.admin-dashboard .credit-health-card a {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .review-person strong {
+    font-size: 11px !important;
+}
+
+.admin-dashboard .review-person small {
+    font-size: 9px !important;
+}
+
+.admin-dashboard .credit-review-item a {
+    font-size: 9px !important;
+}
+
+.admin-dashboard .credit-insight p {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .payment-total > small,
+.admin-dashboard .payment-side-stat > small {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .payment-action-grid strong {
+    font-size: 14px !important;
+}
+
+.admin-dashboard .payment-action-grid span {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .report-card p {
+    font-size: 11px !important;
+}
+
+.admin-dashboard .report-card > span {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .setting-tab {
+    font-size: 11px !important;
+}
+
+.admin-dashboard .settings-profile strong {
+    font-size: 12px !important;
+}
+
+.admin-dashboard .settings-profile span {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .settings-fields label {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .settings-fields input {
+    font-size: 11px !important;
+}
+
+.admin-dashboard .application-review-header p {
+    font-size: 12px !important;
+}
+
+.admin-dashboard .review-view-all {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .review-user h4 {
+    font-size: 13px !important;
+}
+
+.admin-dashboard .review-user span {
+    font-size: 10px !important;
+}
+
+.admin-dashboard .review-info small {
+    font-size: 9px !important;
+}
+
+.admin-dashboard .review-info strong {
+    font-size: 13px !important;
+}
+
+.admin-dashboard .review-priority {
+    font-size: 10px !important;
+}
+
+
+/* =========================================================
+   ADMIN DASHBOARD - MOBILE FONT SIZE ONLY
+   ========================================================= */
+
+@media (max-width: 700px) {
+     .admin-header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        z-index: 1005 !important;
+    }
+     .admin-main {
+        padding-top: 82px !important;
+    }
+
+    .admin-dashboard p {
+        font-size: 12px !important;
+    }
+
+    .admin-dashboard small {
+        font-size: 10px !important;
+    }
+
+    .admin-dashboard .admin-nav-link {
+        font-size: 12px !important;
+    }
+
+    .admin-dashboard .sidebar-label {
+        font-size: 10px !important;
+    }
+
+    .admin-dashboard .admin-profile-text strong {
+        font-size: 12px !important;
+    }
+
+    .admin-dashboard .admin-profile-text span {
+        font-size: 10px !important;
+    }
+
+    .admin-dashboard .header-heading span {
+        font-size: 10px !important;
+    }
+
+    .admin-dashboard .header-admin-text strong {
+        font-size: 11px !important;
+    }
+
+    .admin-dashboard .header-admin-text small {
+        font-size: 10px !important;
+    }
+
+    .admin-dashboard .admin-primary-btn {
+        font-size: 11px !important;
+    }
+
+    .admin-dashboard .admin-stat-card > span {
+        font-size: 11px !important;
+    }
+
+    .admin-dashboard .admin-stat-card > small {
+        font-size: 9px !important;
+    }
+
+    .admin-dashboard .pipeline-info strong {
+        font-size: 11px !important;
+    }
+
+    .admin-dashboard .pipeline-info span {
+        font-size: 9px !important;
+    }
+
+    .admin-dashboard .quick-actions a {
+        font-size: 11px !important;
+    }
+
+    .admin-dashboard .application-summary-card span {
+        font-size: 10px !important;
+    }
+
+    .admin-dashboard .admin-table th {
+        font-size: 9px !important;
+    }
+
+    .admin-dashboard .admin-table td {
+        font-size: 10px !important;
+    }
+
+    .admin-dashboard .status {
+        font-size: 9px !important;
+    }
+
+    .admin-dashboard .client-feature-card > span {
+        font-size: 10px !important;
+    }
+
+    .admin-dashboard .client-feature-card p {
+        font-size: 11px !important;
+    }
+
+    .admin-dashboard .client-feature-card a {
+        font-size: 10px !important;
+    }
+
+    .admin-dashboard .client-row strong {
+        font-size: 11px !important;
+    }
+
+    .admin-dashboard .client-row span {
+        font-size: 9px !important;
+    }
+
+    .admin-dashboard .client-metric span {
+        font-size: 10px !important;
+    }
+
+    .admin-dashboard .credit-score-big span {
+        font-size: 9px !important;
+    }
+
+    .admin-dashboard .credit-score-big small {
+        font-size: 10px !important;
+    }
+
+    .admin-dashboard .credit-health-card p {
+        font-size: 11px !important;
+    }
+
+    .admin-dashboard .credit-health-card a {
+        font-size: 10px !important;
+    }
+
+    .admin-dashboard .review-person strong {
+        font-size: 11px !important;
+    }
+
+    .admin-dashboard .review-person small {
+        font-size: 9px !important;
+    }
+
+    .admin-dashboard .credit-review-item a {
+        font-size: 9px !important;
+    }
+
+    .admin-dashboard .credit-insight p {
+        font-size: 10px !important;
+    }
+
+    .admin-dashboard .payment-total > small,
+    .admin-dashboard .payment-side-stat > small {
+        font-size: 10px !important;
+    }
+
+    .admin-dashboard .payment-action-grid strong {
+        font-size: 13px !important;
+    }
+
+    .admin-dashboard .payment-action-grid span {
+        font-size: 10px !important;
+    }
+
+    .admin-dashboard .report-card p {
+        font-size: 11px !important;
+    }
+
+    .admin-dashboard .report-card > span {
+        font-size: 10px !important;
+    }
+
+    .admin-dashboard .setting-tab {
+        font-size: 11px !important;
+    }
+
+    .admin-dashboard .settings-profile strong {
+        font-size: 11px !important;
+    }
+
+    .admin-dashboard .settings-profile span {
+        font-size: 10px !important;
+    }
+
+    .admin-dashboard .settings-fields label {
+        font-size: 10px !important;
+    }
+
+    .admin-dashboard .settings-fields input {
+        font-size: 11px !important;
+    }
+
+    .admin-dashboard .application-review-header p {
+        font-size: 11px !important;
+    }
+
+    .admin-dashboard .review-view-all {
+        font-size: 10px !important;
+    }
+
+    .admin-dashboard .review-user h4 {
+        font-size: 12px !important;
+    }
+
+    .admin-dashboard .review-user span {
+        font-size: 9px !important;
+    }
+
+    .admin-dashboard .review-info small {
+        font-size: 9px !important;
+    }
+
+    .admin-dashboard .review-info strong {
+        font-size: 12px !important;
+    }
+
+    .admin-dashboard .review-priority {
+        font-size: 10px !important;
     }
 
 }

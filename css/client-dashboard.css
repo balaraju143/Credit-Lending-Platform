@@ -4397,3 +4397,92 @@ input {
     }
 
 }
+
+
+/* =====================================================
+   CLIENT DASHBOARD - TEXT SIZE FIX
+   Keep main headings unchanged
+===================================================== */
+
+.client-dashboard p {
+    font-size: 11px !important;
+    line-height: 1.7;
+}
+
+.client-dashboard small {
+    font-size: 9px !important;
+}
+
+.client-dashboard span {
+    font-size: 11px;
+}
+
+.client-dashboard strong {
+    font-size: 11px;
+}
+
+.client-dashboard h3 {
+    font-size: 17px;
+}
+
+.client-dashboard h4 {
+    font-size: 15px;
+}
+
+/* Navigation text */
+.client-dashboard .dashboard-nav {
+    font-size: 12px;
+}
+
+.client-dashboard .sidebar-help,
+.client-dashboard .sidebar-logout {
+    font-size: 11px;
+}
+
+/* Buttons and links */
+.client-dashboard a {
+    font-size: 11px;
+}
+
+/* Keep icons from becoming oversized */
+.client-dashboard i {
+    font-size: revert;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .client-dashboard p {
+        font-size: 12px !important;
+        line-height: 1.65;
+    }
+
+    .client-dashboard small {
+        font-size: 10px !important;
+    }
+
+    .client-dashboard span {
+        font-size: 10px;
+    }
+
+    .client-dashboard strong {
+        font-size: 10px;
+    }
+
+    .client-dashboard h3 {
+        font-size: 16px;
+    }
+
+    .client-dashboard h4 {
+        font-size: 14px;
+    }
+
+    .client-dashboard .dashboard-nav {
+        font-size: 12px;
+    }
+
+}

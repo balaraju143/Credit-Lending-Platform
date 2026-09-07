@@ -305,7 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "Email verified. Redirecting...",
             "success"
         );
-
+            email.value = ""; 
 
         setTimeout(() => {
 

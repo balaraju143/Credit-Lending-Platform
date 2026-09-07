@@ -346,3 +346,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const email = localStorage.getItem("stacklyUserEmail");
+    const avatarLetter = document.getElementById("adminAvatarLetter");
+    const headerEmail = document.getElementById("headerEmail");
+
+    if (email) {
+        const cleanEmail = email.trim();
+
+        // Change avatar letter automatically
+        if (avatarLetter) {
+            avatarLetter.textContent = cleanEmail.charAt(0).toUpperCase();
+        }
+
+        // Show logged-in email
+        if (headerEmail) {
+            headerEmail.textContent = cleanEmail;
+        }
+    }
+
+});

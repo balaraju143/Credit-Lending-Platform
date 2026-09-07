@@ -1519,3 +1519,330 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+/* =====================================================
+   ABOUT - WHY STACKLY GSAP
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    if (typeof gsap === "undefined") return;
+
+    if (typeof ScrollTrigger !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger);
+    }
+
+    const section = document.querySelector(".about-why-stackly");
+
+    if (!section) return;
+
+
+    /* LEFT CONTENT */
+
+    gsap.fromTo(
+        ".about-why-intro",
+        {
+            x: -90,
+            opacity: 0
+        },
+        {
+            x: 0,
+            opacity: 1,
+            duration: 1.1,
+            ease: "power3.out",
+
+            scrollTrigger: {
+                trigger: section,
+                start: "top 78%",
+                once: true
+            }
+        }
+    );
+
+
+    /* RIGHT CARDS */
+
+    gsap.fromTo(
+        ".about-why-card",
+        {
+            y: 70,
+            opacity: 0
+        },
+        {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            stagger: 0.14,
+            ease: "power3.out",
+
+            scrollTrigger: {
+                trigger: ".about-why-points",
+                start: "top 80%",
+                once: true
+            }
+        }
+    );
+
+
+    /* ICON MICRO ANIMATION */
+
+    document
+        .querySelectorAll(".about-why-card")
+        .forEach(card => {
+
+            const icon = card.querySelector(".about-why-icon");
+
+            card.addEventListener("mouseenter", () => {
+
+                gsap.to(icon, {
+                    rotate: 6,
+                    scale: 1.08,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+
+            });
+
+            card.addEventListener("mouseleave", () => {
+
+                gsap.to(icon, {
+                    rotate: 0,
+                    scale: 1,
+                    duration: 0.3,
+                    ease: "power2.out"
+                });
+
+            });
+
+        });
+
+});
+
+
+
+/* =====================================================
+   STACKLY CTA - GSAP
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const cta =
+        document.querySelector(".credit-cta-section");
+
+    if (
+        !cta ||
+        typeof gsap === "undefined"
+    ) {
+        return;
+    }
+
+
+    const card =
+        cta.querySelector(".credit-cta-card");
+
+    const eyebrow =
+        cta.querySelector(".cta-eyebrow");
+
+    const heading =
+        cta.querySelector(".cta-content h2");
+
+    const paragraph =
+        cta.querySelector(".cta-content p");
+
+    const button =
+        cta.querySelector(".cta-button");
+
+    const pattern =
+        cta.querySelector(".cta-background-pattern");
+
+
+    /* =================================================
+       INITIAL STATE
+    ================================================= */
+
+    gsap.set(card, {
+        opacity: 0,
+        y: 70,
+        scale: .97
+    });
+
+
+    gsap.set(eyebrow, {
+        opacity: 0,
+        y: 20
+    });
+
+
+    gsap.set(heading, {
+        opacity: 0,
+        x: -35
+    });
+
+
+    gsap.set(paragraph, {
+        opacity: 0,
+        y: 20
+    });
+
+
+    gsap.set(button, {
+        opacity: 0,
+        x: 35
+    });
+
+
+    gsap.set(pattern, {
+        opacity: 0,
+        scale: 1.15
+    });
+
+
+    /* =================================================
+       TIMELINE
+    ================================================= */
+
+    const timeline =
+        gsap.timeline({
+            paused: true
+        });
+
+
+    timeline.to(
+        card,
+        {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: .9,
+            ease: "power4.out"
+        }
+    );
+
+
+    timeline.to(
+        pattern,
+        {
+            opacity: .22,
+            scale: 1,
+            duration: 1,
+            ease: "power3.out"
+        },
+        "-=.7"
+    );
+
+
+    timeline.to(
+        eyebrow,
+        {
+            opacity: 1,
+            y: 0,
+            duration: .45,
+            ease: "power3.out"
+        },
+        "-=.55"
+    );
+
+
+    timeline.to(
+        heading,
+        {
+            opacity: 1,
+            x: 0,
+            duration: .7,
+            ease: "power4.out"
+        },
+        "-=.25"
+    );
+
+
+    timeline.to(
+        paragraph,
+        {
+            opacity: 1,
+            y: 0,
+            duration: .5,
+            ease: "power3.out"
+        },
+        "-=.35"
+    );
+
+
+    timeline.to(
+        button,
+        {
+            opacity: 1,
+            x: 0,
+            duration: .6,
+            ease: "back.out(1.4)"
+        },
+        "-=.45"
+    );
+
+
+    /* =================================================
+       OBSERVER
+    ================================================= */
+
+    const observer =
+        new IntersectionObserver(
+            (entries, observer) => {
+
+                entries.forEach(entry => {
+
+                    if (
+                        entry.isIntersecting
+                    ) {
+
+                        timeline.play();
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: .2
+            }
+        );
+
+
+    observer.observe(cta);
+
+
+    /* =================================================
+       BUTTON HOVER
+    ================================================= */
+
+    button.addEventListener(
+        "mouseenter",
+        () => {
+
+            gsap.to(button, {
+                scale: 1.04,
+                duration: .3,
+                ease: "power2.out"
+            });
+
+        }
+    );
+
+
+    button.addEventListener(
+        "mouseleave",
+        () => {
+
+            gsap.to(button, {
+                scale: 1,
+                duration: .3,
+                ease: "power2.out"
+            });
+
+        }
+    );
+
+});

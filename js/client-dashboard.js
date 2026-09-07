@@ -521,3 +521,15 @@ document.addEventListener(
 
     }
 );
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const email = localStorage.getItem("stacklyUserEmail");
+    const avatarLetter = document.getElementById("headerAvatarLetter");
+
+    if (email && avatarLetter) {
+        avatarLetter.textContent = email.trim().charAt(0).toUpperCase();
+    }
+
+});
